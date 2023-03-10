@@ -15,7 +15,6 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           hyprland.nixosModules.default
-          sops-nix.homeManagerModules.sops
           {
             programs.hyprland.enable = true;
           }
