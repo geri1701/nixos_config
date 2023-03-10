@@ -25,7 +25,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs; };
-              users.geri = import ./home.nix;
+              users.geri.modules = [./home.nix sops-nix.homeManagerModules.sops];
             };
           }
         ];
