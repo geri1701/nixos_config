@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
     sops-nix.url = "github:Mic92/sops-nix";
   };
@@ -18,13 +18,16 @@
           {
             programs.hyprland.enable = true;
           }
-          # sops-nix.nixosModules.sops
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs; };
-              users.geri.imports = [./home.nix sops-nix.homeManagerModules.sops];
+              users.geri.imports = [
+                ./home.nix
+                sops-nix.homeManagerModules.sops
+                hyprland.homeManagerModules.default
+              ];
             };
           }
         ];
