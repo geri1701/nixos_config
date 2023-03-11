@@ -164,6 +164,7 @@ in {
 
     '';
   };
+  xdg.enable = true;
   home = {
     username = "geri";
     homeDirectory = "/home/geri";
@@ -175,12 +176,12 @@ in {
       MOZ_ENABLE_WAYLAND = 1;
     };
     packages = with pkgs; [
-      armcord
       calcure
       cht-sh
       chafa
       cinnamon.nemo-with-extensions
       ddgr
+      discord
       exercism
       fsuae
       fsuae-launcher
