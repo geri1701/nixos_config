@@ -3,9 +3,6 @@ let
   print_email_ids = { };
   print_workspace_string = { };
 in {
-  # imports = [ <sops-nix/modules/home-manager/sops.nix> ];
-  # imports = [ sops-nix.homeManagerModules.sops ];
-  # inputs = sops-nix.homeManagerModules.sops;
   sops = {
     age.keyFile = "/home/geri/.config/sops/age/keys.txt";
     defaultSopsFile = ./secrets/zero.yaml;
@@ -207,7 +204,6 @@ in {
       # print_workspace_string
       sirula
       slurp
-      thunderbird # maybe enable?
       tixati
       tldr
       translate-shell
@@ -501,4 +497,5 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.11";
+
 }

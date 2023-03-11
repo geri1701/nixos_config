@@ -12,19 +12,8 @@ let
     };
   }).defaultNix;
   cleanup_dir = { };
-  # stable-pkgs = import <nixos-stable> { };
-  home-manager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-    sha256 = "0zplfvpb0r0x1hjs3zs6v5cwydrgqhm4mi6s8skmnijb5pz6yrqz";
-  };
 in {
-  imports = [
-    ./hardware-configuration.nix
-    # <home-manager/nixos>
-    # (import "${home-manager}/nixos")
-    # <sops-nix/modules/sops>
-    hyprland.nixosModules.default
-  ];
+  imports = [ ./hardware-configuration.nix hyprland.nixosModules.default ];
   programs = {
     hyprland = {
       enable = true;
@@ -44,11 +33,6 @@ in {
     };
     zsh.enable = true;
   };
-  # home-manager = {
-  #   useUserPackages = true;
-  #   useGlobalPkgs = true;
-  #   # users.root = import ./home_root.nix;
-  # };
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";
@@ -138,10 +122,7 @@ in {
     };
   };
   console = { useXkbConfig = true; };
-  systemd.services.mpd.environment = {
-    # fix von  https://gitlab.freedesktop.org/pipewire/-/issues/609
-    XDG_RUNTIME_DIR = "/run/user/1000";
-  };
+  systemd.services.mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
@@ -249,6 +230,7 @@ in {
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
