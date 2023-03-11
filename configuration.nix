@@ -11,7 +11,7 @@ let
       sha256 = "0lc26gjx0izd4b2rhysqjj1v14n8zplmkgfjw1a8m90jy385gqbw";
     };
   }).defaultNix;
-  cleanup_dir = pkgs.callPackage /home/geri/projects/rust/cleanup_dir { };
+  cleanup_dir = { };
   # stable-pkgs = import <nixos-stable> { };
   home-manager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
@@ -21,7 +21,7 @@ in {
   imports = [
     ./hardware-configuration.nix
     # <home-manager/nixos>
-    (import "${home-manager}/nixos")
+    # (import "${home-manager}/nixos")
     # <sops-nix/modules/sops>
     hyprland.nixosModules.default
   ];
@@ -44,11 +44,11 @@ in {
     };
     zsh.enable = true;
   };
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    users.root = import ./home_root.nix;
-  };
+  # home-manager = {
+  #   useUserPackages = true;
+  #   useGlobalPkgs = true;
+  #   # users.root = import ./home_root.nix;
+  # };
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";
@@ -194,7 +194,7 @@ in {
     btrfs-progs
     btrfs-snap
     crate2nix
-    cleanup_dir
+    # cleanup_dir
     exa
     expect
     gcc
@@ -249,7 +249,6 @@ in {
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
