@@ -9,6 +9,7 @@
   };
   outputs = { self, nixpkgs, hyprland, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations = {
+      nix.nixPath = [ "nixpkgs=/etc/nixos" ];
       zero = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
