@@ -4,13 +4,6 @@ let
     pkgs.callPackage /home/geri/projects/rust/print_email_ids { };
   print_workspace_string =
     pkgs.callPackage /home/geri/projects/rust/print_workspace_string { };
-  mach-nix = import (builtins.fetchGit {
-    url = "https://github.com/DavHau/mach-nix";
-    ref = "refs/tags/3.5.0";
-  }) { };
-  # sops-nix = inputs.sops-nix;
-  calcure = mach-nix.buildPythonPackage
-    "https://github.com/anufrievroman/calcure/archive/refs/tags/2.6.tar.gz";
 in {
   # imports = [ <sops-nix/modules/home-manager/sops.nix> ];
   # imports = [ sops-nix.homeManagerModules.sops ];
