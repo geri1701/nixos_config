@@ -1,9 +1,7 @@
 { self, input, config, pkgs, lib, ... }:
 let
-  print_email_ids =
-    pkgs.callPackage /home/geri/projects/rust/print_email_ids { };
-  print_workspace_string =
-    pkgs.callPackage /home/geri/projects/rust/print_workspace_string { };
+  print_email_ids = { };
+  print_workspace_string = { };
 in {
   # imports = [ <sops-nix/modules/home-manager/sops.nix> ];
   # imports = [ sops-nix.homeManagerModules.sops ];
@@ -205,8 +203,8 @@ in {
       obsidian
       oculante
       p7zip
-      print_email_ids
-      print_workspace_string
+      # print_email_ids
+      # print_workspace_string
       sirula
       slurp
       thunderbird # maybe enable?
@@ -503,5 +501,4 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.11";
-
 }
