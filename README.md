@@ -1,4 +1,4 @@
-# My Personal NixOS Configuration Repository
+# My NixOS Configuration
 
 This repository contains the configuration files for my NixOS system:
 
