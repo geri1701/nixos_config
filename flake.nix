@@ -14,9 +14,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
-          {
-            programs.hyprland.enable = true;
-          }
+          { programs.hyprland.enable = true; }
           {
             home-manager = {
               useGlobalPkgs = true;
