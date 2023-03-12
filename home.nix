@@ -199,6 +199,7 @@ in {
       mpdevil
       mpv
       nil
+      notify
       obsidian
       oculante
       p7zip
