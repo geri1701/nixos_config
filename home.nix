@@ -5,7 +5,7 @@ let
 in {
   sops = {
     age.keyFile = "/home/geri/.config/sops/age/keys.txt";
-    defaultSopsFile = ./secrets/zero.yaml;
+    defaultSopsFile = ./sec/zero.yaml;
     secrets = {
       amazon = { };
       discord = { };
