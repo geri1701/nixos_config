@@ -1,5 +1,5 @@
 # Help is available in the configuration.nix(5) man page
-{ sops-nix, config, pkgs, ... }:
+{ sops-nix, config, pkgs, lib, ... }:
 let
   flake-compat = builtins.fetchTarball {
     url = "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
@@ -11,7 +11,6 @@ let
       sha256 = "1hcdva21a5h381aa69cr6bdh5yj9971lrcsyha7wmbywis9y5nn8";
     };
   }).defaultNix;
-  cleanup_dir = { };
 in {
   imports = [ ./hardware-configuration.nix hyprland.nixosModules.default ];
   programs = {
@@ -82,8 +81,20 @@ in {
     description = "sort files";
     serviceConfig = {
       Type = "oneshot";
-      ExecStart =
-        "/nix/store/kxmgmfwv10r32x9z06a4c2fh2w6p3qf5-system-path/bin/cleanup_dir /home/geri/mail_att /home/geri/mail_att";
+      ExecStart = lib.mkForce (pkgs.writeShellScript "clean_att_dir" ''
+        mkdir -p /home/geri/mail_att/gehalt /home/geri/mail_att/rechnung
+        shopt -s nocaseglob
+        for file in "/home/geri/mail_att"/*{gehalt,rechnung}*; do
+            if [[ -f "$file" ]]; then
+                if echo "$file" | grep -qi "gehalt"; then
+                    mv "$file" "/home/geri/mail_att/gehalt" >/dev/null 2>&1
+                elif echo "$file" | grep -qi "rechnung"; then
+                    mv "$file" "/home/geri/mail_att/rechnung" >/dev/null 2>&1
+                fi
+            fi
+        done
+        shopt -u nocaseglob
+      '');
     };
     wantedBy = [ "multi-user.target" ];
   };
