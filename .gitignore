@@ -1,4 +1,2 @@
-secrets/
-hardware-configuration.nix
 config.nix
 hyprland.conf
