@@ -12,6 +12,7 @@ in {
       github = { };
       gmx = { };
       google = { };
+      gtoken = { };
       humble = { };
       iee = { };
       manning = { };
