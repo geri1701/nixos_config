@@ -470,7 +470,26 @@ in {
         }
       '';
     };
-    dunst.enable = true;
+    dunst = {
+      enable = true;
+      settings = {
+        global = {
+          width = 300;
+          height = 300;
+          offset = "30x50";
+          origin = "top-right";
+          transparency = 10;
+          frame_color = "#586e75";
+          font = "Droid Sans 9";
+        };
+
+        urgency_normal = {
+          background = "#073642";
+          foreground = "#93a1a1";
+          timeout = 10;
+        };
+      };
+    };
     pasystray.enable = true;
     gnome-keyring.enable = true;
   };
