@@ -199,7 +199,7 @@ in {
       mpdevil
       mpv
       nil
-      notify
+      libnotify
       obsidian
       oculante
       p7zip
