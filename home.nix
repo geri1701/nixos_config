@@ -245,6 +245,7 @@ in {
         }
       ];
     };
+    notmuch.enable = true;
     himalaya = {
       enable = true;
       settings = {
