@@ -94,7 +94,7 @@ in {
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,sirula
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
-      bind=SUPER,E,exec,nemo
+      bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
       bind=ALT,SPACE,exec,~/.config/rofi/bin/app-launcher.sh
       bind=SUPER,V,pseudo
@@ -143,7 +143,6 @@ in {
       calcure
       cht-sh
       chafa
-      cinnamon.nemo-with-extensions
       ddgr
       discord
       exercism
@@ -165,6 +164,7 @@ in {
       libnotify
       obsidian
       oculante
+      pcmanfm
       p7zip
       # print_email_ids
       # print_workspace_string
