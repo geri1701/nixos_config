@@ -186,7 +186,6 @@ in {
     btrfs-progs
     btrfs-snap
     crate2nix
-    # cleanup_dir
     exa
     expect
     gcc
