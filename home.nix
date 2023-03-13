@@ -38,7 +38,7 @@ in {
       monitor=,preferred,auto,1
       exec-once=dunst
       exec-once=waybar 
-      exec-once=hyprpaper
+      exec-once=swaybg -i /home/geri/Pictures/wallpaper_logo.png
       exec-once=steam
       input {
           kb_file=
@@ -150,7 +150,6 @@ in {
       fsuae-launcher
       glow
       grim
-      hyprpaper
       inkscape-with-extensions
       joshuto
       lesspass-cli
@@ -170,6 +169,7 @@ in {
       # print_workspace_string
       sirula
       slurp
+      swaybg
       tixati
       tldr
       translate-shell
