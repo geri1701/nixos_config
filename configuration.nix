@@ -223,10 +223,6 @@ in {
     vulkan-tools
     wget
     zoxide
-    (pkgs.pidgin.overrideAttrs (oldAttrs: {
-      configFile = "~/.purple/accounts.xml";
-      configFile1 = "~/.purple/prefs.xml";
-    }))
   ];
   ## DEFAULT shell
   #
