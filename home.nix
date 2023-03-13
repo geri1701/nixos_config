@@ -1,4 +1,4 @@
-{ self, input, config, pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   print_email_ids = { };
   print_workspace_string = { };
@@ -289,13 +289,24 @@ in {
       delta = {
         enable = true;
         options = {
-          decorations = {
-            commit-decoration-style = "bold yellow box ul";
-            file-decoration-style = "none";
-            file-style = "bold yellow ul";
-          };
-          features = "decorations";
-          whitespace-error-style = "22 reverse";
+          dark = "true";
+          file-style = "omit";
+          hunk-header-decoration-style = "omit";
+          hunk-header-file-style = "magenta";
+          hunk-header-line-number-style = "dim magenta";
+          hunk-header-style = "file line-number syntax";
+          line-numbers = "false";
+          minus-emph-style = "bold red 52";
+          minus-empty-line-marker-style = "normal #3f0001";
+          minus-non-emph-style = "dim red";
+          minus-style = "bold red";
+          plus-emph-style = "bold green 22";
+          plus-empty-line-marker-style = "normal #002800";
+          plus-non-emph-style = "dim green";
+          plus-style = "bold green";
+          syntax-theme = "OneHalfDark";
+          whitespace-error-style = "reverse red";
+          zero-style = "dim syntax";
         };
       };
     };
