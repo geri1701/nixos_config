@@ -152,7 +152,7 @@ in {
       grim
       inkscape-with-extensions
       joshuto
-      lesspass-cli
+      kalker
       libsForQt5.qtstyleplugin-kvantum
       luajitPackages.vicious
       lxqt.lxqt-qtplugin
@@ -245,7 +245,6 @@ in {
         }
       ];
     };
-    notmuch.enable = true;
     himalaya = {
       enable = true;
       settings = {
