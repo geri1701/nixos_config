@@ -139,55 +139,6 @@ in {
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-    packages = with pkgs; [
-      calcure
-      cht-sh
-      chafa
-      ddgr
-      discord
-      exercism
-      fsuae
-      fsuae-launcher
-      glow
-      grim
-      inkscape-with-extensions
-      joshuto
-      kalker
-      libsForQt5.qtstyleplugin-kvantum
-      luajitPackages.vicious
-      lxqt.lxqt-qtplugin
-      mpc-cli
-      mpdevil
-      mpv
-      nil
-      libnotify
-      obsidian
-      oculante
-      pcmanfm
-      p7zip
-      # print_email_ids
-      # print_workspace_string
-      sirula
-      slurp
-      swaybg
-      tixati
-      tldr
-      translate-shell
-      typespeed
-      unzip
-      vscode-extensions.vadimcn.vscode-lldb
-      wine
-      winetricks
-      wl-clipboard
-      wofi
-      xorg.xkill
-      xsel
-      yt-dlp
-      ytfzf
-      killall
-      zsh-autosuggestions
-      zsh-you-should-use
-    ];
   };
   programs = {
     home-manager.enable = true;

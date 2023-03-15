@@ -24,6 +24,7 @@
               extraSpecialArgs = { inherit inputs; };
               users.geri.imports = [
                 ./home.nix
+                ./user-packages.nix
                 sops-nix.homeManagerModules.sops
                 hyprland.homeManagerModules.default
               ];
