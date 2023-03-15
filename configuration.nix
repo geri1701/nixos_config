@@ -1,21 +1,6 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
   imports = [ ./hardware-configuration.nix ];
-  programs = {
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-    dconf.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall =
-        true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall =
-        true; # Open ports in the firewall for Source Dedicated Server
-    };
-    zsh.enable = true;
-  };
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";
