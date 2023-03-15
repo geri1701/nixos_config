@@ -13,9 +13,10 @@
       zero = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./boot.nix
+          ./system-options.nix
           ./configuration.nix
           ./system-packages.nix
-          ./system-options.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
