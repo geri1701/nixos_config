@@ -26,6 +26,7 @@
                 ./home.nix
                 ./user-packages.nix
                 ./sops.nix
+                ./hyprland.nix
                 sops-nix.homeManagerModules.sops
                 hyprland.homeManagerModules.default
               ];
