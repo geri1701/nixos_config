@@ -3,34 +3,6 @@ let
   print_email_ids = { };
   print_workspace_string = { };
 in {
-  sops = {
-    age.keyFile = "/home/geri/.config/sops/age/keys.txt";
-    defaultSopsFile = ./sec/zero.yaml;
-    secrets = {
-      amazon = { };
-      discord = { };
-      github = { };
-      gmx = { };
-      google = { };
-      gtoken = { };
-      humble = { };
-      iee = { };
-      manning = { };
-      mechanicalkeyboardsdotcom = { };
-      no_starch_press = { };
-      packt = { };
-      paypal = { };
-      pine64_forum = { };
-      pine64_support = { };
-      planery = { };
-      scratch = { };
-      sdf = { };
-      steam = { };
-      thalia = { };
-      typingclub = { };
-      wienenergie = { };
-    };
-  };
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   wayland.windowManager.hyprland = {
     enable = true;
