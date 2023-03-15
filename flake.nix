@@ -15,6 +15,7 @@
         modules = [
           ./configuration.nix
           ./system-packages.nix
+          ./system-options.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
