@@ -1,27 +1,5 @@
 # Help is available in the configuration.nix(5) man page
-{ sops-nix, config, pkgs, lib, ... }: {
-  systemd.services.sort-att-dir = {
-    description = "sort files";
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = lib.mkForce (pkgs.writeShellScript "clean_att_dir" ''
-        mkdir -p /home/geri/mail_att/gehalt /home/geri/mail_att/rechnung
-        shopt -s nocaseglob
-        for file in "/home/geri/mail_att"/*{gehalt,rechnung}*; do
-            if [[ -f "$file" ]]; then
-                if echo "$file" | grep -qi "gehalt"; then
-                    mv "$file" "/home/geri/mail_att/gehalt" >/dev/null 2>&1
-                elif echo "$file" | grep -qi "rechnung"; then
-                    mv "$file" "/home/geri/mail_att/rechnung" >/dev/null 2>&1
-                fi
-            fi
-        done
-        shopt -u nocaseglob
-      '');
-    };
-    wantedBy = [ "multi-user.target" ];
-  };
-
+{ sops-nix, config, pkgs, ... }: {
   time.timeZone = "Europe/Vienna";
   i18n = {
     defaultLocale = "en_US.UTF-8";
