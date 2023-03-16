@@ -1,6 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  console = { useXkbConfig = true; };
   systemd.services.mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   virtualisation.docker = {
     enable = true;

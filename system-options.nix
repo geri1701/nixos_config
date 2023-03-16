@@ -1,4 +1,5 @@
 { pkgs, lib, ... }: {
+  console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   fileSystems = {
     "/" = {
