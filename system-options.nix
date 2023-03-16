@@ -54,6 +54,24 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
   };
+  services = {
+    openssh = {
+      enable = false;
+      settings = { PasswordAuthentication = false; };
+    };
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
+    printing.enable = true;
+    fstrim = {
+      enable = true;
+      interval = "weekly";
+    };
+  };
   systemd.services.sort-att-dir = {
     description = "sort files";
     serviceConfig = {

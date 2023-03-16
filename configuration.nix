@@ -1,23 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  services = {
-    openssh = {
-      enable = false;
-      settings = { PasswordAuthentication = false; };
-    };
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-    };
-    printing.enable = true;
-    fstrim = {
-      enable = true;
-      interval = "weekly";
-    };
-  };
   console = { useXkbConfig = true; };
   systemd.services.mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   virtualisation.docker = {
