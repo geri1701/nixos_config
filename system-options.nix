@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  environment.sessionVariables.EDITOR = "hx";
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";

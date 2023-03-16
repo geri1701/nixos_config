@@ -1,6 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
-  environment.sessionVariables.EDITOR = "hx";
   virtualisation.libvirtd.enable = true;
   systemd.services.sort-att-dir = {
     description = "sort files";
