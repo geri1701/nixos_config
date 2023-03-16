@@ -98,5 +98,11 @@
     };
   };
   time.timeZone = "Europe/Vienna";
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
+    libvirtd.enable = true;
+  };
 }

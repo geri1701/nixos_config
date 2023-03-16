@@ -1,9 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-  };
   # Enable flakes
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
