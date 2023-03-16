@@ -41,6 +41,10 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
+  };
   programs = {
     gnupg.agent = {
       enable = true;

@@ -1,10 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  # Enable flakes
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
-  };
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
