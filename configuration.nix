@@ -1,14 +1,6 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
   environment.sessionVariables.EDITOR = "hx";
-  networking = {
-    hostName = "zero";
-    wireless.enable = false;
-    networkmanager = {
-      enable = true;
-      insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
-    };
-  };
   virtualisation.libvirtd.enable = true;
   systemd.services.sort-att-dir = {
     description = "sort files";

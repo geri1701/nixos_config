@@ -17,6 +17,14 @@
       options = [ "defaults" "noatime" "nodiratime" ];
     };
   };
+  networking = {
+    hostName = "zero";
+    wireless.enable = false;
+    networkmanager = {
+      enable = true;
+      insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
+    };
+  };
   programs = {
     gnupg.agent = {
       enable = true;
