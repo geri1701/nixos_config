@@ -40,4 +40,5 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
   };
+  virtualisation.libvirtd.enable = true;
 }

@@ -1,6 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
-  virtualisation.libvirtd.enable = true;
   systemd.services.sort-att-dir = {
     description = "sort files";
     serviceConfig = {
