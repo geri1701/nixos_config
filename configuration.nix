@@ -1,6 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
-  imports = [ ./hardware-configuration.nix ];
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";

@@ -17,6 +17,7 @@
           ./system-options.nix
           ./configuration.nix
           ./system-packages.nix
+          ./hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
