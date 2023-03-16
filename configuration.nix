@@ -132,7 +132,6 @@
     terminus_font
   ];
   nixpkgs.config.allowUnfree = true;
-  environment.defaultPackages = [ ];
   users.defaultUserShell = pkgs.zsh;
   security.polkit.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
