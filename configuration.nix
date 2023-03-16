@@ -1,23 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, lib, ... }: {
-  fileSystems = {
-    "/" = {
-      device = "/dev/disk/by-label/root";
-      fsType = "ext4";
-      options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
-    };
-    "/home" = {
-      device = "/dev/disk/by-label/home";
-      fsType = "ext4";
-      options = [ "rw" "noatime" "discard" "nodelalloc" "errors=remount-ro" ];
-      neededForBoot = true;
-    };
-    "/mnt/data" = {
-      device = "/dev/disk/by-label/slow";
-      fsType = "ext4";
-      options = [ "defaults" "noatime" "nodiratime" ];
-    };
-  };
   environment.sessionVariables.EDITOR = "hx";
   networking = {
     hostName = "zero";
