@@ -253,4 +253,5 @@ in {
       package = waybar_exp;
     };
   };
+  xdg.enable = true;
 }

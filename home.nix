@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-  xdg.enable = true;
   home = {
     username = "geri";
     homeDirectory = "/home/geri";
