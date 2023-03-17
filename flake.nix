@@ -25,6 +25,7 @@
               extraSpecialArgs = { inherit inputs; };
               users.geri.imports = [
                 ./home.nix
+                ./user-options.nix
                 ./user-packages.nix
                 ./sops.nix
                 ./hyprland.nix
