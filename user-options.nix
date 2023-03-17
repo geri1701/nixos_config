@@ -1,135 +1,23 @@
 { pkgs, ... }:
 let
-  print_email_ids = { };
-  print_workspace_string = { };
+  waybar_exp = (pkgs.waybar.overrideAttrs (oldAttrs: {
+    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+  }));
 in {
-  sops = {
-    age.keyFile = "/home/geri/.config/sops/age/keys.txt";
-    defaultSopsFile = ./sec/zero.yaml;
-    secrets = {
-      amazon = { };
-      discord = { };
-      github = { };
-      gmx = { };
-      google = { };
-      gtoken = { };
-      humble = { };
-      iee = { };
-      manning = { };
-      mechanicalkeyboardsdotcom = { };
-      no_starch_press = { };
-      packt = { };
-      paypal = { };
-      pine64_forum = { };
-      pine64_support = { };
-      planery = { };
-      scratch = { };
-      sdf = { };
-      steam = { };
-      thalia = { };
-      typingclub = { };
-      wienenergie = { };
+  gtk = {
+    enable = true;
+    font.name = "Victor Mono SemiBold 12";
+    theme = {
+      name = "SolArc-Dark";
+      package = pkgs.solarc-gtk-theme;
+    };
+    iconTheme = {
+      name = "material-black";
+      package = pkgs.tela-icon-theme;
     };
   };
-  systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
-  wayland.windowManager.hyprland = {
-    enable = true;
-    extraConfig = ''
-      monitor=,preferred,auto,1
-      exec-once=dunst
-      exec-once=waybar 
-      exec-once=swaybg -i /home/geri/Pictures/wallpaper_logo.png
-      exec-once=steam
-      input {
-          kb_file=
-          kb_layout= us
-          kb_variant= altgr-intl
-          kb_model=
-          kb_options= caps:escape
-          kb_rules=
-          follow_mouse=1
-          touchpad {
-              natural_scroll=no
-          }
-          sensitivity=0 # -1.0 - 1.0, 0 means no modification.
-      }
-      general {
-          gaps_in=6
-          gaps_out=15
-          border_size=0
-          col.active_border= 0x44FF7F00
-          col.inactive_border=0x66333333
-          apply_sens_to_raw=0 
-      }
-      decoration {
-          rounding=15
-          blur=1
-          blur_size=3 # minimum 1
-          blur_passes=1 # minimum 1
-          blur_new_optimizations=1
-      }
-      bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-      animations {
-          enabled=1
-          #animation=windows,1,2,default
-          animation=border,1,3,default
-          animation=fade,1,3,default
-          animation=workspaces,1,6,default
-          animation=windows,1,8,myBezier, popin 80%
-      }
-      dwindle {
-          pseudotile=0 # enable pseudotiling on dwindle
-      }
-      gestures {
-          workspace_swipe=no
-      }
-      windowrule=float,^(xdg-desktop-portal-gnome)$
-      windowrule=float,^(Rofi)$
-      windowrule=float,^(jetbrains-studio)$
-      bindm=SUPER,mouse:272,movewindow
-      bindm=SUPER,mouse:273,resizewindow
-      bind=SUPER,Q,exec,wezterm
-      bind=SUPER,RETURN,exec,wezterm
-      bind=SUPER,C,killactive,
-      bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
-      bind=SUPER,P,exec,sirula
-      bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
-      bind=SUPER,E,exec,pcmanfm
-      bind=SUPER,F,togglefloating,
-      bind=ALT,SPACE,exec,~/.config/rofi/bin/app-launcher.sh
-      bind=SUPER,V,pseudo
-      bind=SUPER,h,movefocus,l
-      bind=SUPER,l,movefocus,r
-      bind=SUPER,k,movefocus,u
-      bind=SUPER,j,movefocus,d
-      bind=SUPER,1,workspace,1
-      bind=SUPER,2,workspace,2
-      bind=SUPER,3,workspace,3
-      bind=SUPER,4,workspace,4
-      bind=SUPER,5,workspace,5
-      bind=SUPER,6,workspace,6
-      bind=SUPER,7,workspace,7
-      bind=SUPER,8,workspace,8
-      bind=SUPER,9,workspace,9
-      bind=SUPER,0,workspace,10
-      bind=ALT,1,movetoworkspace,1
-      bind=ALT,2,movetoworkspace,2
-      bind=ALT,3,movetoworkspace,3
-      bind=ALT,4,movetoworkspace,4
-      bind=ALT,5,movetoworkspace,5
-      bind=ALT,6,movetoworkspace,6
-      bind=ALT,7,movetoworkspace,7
-      bind=ALT,8,movetoworkspace,8
-      bind=ALT,9,movetoworkspace,9
-      bind=ALT,0,movetoworkspace,10
-      bind=SUPER,mouse_down,workspace,e+1
-      bind=SUPER,mouse_up,workspace,e-1
-      bind = SUPER,Tab,cyclenext,          # change focus
-      bind = SUPER,Tab,bringactivetotop,   # to top
-    '';
-  };
-  xdg.enable = true;
   home = {
+    stateVersion = "22.11";
     username = "geri";
     homeDirectory = "/home/geri";
     sessionVariables = {
@@ -139,55 +27,6 @@ in {
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-    packages = with pkgs; [
-      calcure
-      cht-sh
-      chafa
-      ddgr
-      discord
-      exercism
-      fsuae
-      fsuae-launcher
-      glow
-      grim
-      inkscape-with-extensions
-      joshuto
-      kalker
-      libsForQt5.qtstyleplugin-kvantum
-      luajitPackages.vicious
-      lxqt.lxqt-qtplugin
-      mpc-cli
-      mpdevil
-      mpv
-      nil
-      libnotify
-      obsidian
-      oculante
-      pcmanfm
-      p7zip
-      # print_email_ids
-      # print_workspace_string
-      sirula
-      slurp
-      swaybg
-      tixati
-      tldr
-      translate-shell
-      typespeed
-      unzip
-      vscode-extensions.vadimcn.vscode-lldb
-      wine
-      winetricks
-      wl-clipboard
-      wofi
-      xorg.xkill
-      xsel
-      yt-dlp
-      ytfzf
-      killall
-      zsh-autosuggestions
-      zsh-you-should-use
-    ];
   };
   programs = {
     home-manager.enable = true;
@@ -330,22 +169,21 @@ in {
       };
     };
     vscode.enable = true;
-    waybar.enable = true;
     wezterm = {
       enable = true;
       extraConfig = ''
         local wezterm = require 'wezterm';
         return {
           -- Fonts
-          font     	= wezterm.font("FantasqueSansMono"),
-          font_size	= 10.0, -- [12.0]
-          text_blink_rate = 0,  
+          font          = wezterm.font("FantasqueSansMono"),
+          font_size     = 10.0, -- [12.0]
+          text_blink_rate = 0,
           -- Colors
           color_scheme = "Silk Dark (base16)",
           -- Appearance
-          window_background_opacity   	= 0.9  	,
-          enable_tab_bar              	= false	,
-          hide_tab_bar_if_only_one_tab	= false	,
+          window_background_opacity     = 0.9   ,
+          enable_tab_bar                = false ,
+          hide_tab_bar_if_only_one_tab  = false ,
           window_close_confirmation = 'NeverPrompt',
           skip_close_confirmation_for_processes_named = {
             'bash',
@@ -359,13 +197,13 @@ in {
             'powershell.exe',
           },
           scrollback_lines = 6000,
-          	audible_bell = 'SystemBeep',
-        	visual_bell = {
-        		fade_in_duration_ms = 20,
-        		fade_out_duration_ms = 200,
-        		fade_in_function = 'Linear',
-        		fade_out_function = 'EaseOut',
-        	},
+                audible_bell = 'SystemBeep',
+                visual_bell = {
+                        fade_in_duration_ms = 20,
+                        fade_out_duration_ms = 200,
+                        fade_in_function = 'Linear',
+                        fade_out_function = 'EaseOut',
+                },
           keys = {
             {
               key = 'C',
@@ -373,7 +211,7 @@ in {
               action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
             },
           },
-        } 
+        }
       '';
     };
     zathura = {
@@ -433,6 +271,15 @@ in {
       };
     };
     starship.enable = true;
+    systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
+    waybar = {
+      enable = true;
+      package = waybar_exp;
+    };
+  };
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
   };
   services = {
     network-manager-applet.enable = true;
@@ -469,30 +316,5 @@ in {
     pasystray.enable = true;
     gnome-keyring.enable = true;
   };
-  gtk = {
-    enable = true;
-    font.name = "Victor Mono SemiBold 12";
-    theme = {
-      name = "SolArc-Dark";
-      package = pkgs.solarc-gtk-theme;
-    };
-    iconTheme = {
-      name = "material-black";
-      package = pkgs.tela-icon-theme;
-    };
-  };
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-  };
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "22.11";
-
+  xdg.enable = true;
 }

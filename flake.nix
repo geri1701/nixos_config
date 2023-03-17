@@ -13,16 +13,21 @@
       zero = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./boot.nix
+          ./system-options.nix
+          ./system-packages.nix
+          ./hardware-configuration.nix
           home-manager.nixosModules.home-manager
-          { programs.hyprland.enable = true; }
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs; };
               users.geri.imports = [
-                ./home.nix
+                ./user-options.nix
+                ./user-packages.nix
+                ./sops.nix
+                ./hyprland.nix
                 sops-nix.homeManagerModules.sops
                 hyprland.homeManagerModules.default
               ];
