@@ -19,6 +19,7 @@
       options = [ "defaults" "noatime" "nodiratime" ];
     };
   };
+  hardware.pulseaudio.enable = false;
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -64,6 +65,7 @@
       enable = false;
       settings = { PasswordAuthentication = false; };
     };
+    sound.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
