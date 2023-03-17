@@ -63,6 +63,7 @@
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
   };
+  nixpkgs.config.allowUnfree = true;
   programs = {
     gnupg.agent = {
       enable = true;
@@ -147,4 +148,6 @@
     enable = true;
     wlr.enable = true;
   };
+  ### Enable touchpad support (enabled default in most desktopManager).
+  ### services.xserver.libinput.enable = true;
 }
