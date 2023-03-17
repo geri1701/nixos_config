@@ -2,10 +2,6 @@
 { sops-nix, config, pkgs, ... }: {
   ### Enable touchpad support (enabled default in most desktopManager).
   ### services.xserver.libinput.enable = true;
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-  };
   fonts.fonts = with pkgs; [
     dina-font
     fantasque-sans-mono
