@@ -247,6 +247,7 @@ in {
       };
     };
     starship.enable = true;
+    systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
     waybar = {
       enable = true;
       package = waybar_exp;

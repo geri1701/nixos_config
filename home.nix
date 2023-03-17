@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-  systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg.enable = true;
   home = {
     username = "geri";
