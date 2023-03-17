@@ -1,15 +1,4 @@
 { pkgs, ... }: {
-  home = {
-    username = "geri";
-    homeDirectory = "/home/geri";
-    sessionVariables = {
-      EDITOR = "hx";
-      TERM = "wezterm";
-      QT_STYLE_OVERRIDE = "kvantum";
-      GTK_USE_PORTAL = 1;
-      MOZ_ENABLE_WAYLAND = 1;
-    };
-  };
   services = {
     network-manager-applet.enable = true;
     mpd = {
