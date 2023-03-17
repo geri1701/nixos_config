@@ -93,7 +93,6 @@
       enable = false;
       settings = { PasswordAuthentication = false; };
     };
-    sound.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -107,6 +106,7 @@
       interval = "weekly";
     };
   };
+  sound.enable = true;
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
     sort-att-dir = {
@@ -132,11 +132,13 @@
     };
   };
   time.timeZone = "Europe/Vienna";
-  users.users.geri = {
-    isNormalUser = true;
-    description = "geri";
+  users = {
     defaultUserShell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+    users.geri = {
+      isNormalUser = true;
+      description = "geri";
+      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+    };
   };
   virtualisation = {
     docker = {
