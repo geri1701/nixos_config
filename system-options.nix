@@ -133,6 +133,7 @@
   users.users.geri = {
     isNormalUser = true;
     description = "geri";
+    defaultUserShell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
   };
   virtualisation = {
