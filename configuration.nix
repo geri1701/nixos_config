@@ -1,5 +1,6 @@
 # Help is available in the configuration.nix(5) man page
-{ sops-nix, config, pkgs, ... }: {
+{ sops-nix, config, pkgs, ... }:
+{
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -11,5 +12,4 @@
 
   # Before changing this value read the documentation for this option
   # e.g. man configuration.nix or on https://nixos.org/nixos/options.html.
-  system.stateVersion = "22.11";
 }

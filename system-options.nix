@@ -1,4 +1,5 @@
 { pkgs, lib, ... }: {
+  system.stateVersion = "22.11";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   fileSystems = {
