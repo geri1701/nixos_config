@@ -113,6 +113,11 @@
     };
   };
   time.timeZone = "Europe/Vienna";
+  users.users.geri = {
+    isNormalUser = true;
+    description = "geri";
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+  };
   virtualisation = {
     docker = {
       enable = true;

@@ -2,11 +2,6 @@
 { sops-nix, config, pkgs, ... }: {
   ### Enable touchpad support (enabled default in most desktopManager).
   ### services.xserver.libinput.enable = true;
-  users.users.geri = {
-    isNormalUser = true;
-    description = "geri";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
-  };
   xdg.portal = {
     enable = true;
     wlr.enable = true;
