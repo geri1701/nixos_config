@@ -1,12 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  qt.enable = true;
-  qt.platformTheme = "gtk2";
-  qt.style = "gtk2";
-
   ### Enable touchpad support (enabled default in most desktopManager).
   ### services.xserver.libinput.enable = true;
-
   users.users.geri = {
     isNormalUser = true;
     description = "geri";

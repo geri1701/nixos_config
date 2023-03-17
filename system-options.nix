@@ -60,6 +60,11 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
   };
+  qt = {
+    enable = true;
+    platformTheme = "gtk2";
+    style = "gtk2";
+  };
   security = {
     polkit.enable = true;
     rtkit.enable = true;
