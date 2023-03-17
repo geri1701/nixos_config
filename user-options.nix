@@ -4,6 +4,18 @@ let
     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
   }));
 in {
+  gtk = {
+    enable = true;
+    font.name = "Victor Mono SemiBold 12";
+    theme = {
+      name = "SolArc-Dark";
+      package = pkgs.solarc-gtk-theme;
+    };
+    iconTheme = {
+      name = "material-black";
+      package = pkgs.tela-icon-theme;
+    };
+  };
   home = {
     username = "geri";
     homeDirectory = "/home/geri";
@@ -263,6 +275,10 @@ in {
       enable = true;
       package = waybar_exp;
     };
+  };
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
   };
   services = {
     network-manager-applet.enable = true;
