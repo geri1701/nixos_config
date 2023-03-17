@@ -1,6 +1,5 @@
 # Help is available in the configuration.nix(5) man page
 { sops-nix, config, pkgs, ... }: {
-  security.rtkit.enable = true;
   qt.enable = true;
   qt.platformTheme = "gtk2";
   qt.style = "gtk2";
@@ -36,6 +35,7 @@
   ];
   nixpkgs.config.allowUnfree = true;
   users.defaultUserShell = pkgs.zsh;
+  security.rtkit.enable = true;
   security.polkit.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

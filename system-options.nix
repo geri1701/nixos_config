@@ -60,6 +60,10 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
   };
+  security = {
+    polkit.enable = true;
+    rtkit.enable = true;
+  };
   services = {
     openssh = {
       enable = false;
