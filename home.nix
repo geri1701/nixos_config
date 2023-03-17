@@ -1,11 +1,4 @@
-{ pkgs, ... }:
-let
-  print_email_ids = { };
-  print_workspace_string = { };
-  waybar_exp = (pkgs.waybar.overrideAttrs (oldAttrs: {
-    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-  }));
-in {
+{ pkgs, ... }: {
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg.enable = true;
   home = {
@@ -160,10 +153,6 @@ in {
       };
     };
     vscode.enable = true;
-    waybar = {
-      enable = true;
-      package = waybar_exp;
-    };
     wezterm = {
       enable = true;
       extraConfig = ''

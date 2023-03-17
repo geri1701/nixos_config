@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let print_email_ids = { };
+in {
   home.packages = with pkgs; [
     calcure
     cht-sh
@@ -26,7 +28,6 @@
     pcmanfm
     p7zip
     # print_email_ids
-    # print_workspace_string
     sirula
     slurp
     swaybg
@@ -49,3 +50,4 @@
     zsh-you-should-use
   ];
 }
+
