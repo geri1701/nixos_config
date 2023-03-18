@@ -151,6 +151,29 @@
     enable = true;
     wlr.enable = true;
   };
+  stylix.image = ./wallpaper_logo.png;
+  stylix.polarity = "dark";
+  stylix.fonts = {
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "Fantasque Sans";
+    };
+
+    monospace = {
+      package = pkgs.dejavu_fonts;
+      name = "Fantasque Sans Mono";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
   ### Enable touchpad support (enabled default in most desktopManager).
   ### services.xserver.libinput.enable = true;
 }

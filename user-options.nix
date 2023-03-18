@@ -4,18 +4,7 @@ let
     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
   }));
 in {
-  gtk = {
-    enable = true;
-    font.name = "Victor Mono SemiBold 12";
-    theme = {
-      name = "SolArc-Dark";
-      package = pkgs.solarc-gtk-theme;
-    };
-    iconTheme = {
-      name = "material-black";
-      package = pkgs.tela-icon-theme;
-    };
-  };
+  gtk = { enable = true; };
   home = {
     stateVersion = "22.11";
     username = "geri";
@@ -292,29 +281,12 @@ in {
         }
       '';
     };
-    dunst = {
-      enable = true;
-      settings = {
-        global = {
-          width = 300;
-          height = 300;
-          offset = "30x50";
-          origin = "top-right";
-          transparency = 10;
-          frame_color = "#586e75";
-          font = "Droid Sans 9";
-        };
-
-        urgency_normal = {
-          background = "#073642";
-          foreground = "#93a1a1";
-          timeout = 10;
-        };
-      };
-    };
+    dunst = { enable = true; };
     pasystray.enable = true;
     gnome-keyring.enable = true;
   };
+  stylix.targets.helix.enable = false;
+  stylix.targets.vscode.enable = false;
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg.enable = true;
 }
