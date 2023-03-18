@@ -155,6 +155,7 @@ in {
         "layout.css.devPixelsPerPx" = "0.65";
         "extensions.webextensions.tabhide.enabled" = true;
         "browser.startup.homepage" = "localhost:9090/bookmarks";
+        "browser.sessionstore.resume_from_crash" = false;
       };
     };
     vscode.enable = true;

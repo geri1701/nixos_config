@@ -24,7 +24,6 @@
             {
               home-manager = {
                 useGlobalPkgs = true;
-                useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./user-options.nix
