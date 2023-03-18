@@ -271,7 +271,6 @@ in {
       };
     };
     starship.enable = true;
-    systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
     waybar = {
       enable = true;
       package = waybar_exp;
@@ -316,5 +315,6 @@ in {
     pasystray.enable = true;
     gnome-keyring.enable = true;
   };
+  systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg.enable = true;
 }
