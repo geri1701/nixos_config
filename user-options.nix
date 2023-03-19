@@ -25,6 +25,10 @@ in {
       enable = true;
       extraConfig = {
         general = { unsafe-accounts-conf = true; };
+        ui = {
+          styleset-name = "styleset";
+          timestamp-format = "02 Jan 06 15:04:05";
+        };
         filters = {
           "text/plain" = "cat";
           "text/html" = "w3m -I %{charset} -T text/html -cols 125";
