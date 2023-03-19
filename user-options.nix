@@ -23,6 +23,7 @@ in {
   programs = {
     aerc = {
       enable = true;
+      extraConfig.general.unsafe-accounts-conf = true;
       extraAccounts = {
         gmx = {
           source = "imaps://gschwa%40gmx.net@imap.gmx.net:993";
