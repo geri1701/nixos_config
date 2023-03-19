@@ -21,6 +21,7 @@ in {
     };
   };
   programs = {
+    aerc = { enable = true; };
     home-manager.enable = true;
     helix = {
       enable = true;
