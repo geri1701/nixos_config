@@ -23,7 +23,13 @@ in {
   programs = {
     aerc = {
       enable = true;
-      extraConfig.general.unsafe-accounts-conf = true;
+      extraConfig = {
+        general = { unsafe-accounts-conf = true; };
+        filters = {
+          "text/plain" = "cat";
+          "text/html" = "w3m -I %{charset} -T text/html -cols 125";
+        };
+      };
       extraAccounts = {
         gmx = {
           source = "imaps://gschwa%40gmx.net@imap.gmx.net:993";
@@ -282,5 +288,5 @@ in {
   stylix.targets.helix.enable = false;
   stylix.targets.vscode.enable = false;
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
-  xdg.enable = true;
+  xdg = { enable = true; };
 }

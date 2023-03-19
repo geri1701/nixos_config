@@ -41,6 +41,7 @@ in {
     typespeed
     unzip
     vscode-extensions.vadimcn.vscode-lldb
+    w3m
     wine
     winetricks
     wl-clipboard
