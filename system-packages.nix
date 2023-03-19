@@ -9,7 +9,6 @@
       exa
       expect
       gcc
-      git
       glibc
       gnumake
       gnupg

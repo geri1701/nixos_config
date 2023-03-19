@@ -66,6 +66,10 @@
   };
   nixpkgs.config.allowUnfree = true;
   programs = {
+    git = {
+      enable = true;
+      package = pkgs.gitFull;
+    };
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;

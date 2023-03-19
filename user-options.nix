@@ -21,6 +21,32 @@ in {
     };
   };
   programs = {
+    aerc = {
+      enable = true;
+      extraConfig.general.unsafe-accounts-conf = true;
+      extraAccounts = {
+        gmx = {
+          source = "imaps://gschwa%40gmx.net@imap.gmx.net:993";
+          outgoing = "smtp+plain://gschwa%40gmx.net@mail.gmx.net:587";
+          default = "INBOX";
+          smtp-starttls = "yes";
+          source-cred-cmd = "cat /run/user/1000/secrets/gmx";
+          outgoing-cred-cmd = "cat /run/user/1000/secrets/gmx";
+          from = "Gerhard <gschwa@gmx.net>";
+          copy-to = "Sent";
+        };
+        sdf = {
+          source = "imaps://geri@mx.sdf.org:993";
+          outgoing = "smtp+plain://geri@mx.sdf.org:587";
+          default = "INBOX";
+          smtp-starttls = "yes";
+          source-cred-cmd = "cat /run/user/1000/secrets/sdf";
+          outgoing-cred-cmd = "cat /run/user/1000/secrets/sdf";
+          from = "Gerhard <geri@sdf.org>";
+          copy-to = "Sent";
+        };
+      };
+    };
     home-manager.enable = true;
     helix = {
       enable = true;
@@ -75,43 +101,6 @@ in {
           formatter.command = "nixfmt";
         }
       ];
-    };
-    himalaya = {
-      enable = true;
-      settings = {
-        gmx = {
-          default = true;
-          email = "gschwa@gmx.net";
-          backend = "imap";
-          imap-host = "imap.gmx.net";
-          imap-port = 993;
-          imap-login = "gschwa@gmx.net";
-          imap-passwd-cmd = "cat /run/user/1000/secrets/gmx";
-          sender = "smtp";
-          smtp-host = "mail.gmx.net";
-          smtp-port = 587;
-          smtp-login = "gschwa@gmx.net";
-          smtp-passwd-cmd = "cat /run/user/1000/secrets/gmx";
-          email-listing-page-size = 50;
-          downloads-dir = "/home/geri/mail_att";
-        };
-        sdf = {
-          email = "geri@sdf.org";
-          backend = "imap";
-          imap-host = "mx.sdf.org";
-          imap-port = 993;
-          imap-login = "geri";
-          imap-passwd-cmd = "cat /run/user/1000/secrets/sdf";
-          sender = "smtp";
-          smtp-host = "mx.sdf.org";
-          smtp-port = 587;
-          smtp-starttls = true;
-          smtp-login = "geri";
-          smtp-passwd-cmd = "cat /run/user/1000/secrets/sdf";
-          email-listening-page-size = 50;
-          downloads-dir = "/home/geri/mail_att";
-        };
-      };
     };
     git = {
       enable = true;
