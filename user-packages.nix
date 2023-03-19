@@ -1,5 +1,10 @@
-{ pkgs, ... }:
-let print_email_ids = { };
+{ pkgs, lib, ... }:
+let
+  print_email_ids = (pkgs.writeShellScriptBin "print_email_ids" ''
+    input=$(sed -E 's/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g')
+    output=$(echo "$input" | awk 'NR > 1 {split($0,a," "); if (a[1] ~ /^[0-9]+$/) {printf("%s,",a[1])}}' | sed 's/,$//')
+    echo "$output" 
+  '');
 in {
   home.packages = with pkgs; [
     calcure
@@ -27,7 +32,7 @@ in {
     oculante
     pcmanfm
     p7zip
-    # print_email_ids
+    print_email_ids
     sirula
     slurp
     swaybg
