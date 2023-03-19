@@ -274,6 +274,7 @@ in {
     platformTheme = "gtk";
   };
   services = {
+    gpg-agent = { enable = true; };
     network-manager-applet.enable = true;
     mpd = {
       enable = true;
