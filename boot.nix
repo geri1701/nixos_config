@@ -1,11 +1,15 @@
 { pkgs, ... }: {
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-    initrd.kernelModules = [ "amdgpu" ];
-    kernelParams = [ "quiet" ];
+    initrd = {
+      kernelModules = [ "amdgpu" ];
+      systemd.enable = true;
+      verbose = false;
+    };
+    kernelParams = [ "quiet" "splash" ];
     cleanTmpDir = true;
     plymouth.enable = true;
-    initrd.systemd.enable = true;
+    consoleLogLevel = 0;
     loader = {
       efi.canTouchEfiVariables = true;
       timeout = 1;
@@ -13,6 +17,9 @@
         enable = true;
         device = "/dev/sda";
         useOSProber = true;
+        extraConfig = ''
+          set timeout_style=hidden
+        '';
       };
     };
   };
