@@ -9,7 +9,6 @@ in {
   home.packages = with pkgs; [
     calcure
     cht-sh
-    chafa
     ddgr
     discord
     exercism
@@ -46,8 +45,6 @@ in {
     winetricks
     wl-clipboard
     wofi
-    xorg.xkill
-    xsel
     yt-dlp
     ytfzf
     killall
