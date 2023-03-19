@@ -21,7 +21,31 @@ in {
     };
   };
   programs = {
-    aerc = { enable = true; };
+    aerc = {
+      enable = true;
+      extraAccounts = {
+        gmx = {
+          source = "imaps://gschwa%40gmx.net@imap.gmx.net:993";
+          outgoing = "smtp+plain://gschwa%40gmx.net@mail.gmx.net:587";
+          default = "INBOX";
+          smtp-starttls = "yes";
+          source-cred-cmd = "cat /run/user/1000/secrets/gmx";
+          outgoing-cred-cmd = "cat /run/user/1000/secrets/gmx";
+          from = "Gerhard <gschwa@gmx.net>";
+          copy-to = "Sent";
+        };
+        sdf = {
+          source = "imaps://geri%40sdf.org@mx.sdf.org:993";
+          outgoing = "smtp+plain://geri@mx.sdf.org:587";
+          default = "INBOX";
+          smtp-starttls = "yes";
+          source-cred-cmd = "cat /run/user/1000/secrets/sdf";
+          outgoing-cred-cmd = "cat /run/user/1000/secrets/sdf";
+          from = "Gerhard <geri@sdf.org>";
+          copy-to = "Sent";
+        };
+      };
+    };
     home-manager.enable = true;
     helix = {
       enable = true;
