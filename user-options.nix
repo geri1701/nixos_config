@@ -36,7 +36,7 @@ in {
           copy-to = "Sent";
         };
         sdf = {
-          source = "imaps://geri%40sdf.org@mx.sdf.org:993";
+          source = "imaps://geri@mx.sdf.org:993";
           outgoing = "smtp+plain://geri@mx.sdf.org:587";
           default = "INBOX";
           smtp-starttls = "yes";
