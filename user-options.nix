@@ -102,43 +102,6 @@ in {
         }
       ];
     };
-    himalaya = {
-      enable = true;
-      settings = {
-        gmx = {
-          default = true;
-          email = "gschwa@gmx.net";
-          backend = "imap";
-          imap-host = "imap.gmx.net";
-          imap-port = 993;
-          imap-login = "gschwa@gmx.net";
-          imap-passwd-cmd = "cat /run/user/1000/secrets/gmx";
-          sender = "smtp";
-          smtp-host = "mail.gmx.net";
-          smtp-port = 587;
-          smtp-login = "gschwa@gmx.net";
-          smtp-passwd-cmd = "cat /run/user/1000/secrets/gmx";
-          email-listing-page-size = 50;
-          downloads-dir = "/home/geri/mail_att";
-        };
-        sdf = {
-          email = "geri@sdf.org";
-          backend = "imap";
-          imap-host = "mx.sdf.org";
-          imap-port = 993;
-          imap-login = "geri";
-          imap-passwd-cmd = "cat /run/user/1000/secrets/sdf";
-          sender = "smtp";
-          smtp-host = "mx.sdf.org";
-          smtp-port = 587;
-          smtp-starttls = true;
-          smtp-login = "geri";
-          smtp-passwd-cmd = "cat /run/user/1000/secrets/sdf";
-          email-listening-page-size = 50;
-          downloads-dir = "/home/geri/mail_att";
-        };
-      };
-    };
     git = {
       enable = true;
       userName = "geri";
