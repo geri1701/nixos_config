@@ -18,7 +18,7 @@
             ./boot.nix
             ./system-options.nix
             ./system-packages.nix
-            ./hardware-configuration.nix
+            ./host-zero.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             {
