@@ -36,13 +36,22 @@
           blur_new_optimizations=1
       }
       bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-      animations {
-          enabled=1
-          #animation=windows,1,2,default
-          animation=border,1,3,default
-          animation=fade,1,3,default
-          animation=workspaces,1,6,default
-          animation=windows,1,8,myBezier, popin 80%
+      # animations {
+      #     enabled=1
+      #     #animation=windows,1,2,default
+      #     animation=border,1,3,default
+      #     animation=fade,1,3,default
+      #     animation=workspaces,1,6,default
+      #     animation=windows,1,8,myBezier, popin 80%
+      # }
+        animations {
+            enabled=1
+            bezier = overshot, 0.13, 0.99, 0.29, 1.1
+            animation = windows, 1, 4, overshot, slide
+            animation = windowsOut, 1, 5, default, popin 80%
+            animation = border, 1, 5, default
+            animation = fade, 1, 8, default
+            animation = workspaces, 1, 6, overshot, slidevert
       }
       dwindle {
           pseudotile=0 # enable pseudotiling on dwindle
