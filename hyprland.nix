@@ -5,7 +5,7 @@
       monitor=,preferred,auto,1
       exec-once=dunst
       exec-once=waybar 
-      exec-once=swaybg -i /home/geri/Pictures/wallpaper_logo.png
+      exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
       exec-once=steam
       input {
           kb_file=
