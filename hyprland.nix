@@ -28,6 +28,9 @@
           col.inactive_border=0x66333333
           apply_sens_to_raw=0 
       }
+      misc {
+         disable_hyprland_logo=true
+      }
       decoration {
           rounding=15
           blur=1
@@ -35,15 +38,6 @@
           blur_passes=1 # minimum 1
           blur_new_optimizations=1
       }
-      bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-      # animations {
-      #     enabled=1
-      #     #animation=windows,1,2,default
-      #     animation=border,1,3,default
-      #     animation=fade,1,3,default
-      #     animation=workspaces,1,6,default
-      #     animation=windows,1,8,myBezier, popin 80%
-      # }
         animations {
             enabled=1
             bezier = overshot, 0.13, 0.99, 0.29, 1.1
