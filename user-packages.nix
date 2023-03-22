@@ -64,7 +64,6 @@ in {
     sirula
     slurp
     swaybg
-    tixati
     tldr
     translate-shell
     typespeed
