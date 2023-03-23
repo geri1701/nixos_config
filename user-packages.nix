@@ -44,6 +44,7 @@ in {
     fsuae-launcher
     glow
     grim
+    img2sixel
     inkscape-with-extensions
     joshuto
     kalker
