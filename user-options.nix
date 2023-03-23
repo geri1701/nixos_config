@@ -170,51 +170,6 @@ in {
       };
     };
     vscode.enable = true;
-    wezterm = {
-      enable = true;
-      extraConfig = ''
-        local wezterm = require 'wezterm';
-        return {
-          -- Fonts
-          font          = wezterm.font("FantasqueSansMono"),
-          font_size     = 10.0, -- [12.0]
-          text_blink_rate = 0,
-          -- Colors
-          color_scheme = "Silk Dark (base16)",
-          -- Appearance
-          window_background_opacity     = 0.9   ,
-          enable_tab_bar                = false ,
-          hide_tab_bar_if_only_one_tab  = false ,
-          window_close_confirmation = 'NeverPrompt',
-          skip_close_confirmation_for_processes_named = {
-            'bash',
-            'sh',
-            'zsh',
-            'fish',
-            'tmux',
-            'nu',
-            'cmd.exe',
-            'pwsh.exe',
-            'powershell.exe',
-          },
-          scrollback_lines = 6000,
-                audible_bell = 'SystemBeep',
-                visual_bell = {
-                        fade_in_duration_ms = 20,
-                        fade_out_duration_ms = 200,
-                        fade_in_function = 'Linear',
-                        fade_out_function = 'EaseOut',
-                },
-          keys = {
-            {
-              key = 'C',
-              mods = 'CTRL',
-              action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
-            },
-          },
-        }
-      '';
-    };
     zathura = {
       enable = true;
       options = {
