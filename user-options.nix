@@ -190,7 +190,7 @@ in {
       '';
       sessionVariables = {
         EDITOR = "hx";
-        TERM = "wezterm";
+        TERM = "foot";
         DISABLE_AUTO_TITLE = "false";
         ENABLE_CORRECTION = "true";
         HIST_STAMPS = "%y-%m-%d";
