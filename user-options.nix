@@ -31,7 +31,7 @@ in {
         };
         filters = {
           "text/plain" = "cat";
-          "text/html" = "w3m -I %{charset} -T text/html -cols 125";
+          "text/html" = "w3m -sixel -I %{charset} -T text/html -cols 125";
         };
       };
       extraAccounts = {
