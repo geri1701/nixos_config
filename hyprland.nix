@@ -58,8 +58,8 @@
       windowrule=float,^(jetbrains-studio)$
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
-      bind=SUPER,Q,exec,wezterm
-      bind=SUPER,RETURN,exec,wezterm
+      bind=SUPER,Q,exec,foot -L
+      bind=SUPER,RETURN,exec,foot -L
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,sirula

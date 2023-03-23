@@ -57,6 +57,15 @@ in {
         };
       };
     };
+    foot = {
+      enable = true;
+      settings = {
+        main = { font = "Fantasque Sans Mono:size=10"; };
+        mouse = { hide-when-typing = "yes"; };
+        colors = { alpha = 0.8; };
+      };
+    };
+
     home-manager.enable = true;
     helix = {
       enable = true;
@@ -291,6 +300,7 @@ in {
   };
   stylix.targets.helix.enable = false;
   stylix.targets.vscode.enable = false;
+  stylix.fonts.sizes.terminal = 10;
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg = { enable = true; };
 }
