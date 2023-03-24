@@ -29,9 +29,11 @@ in {
           styleset-name = "styleset";
           timestamp-format = "02 Jan 06 15:04:05";
         };
+        viewer = { alternatives = "text/html,text/plain"; };
         filters = {
           "text/plain" = "cat";
-          "text/html" = "w3m -sixel -I %{charset} -T text/html -cols 125";
+          "text/html" = "w3m -dump -I UTF-8 -T text/html";
+          "image/*" = "img2sixel $(tput cols) -";
         };
       };
       extraAccounts = {
