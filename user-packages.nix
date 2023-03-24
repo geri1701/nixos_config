@@ -75,6 +75,7 @@ in {
     winetricks
     wl-clipboard
     wofi
+    xdg-utils
     yt-dlp
     ytfzf
     killall

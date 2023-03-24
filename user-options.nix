@@ -171,7 +171,11 @@ in {
         "browser.sessionstore.resume_from_crash" = false;
       };
     };
-    vscode.enable = true;
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhsWithPackages
+        (ps: with ps; [ rustup zlib openssl.dev pkg-config ]);
+    };
     zathura = {
       enable = true;
       options = {
