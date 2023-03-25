@@ -21,8 +21,8 @@
           sensitivity=0 # -1.0 - 1.0, 0 means no modification.
       }
       general {
-          gaps_in=6
-          gaps_out=15
+          gaps_in=3
+          gaps_out=7
           border_size=0
           col.active_border= 0x44FF7F00
           col.inactive_border=0x66333333
