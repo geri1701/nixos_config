@@ -125,7 +125,7 @@
               if [[ -f "$file" ]]; then
                   if echo "$file" | grep -qi "gehalt"; then
                       mv "$file" "/home/geri/mail_att/gehalt" >/dev/null 2>&1
-                  elif echo "$file" | grep -qi "rechnung"; then
+                  elif echo "$file" | grep -qi  -e "rechnung" -e "invoice"; then
                       mv "$file" "/home/geri/mail_att/rechnung" >/dev/null 2>&1
                   fi
               fi
