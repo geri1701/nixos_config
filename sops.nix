@@ -24,6 +24,7 @@
       steam = { };
       thalia = { };
       typingclub = { };
+      typst = { };
       wienenergie = { };
     };
   };
