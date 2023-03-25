@@ -236,6 +236,63 @@ in {
     waybar = {
       enable = true;
       package = waybar_exp;
+      settings = {
+        mainBar = {
+          layer = "top";
+          position = "top";
+          mod = "dock";
+          exclusive = true;
+          passtrough = false;
+          height = 0;
+          modules-left = [ "wlr/workspaces" "network" ];
+          modules-center = [ "hyperland/window" ];
+          modules-right = [ "pulseaudio" "custom/weather" "tray" "clock" ];
+          "wlr/workspaces" = {
+            format = "{icon}";
+            on-click = "activate";
+            sort-by-number = true;
+          };
+          network = {
+            interface = "eno1*";
+            format-wifi = "{essid} ({signalStrength}%) ";
+            format-ethernet = "{ipaddr}/{cidr} ";
+            tooltip-format = "{ifname} via {gwaddr} ";
+            format-linked = "{ifname} (No IP) ";
+            format-disconnected = "Disconnected ⚠";
+            format-alt = "{ifname}: {ipaddr}/{cidr}";
+          };
+          "hyprland/window" = {
+            format = "{}";
+            seperate-outputs = true;
+          };
+          "pulseaudio" = {
+            scroll-step = 1;
+            format = "{volume}% {icon} {format_source}";
+            format-bluetooth = "{volume}% {icon} {format_source}";
+            format-bluetooth-muted = "{volume}% {icon} {format_source}";
+            format-muted = "{volume}% {icon} {format_source}";
+            format-source = "{volume}% ";
+            format-source-muted = "";
+            format-icons = { "default" = [ "" "" "" ]; };
+            on-click = "pulsemixer --toggle-mute";
+          };
+          "custom/weather" = {
+            exec = "curl 'https://wttr.in/?format=1'";
+            interval = 3600;
+          };
+          "tray" = {
+            icon-size = 21;
+            spacing = 5;
+          };
+          "clock" = {
+            format = "{:%d.%m.%Y %H:%M:%S}";
+            tooltip-format = ''
+              <big>{:%Y %B}</big>
+              <tt><small>{calendar}</small></tt>'';
+            interval = 1;
+          };
+        };
+      };
     };
   };
   qt = {
