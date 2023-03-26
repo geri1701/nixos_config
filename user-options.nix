@@ -158,6 +158,33 @@ in {
       enable = true;
       # todo: add settings as soon https://github.com/nix-community/home-manager/issues/3364 is closed
       # and kdl is possible
+      settings = {
+        theme = "solarized-dark";
+        copy_command = "wl-copy";
+        copy_clipboard = "primary";
+        scrollback_editor = "/usr/bin/helix";
+        plugins = {
+          tab-bar = { path = "tab-bar"; };
+          status-bar = { path = "status-bar"; };
+          strider = { path = "strider"; };
+        };
+        ui = { pane_frames = { rounded_corners = "true"; }; };
+        themes = {
+          solarized-dark = {
+            fg = "#fdf6e3";
+            bg = "#002b36";
+            black = "#073642";
+            red = "#dc322f";
+            green = "#859900";
+            yellow = "#b58900";
+            blue = "#268bd2";
+            magenta = "#d33682";
+            cyan = "#2aa198";
+            white = "#eee8d5";
+            orange = "#cb4b16";
+          };
+        };
+      };
     };
     firefox = {
       enable = true;
