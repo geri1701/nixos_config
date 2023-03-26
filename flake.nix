@@ -36,6 +36,7 @@
                   ./config/vscode.nix
                   ./config/zathura.nix
                   ./config/zellij.nix
+                  ./config/zsh.nix
                   ./user-options.nix
                   ./user-packages.nix
                   ./sops.nix
