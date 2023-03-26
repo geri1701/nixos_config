@@ -29,6 +29,7 @@
                 users.geri.imports = [
                   ./config/aerc.nix
                   ./config/foot.nix
+                  ./config/git.nix
                   ./config/helix.nix
                   ./config/hyprland.nix
                   ./config/zellij.nix
