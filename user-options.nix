@@ -21,15 +21,6 @@ in {
     };
   };
   programs = {
-    foot = {
-      enable = true;
-      settings = {
-        main = { font = "Fantasque Sans Mono:size=10"; };
-        mouse = { hide-when-typing = "yes"; };
-        colors = { alpha = 0.8; };
-      };
-    };
-
     home-manager.enable = true;
     git = {
       enable = true;
