@@ -34,6 +34,7 @@
                   ./config/helix.nix
                   ./config/hyprland.nix
                   ./config/vscode.nix
+                  ./config/zathura.nix
                   ./config/zellij.nix
                   ./user-options.nix
                   ./user-packages.nix
