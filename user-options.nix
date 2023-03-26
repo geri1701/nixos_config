@@ -166,7 +166,7 @@ in {
           status-bar = { path = "status-bar"; };
           strider = { path = "strider"; };
         };
-        ui = { pane_frames = { rounded_corners = "true"; }; };
+        ui = { pane_frames = { rounded_corners = true; }; };
         themes = {
           solarized-dark = {
             fg = "#fdf6e3";
