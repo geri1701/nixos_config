@@ -78,7 +78,7 @@ in {
       }
       window#waybar {
           background: rgba(21, 18, 27, 0);
-          color: #cdd6f4;
+          color: #eee8d5;
       }
       tooltip {
           background: #002b36;
@@ -147,14 +147,14 @@ in {
           margin-right: 60px;
       }
       #clock {
-          color: #fab387;
+          color: #cb4b16;
           border-radius: 10px;
           margin-left: 5px;
           margin-right: 10px;    
           border-right: 0px;
       }
       #network {
-          color: #f9e2af;
+          color: #b58900;
           border-left: 0px;
           border-right: 0px;
           border-radius: 10px;    
