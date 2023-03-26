@@ -24,18 +24,6 @@ in {
     home-manager.enable = true;
     skim.enable = true;
     bottom.enable = true;
-    firefox = {
-      enable = true;
-      profiles.geri.settings = {
-        "media.ffmpeg.vaapi.enabled" = true;
-        "gfx.webrender.all" = true;
-        "browser.download.start_downloads_in_tmp_dir" = true;
-        "layout.css.devPixelsPerPx" = "0.65";
-        "extensions.webextensions.tabhide.enabled" = true;
-        "browser.startup.homepage" = "localhost:9090/bookmarks";
-        "browser.sessionstore.resume_from_crash" = false;
-      };
-    };
     vscode = {
       enable = true;
       package = pkgs.vscode.fhsWithPackages

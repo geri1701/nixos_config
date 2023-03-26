@@ -28,6 +28,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./config/aerc.nix
+                  ./config/firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
