@@ -245,7 +245,7 @@ in {
           passtrough = false;
           height = 0;
           modules-left = [ "wlr/workspaces" "network" ];
-          modules-center = [ "hyperland/window" ];
+          modules-center = [ "hyprland/window" ];
           modules-right = [ "pulseaudio" "custom/weather" "tray" "clock" ];
           "wlr/workspaces" = {
             format = "{icon}";
