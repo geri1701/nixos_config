@@ -83,6 +83,7 @@
       dedicatedServer.openFirewall =
         true; # Open ports in the firewall for Source Dedicated Server
     };
+    zsh.enable = true;
   };
   qt = {
     enable = true;
