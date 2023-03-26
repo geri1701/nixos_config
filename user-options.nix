@@ -24,11 +24,6 @@ in {
     home-manager.enable = true;
     skim.enable = true;
     bottom.enable = true;
-    vscode = {
-      enable = true;
-      package = pkgs.vscode.fhsWithPackages
-        (ps: with ps; [ rustup zlib openssl.dev pkg-config ]);
-    };
     zathura = {
       enable = true;
       options = {
