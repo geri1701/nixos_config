@@ -160,7 +160,7 @@ in {
         theme = "solarized-dark";
         copy_command = "wl-copy";
         copy_clipboard = "primary";
-        scrollback_editor = "/usr/bin/helix";
+        scrollback_editor = "hx";
         plugins = {
           tab-bar = { path = "tab-bar"; };
           status-bar = { path = "status-bar"; };
