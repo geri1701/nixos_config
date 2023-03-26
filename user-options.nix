@@ -14,7 +14,7 @@ in {
     homeDirectory = "/home/geri";
     sessionVariables = {
       EDITOR = "hx";
-      TERM = "wezterm";
+      TERM = "foot";
       QT_STYLE_OVERRIDE = "kvantum";
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
