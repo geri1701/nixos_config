@@ -156,8 +156,6 @@ in {
     bottom.enable = true;
     zellij = {
       enable = true;
-      # todo: add settings as soon https://github.com/nix-community/home-manager/issues/3364 is closed
-      # and kdl is possible
       settings = {
         theme = "solarized-dark";
         copy_command = "wl-copy";
