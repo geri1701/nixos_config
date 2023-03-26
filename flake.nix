@@ -30,7 +30,7 @@
                   ./user-options.nix
                   ./user-packages.nix
                   ./sops.nix
-                  ./hyprland.nix
+                  ./config/hyprland.nix
                   sops-nix.homeManagerModules.sops
                   hyprland.homeManagerModules.default
                 ];
