@@ -27,11 +27,11 @@
                 useGlobalPkgs = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
+                  ./config/hyprland.nix
+                  ./config/zellij.nix
                   ./user-options.nix
                   ./user-packages.nix
                   ./sops.nix
-                  ./config/hyprland.nix
-                  ./config/zellij.nix
                   sops-nix.homeManagerModules.sops
                   hyprland.homeManagerModules.default
                 ];
