@@ -449,6 +449,34 @@ in {
       '';
     };
   };
+  xdg.configFile."zellij/layouts/default.kdl".text = ''
+    layout {
+        default_tab_template {
+            pane size=1 borderless=true {
+                plugin location="zellij:tab-bar"
+            }
+            children
+            pane size=2 borderless=true {
+                plugin location="zellij:status-bar"
+            }
+        }
+        tab
+        tab split_direction="Vertical" {
+            pane split_direction="Vertical" {
+                pane
+                pane
+            }
+        }
+        tab split_direction="Vertical" {
+            pane split_direction="Vertical" {
+                pane split_direction="Horizontal" {
+                    pane
+                    pane size="60%"
+                }
+                pane size="60%" focus=true
+            }
+        }
+    } '';
   qt = {
     enable = true;
     platformTheme = "gtk";
