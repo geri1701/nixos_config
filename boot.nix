@@ -6,7 +6,7 @@
       systemd.enable = true;
       verbose = false;
     };
-    kernelParams = [ "quiet" "splash" ];
+    kernelParams = [ "quiet" ];
     cleanTmpDir = true;
     plymouth.enable = true;
     consoleLogLevel = 0;
