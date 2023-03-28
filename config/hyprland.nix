@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''
-      monitor=,preferred,auto,1
+      monitor=,preferred,auto,auto
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
