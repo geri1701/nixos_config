@@ -18,7 +18,7 @@ in {
         exclusive = true;
         passtrough = false;
         height = 0;
-        modules-left = [ "wlr/workspaces" "network" ];
+        modules-left = [ "wlr/workspaces" "network" "battery" ];
         modules-center = [ "hyprland/window" ];
         modules-right = [ "pulseaudio" "custom/weather" "tray" "clock" ];
         "wlr/workspaces" = {
@@ -64,6 +64,17 @@ in {
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
           interval = 1;
+        };
+        "battery" = {
+          "interval" = 60;
+          "states" = {
+            "warning" = 30;
+            "critical" = 15;
+            };
+            "format" = "{capacity}% {icon}";
+            "format-icons" = ["" "" "" "" ""];
+            "max-length" = 25;
+          };
         };
       };
     };
