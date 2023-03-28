@@ -16,7 +16,7 @@
         zero = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./boot.nix
+            ./zero-boot.nix
             ./system-options.nix
             ./system-packages.nix
             ./host-zero.nix
