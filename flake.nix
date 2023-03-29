@@ -28,7 +28,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./config/aerc.nix
-                  ./config/firefox.nix
+                  ./config/zero-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
@@ -63,7 +63,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./config/aerc.nix
-                  ./config/firefox.nix
+                  ./config/one-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
