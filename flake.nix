@@ -48,6 +48,41 @@
             }
           ];
         };
+        one = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./one-boot.nix
+            ./system-options.nix
+            ./system-packages.nix
+            ./host-one.nix
+            home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                extraSpecialArgs = { inherit inputs; };
+                users.geri.imports = [
+                  ./config/aerc.nix
+                  ./config/firefox.nix
+                  ./config/foot.nix
+                  ./config/git.nix
+                  ./config/helix.nix
+                  ./config/hyprland.nix
+                  ./config/vscode.nix
+                  ./config/waybar.nix
+                  ./config/zathura.nix
+                  ./config/zellij.nix
+                  ./config/zsh.nix
+                  ./user-options.nix
+                  ./user-packages.nix
+                  ./sops.nix
+                  sops-nix.homeManagerModules.sops
+                  hyprland.homeManagerModules.default
+                ];
+              };
+            }
+          ];
+        };
       };
     };
 }
