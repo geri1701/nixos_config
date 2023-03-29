@@ -6,7 +6,12 @@
       systemd.enable = true;
       verbose = false;
     };
-    kernelParams = [ "quiet" ];
+    kernelParams = [
+      "quiet"
+      "tuxedo_keyboard.mode=0"
+      "tuxedo_keyboard.brightness=100"
+      "tuxedo_keyboard.color_left=0xff0a0a"
+    ];
     cleanTmpDir = true;
     plymouth.enable = true;
     consoleLogLevel = 0;

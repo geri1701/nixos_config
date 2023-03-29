@@ -37,6 +37,7 @@
     terminus_font
   ];
   hardware.pulseaudio.enable = false;
+  hardware.tuxedo-keyboard.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
