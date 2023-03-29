@@ -16,7 +16,7 @@
     plymouth.enable = true;
     consoleLogLevel = 0;
     loader = {
-      sytemd-boot.enable = true;
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
   };
