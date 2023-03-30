@@ -136,6 +136,7 @@ in {
       }
       #tray {
           border-radius: 10px;
+          margin-right: 5px;
       }
       #workspaces {
           background: #002b36;
