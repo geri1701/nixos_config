@@ -2,7 +2,7 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     initrd = {
-      kernelModules = [ "amdgpu" ];
+      kernelModules = [ ];
       systemd.enable = true;
       verbose = false;
     };
