@@ -143,7 +143,7 @@
     users.geri = {
       isNormalUser = true;
       description = "geri";
-      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "video" ];
     };
   };
   virtualisation = {
