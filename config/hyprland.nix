@@ -60,8 +60,8 @@
       bindm=SUPER,mouse:273,resizewindow
       bind=SUPER,Q,exec,foot -L
       bind=SUPER,RETURN,exec,foot -L
-      bind=FN,F7,exec,brillo -U 1
-      bind=FN,F8,exec,brillo -A 1            
+      bind=,XF86MonBrightnessDown,exec,brillo -U 1
+      bind=,XF86MonBrightnessUp,exec,brillo -A 1            
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,sirula
