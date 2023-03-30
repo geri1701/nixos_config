@@ -169,6 +169,7 @@ in {
           border-left: 0px;
           border-right: 0px;
           border-radius: 10px;    
+          margin-right: 5px;        
       }
       #battery {
           color: #839496;
