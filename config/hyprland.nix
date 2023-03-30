@@ -62,6 +62,7 @@
       bind=SUPER,RETURN,exec,foot -L
       bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-           
       bind=,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+           
+      bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle           
       bind=,XF86MonBrightnessDown,exec,brillo -U 1
       bind=,XF86MonBrightnessUp,exec,brillo -A 1            
       bind=SUPER,C,killactive,
