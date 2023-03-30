@@ -152,36 +152,45 @@ in {
           border-right: 0px;
       }
       #window {
+          color: #839496;
           border-radius: 10px;
           margin-left: 60px;
           margin-right: 60px;
       }
       #clock {
-          color: #cb4b16;
+          color: #839496;
           border-radius: 10px;
           margin-left: 5px;
           margin-right: 10px;    
           border-right: 0px;
       }
       #network {
-          color: #b58900;
+          color: #839496;
           border-left: 0px;
           border-right: 0px;
           border-radius: 10px;    
       }
+      #battery {
+          color: #839496;
+          border-left: 0px;
+          border-right: 0px;
+          border-radius: 10px;    
+      }
+
       #pulseaudio {
-          color: #89b4fa;
+          color: #839496;
           border-left: 0px;
           border-right: 0px;
           border-radius: 10px;
           margin-right: 5px;        
       }
       #pulseaudio.microphone {
-          color: #cba6f7;
+          color: #839496;
           margin-right: 5px;
           border-radius: 10px;
       }
       #custom-weather {
+          color: #839496;
           border-radius: 0px 10px 10px 0px;
           border-right: 0px;
           margin-left: 0px;
