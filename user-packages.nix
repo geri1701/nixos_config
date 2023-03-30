@@ -73,7 +73,6 @@ in {
     w3m
     wine
     winetricks
-    wluma
     wl-clipboard
     wofi
     xdg-utils
