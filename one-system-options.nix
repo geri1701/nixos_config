@@ -36,6 +36,7 @@
     tamzen
     terminus_font
   ];
+  hardware.brillo.enable = true;
   hardware.pulseaudio.enable = false;
   hardware.tuxedo-keyboard.enable = true;
   hardware.tuxedo-control-center.enable = true;
