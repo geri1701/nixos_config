@@ -136,7 +136,6 @@ in {
       }
       #tray {
           border-radius: 10px;
-          margin-right: 5px;
       }
       #workspaces {
           background: #002b36;
@@ -160,7 +159,6 @@ in {
       #clock {
           color: #839496;
           border-radius: 10px;
-          margin-left: 5px;
           margin-right: 10px;    
           border-right: 0px;
       }
@@ -175,7 +173,8 @@ in {
           color: #839496;
           border-left: 0px;
           border-right: 0px;
-          border-radius: 10px;    
+          border-radius: 10px;
+          padding-left: 5px;    
       }
 
       #pulseaudio {
