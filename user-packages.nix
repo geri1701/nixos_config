@@ -63,6 +63,7 @@ in {
     p7zip
     print_email_ids
     sirula
+    siglo
     slurp
     swaybg
     tldr
