@@ -8,11 +8,7 @@
       crate2nix
       exa
       expect
-      gcc
-      glibc
-      gnumake
       gnupg
-      gopass
       gparted
       graphviz
       helix
@@ -26,14 +22,11 @@
       nix-prefetch-git
       nushell
       openssl
-      perl
       pfetch
       pinentry
-      pkgconfig
       age
       rnix-lsp
       rust-analyzer
-      rustup
       sshfs
       starship
       sops
