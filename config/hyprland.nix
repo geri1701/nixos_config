@@ -7,7 +7,7 @@
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
       exec-once=steam
-      exec-once=blueman      
+      exec-once=blueman-applet      
       input {
           kb_file=
           kb_layout= us
