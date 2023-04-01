@@ -46,6 +46,7 @@ in {
     grim
     libsixel
     inkscape-with-extensions
+    itd
     joshuto
     kalker
     libsForQt5.qtstyleplugin-kvantum
