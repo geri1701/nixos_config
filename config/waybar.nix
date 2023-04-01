@@ -132,71 +132,44 @@ in {
           background: #002b36;
           padding: 0px 10px; 
           margin-top: 3px;
-          border: 1px solid #181825;
+          border: 2px solid #859900;
       }
       #tray {
           border-radius: 10px;
           margin-right: 5px;
       }
       #workspaces {
-          background: #002b36;
           border-radius: 10px;
-          margin-left: 10px;
-          margin-right: 5px;    
-          padding-right: 0px;
-          padding-left: 5px;
-      }
-      #custom-language {
-          color: #f38ba8;
-          border-left: 0px;
-          border-right: 0px;
+          margin-right: 5px;
       }
       #window {
-          color: #839496;
           border-radius: 10px;
-          margin-left: 60px;
-          margin-right: 60px;
+          margin-right: 5px;
       }
       #clock {
-          color: #839496;
           border-radius: 10px;
-          margin-right: 10px;    
-          border-right: 0px;
+          margin-right: 5px;
       }
       #network {
-          color: #839496;
-          border-left: 0px;
-          border-right: 0px;
-          border-radius: 10px;    
-          margin-right: 5px;        
+          border-radius: 10px;
+          margin-right: 5px;
       }
       #battery {
-          color: #839496;
-          border-left: 0px;
-          border-right: 0px;
           border-radius: 10px;
-          padding-left: 5px;    
+          margin-right: 5px;
       }
 
       #pulseaudio {
-          color: #839496;
-          border-left: 0px;
-          border-right: 0px;
           border-radius: 10px;
-          margin-right: 5px;        
+          margin-right: 5px;
       }
       #pulseaudio.microphone {
-          color: #839496;
-          margin-right: 5px;
           border-radius: 10px;
+          margin-right: 5px;
       }
       #custom-weather {
-          color: #839496;
-          border-radius: 0px 10px 10px 0px;
-          border-right: 0px;
-          margin-left: 0px;
+          border-radius: 10px;
           margin-right: 5px;    
-          border-radius: 10px;    
       }
     '';
   };
