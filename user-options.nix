@@ -42,6 +42,7 @@
   };
   stylix.targets.helix.enable = false;
   stylix.targets.vscode.enable = false;
+  stylix.targets.waybar.enable = false;
   stylix.fonts.sizes.terminal = 10;
   systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg = { enable = true; };
