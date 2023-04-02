@@ -55,7 +55,7 @@ in {
     mpc-cli
     mpdevil
     mpv
-    networkmanagerapplet
+    nm-tray
     nil
     libnotify
     obsidian

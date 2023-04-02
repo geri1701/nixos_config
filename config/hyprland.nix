@@ -8,7 +8,7 @@
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
       exec-once=steam
       exec-once=blueman-applet      
-      exec-once=network-manager-applet      
+      exec-once=nm-tray      
       input {
           kb_file=
           kb_layout= us
