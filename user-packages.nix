@@ -72,6 +72,7 @@ in {
     typespeed
     unzip
     vscode-extensions.vadimcn.vscode-lldb
+    watchmate
     w3m
     wine
     winetricks
