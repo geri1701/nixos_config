@@ -11,7 +11,7 @@
       EDITOR = "hx";
       TERM = "foot";
       DISABLE_AUTO_TITLE = "false";
-      ENABLE_CORRECTION = "true";
+      ENABLE_CORRECTION = "false";
       HIST_STAMPS = "%y-%m-%d";
     };
     oh-my-zsh = {
