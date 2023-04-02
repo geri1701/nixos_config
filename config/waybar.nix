@@ -27,7 +27,7 @@ in {
           sort-by-number = true;
         };
         network = {
-          interface = "eno1*";
+          # interface = "eno1*";
           format-wifi = "{essid} ({signalStrength}%) ";
           format-ethernet = "{ipaddr}/{cidr} ";
           tooltip-format = "{ifname} via {gwaddr} ";
