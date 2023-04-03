@@ -33,6 +33,32 @@ let
     name=$(echo "$top_line")
     echo "$name"
   '');
+  toggle_touchpad = (pkgs.writeShellScriptBin "toggle_touchpad" ''
+    readonly hyprland_device="uniw0001:00-93a:0255-touchpad"
+    readonly status_file="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/touchpad.status"
+    enable_touchpad() {
+    echo "true" > "$status_file"
+    notify-send -u normal "Enabling Touchpad"
+    hyprctl keyword "device:$hyprland_device:enabled" true
+    }
+    disable_touchpad() {
+      echo "false" > "$status_file"
+      notify-send -u normal "Disabling Touchpad"
+      hyprctl keyword "device:$hyprland_device:enabled" false
+     }
+     if [[ ! -f "$status_file" ]]; then
+       enable_touchpad
+     else
+       case "$(cat "$status_file" 2>/dev/null)" in
+         "true")
+           disable_touchpad ;;
+         "false")
+           enable_touchpad ;;
+         *)
+           enable_touchpad ;;
+       esac
+     fi
+  '');
 in {
   home.packages = with pkgs; [
     calcure
@@ -69,6 +95,7 @@ in {
     slurp
     swaybg
     tldr
+    toggle_touchpad
     translate-shell
     typespeed
     unzip
