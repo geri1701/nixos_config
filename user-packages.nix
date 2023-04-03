@@ -35,7 +35,7 @@ let
   '');
   toggle_touchpad = (pkgs.writeShellScriptBin "toggle_touchpad" ''
     readonly hyprland_device="uniw0001:00-93a:0255-touchpad"
-    readonly status_file="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/touchpad.status"
+    readonly status_file="${XDG_RUNTIME_DIR%/}/touchpad.status"
     enable_touchpad() {
     echo "true" > "$status_file"
     notify-send -u normal "Enabling Touchpad"
