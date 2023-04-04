@@ -11,6 +11,11 @@
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
+    pointerCursor = {
+      name = "Bibata_Ghost";
+      size = 24;
+      package = pkgs.bibata-cursors-translucent;
+    };
   };
   programs = {
     home-manager.enable = true;
