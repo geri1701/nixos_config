@@ -71,6 +71,7 @@
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,sirula
+      bind=,Menu,exec,sirula
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
       bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
