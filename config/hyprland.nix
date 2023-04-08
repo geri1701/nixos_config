@@ -55,9 +55,6 @@
       gestures {
           workspace_swipe=no
       }
-      windowrule=float,^(xdg-desktop-portal-gnome)$
-      windowrule=float,^(Rofi)$
-      windowrule=float,^(jetbrains-studio)$
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
       bind=SUPER,Q,exec,foot -L
