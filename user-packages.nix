@@ -90,6 +90,7 @@ in {
     pcmanfm
     p7zip
     print_email_ids
+    realify
     sirula
     siglo
     slurp
