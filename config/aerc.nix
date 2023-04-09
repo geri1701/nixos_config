@@ -21,9 +21,9 @@
         default = "INBOX";
         smtp-starttls = "yes";
         source-cred-cmd =
-          "cat /run/user/1000/secrets/$(real_name --config ~/realify.conf --name gmx)";
+          "cat /run/user/1000/secrets/$(realify --config ~/realify.conf --name gmx)";
         outgoing-cred-cmd =
-          "cat /run/user/1000/secrets/$(real_name --config ~/realify.conf --name gmx)";
+          "cat /run/user/1000/secrets/$(realify --config ~/realify.conf --name gmx)";
         from = "Gerhard <gschwa@gmx.net>";
         copy-to = "Sent";
       };
@@ -33,9 +33,9 @@
         default = "INBOX";
         smtp-starttls = "yes";
         source-cred-cmd =
-          "cat /run/user/1000/secrets/$(real_name --config ~/realify.conf --name sdf)";
+          "cat /run/user/1000/secrets/$(realify --config ~/realify.conf --name sdf)";
         outgoing-cred-cmd =
-          "cat /run/user/1000/secrets/$(real_name --config ~/realify.conf --name sdf)";
+          "cat /run/user/1000/secrets/$(realify --config ~/realify.conf --name sdf)";
         from = "Gerhard <geri@sdf.org>";
         copy-to = "Sent";
       };
