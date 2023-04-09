@@ -59,34 +59,6 @@ let
        esac
      fi
   '');
-  real_name = (pkgs.writeShellScriptBin "real_name" ''
-    while [[ $# -gt 0 ]]; do
-        key="$1"
-        case $key in
-            --config)
-            CONFIG="$2"
-            shift
-            shift
-            ;;
-            --name)
-            NAME="$2"
-            shift
-            shift
-            ;;
-            *)
-            echo "Unknown argument: $1"
-            exit 1
-            ;;
-        esac
-    done
-    VALUE=$(grep "^$NAME\s" "$CONFIG" | cut -f2- -d' ')
-    if [[ -n "$VALUE" ]]; then
-        echo "$VALUE"
-    else
-        echo "Error: Your config doesn't contain the key $NAME" >&2
-        exit 1
-    fi
-  '');
 in {
   home.packages = with pkgs; [
     inputs.realify.defaultPackage.x86_64-linux.out
