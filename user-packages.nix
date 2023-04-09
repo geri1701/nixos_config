@@ -91,7 +91,6 @@ in {
     pcmanfm
     p7zip
     print_email_ids
-    real_name
     sirula
     siglo
     slurp
