@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
   print_email_ids = (pkgs.writeShellScriptBin "print_email_ids" ''
     input=$(sed -E 's/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g')
@@ -59,6 +59,34 @@ let
        esac
      fi
   '');
+  real_name = (pkgs.writeShellScriptBin "real_name" ''
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+        case $key in
+            --config)
+            CONFIG="$2"
+            shift
+            shift
+            ;;
+            --name)
+            NAME="$2"
+            shift
+            shift
+            ;;
+            *)
+            echo "Unknown argument: $1"
+            exit 1
+            ;;
+        esac
+    done
+    VALUE=$(grep "^$NAME\s" "$CONFIG" | cut -f2- -d' ')
+    if [[ -n "$VALUE" ]]; then
+        echo "$VALUE"
+    else
+        echo "Error: Your config doesn't contain the key $NAME" >&2
+        exit 1
+    fi
+  '');
 in {
   home.packages = with pkgs; [
     calcure
@@ -90,7 +118,7 @@ in {
     pcmanfm
     p7zip
     print_email_ids
-    realify
+    real_name
     sirula
     siglo
     slurp

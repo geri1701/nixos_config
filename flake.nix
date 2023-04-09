@@ -9,10 +9,9 @@
     sops-nix.url = "github:Mic92/sops-nix";
     stylix.url = "github:danth/stylix";
     tuxedo-nixos.url = "github:blitz/tuxedo-nixos";
-    realify.url = "github:geri1701/realify";
   };
   outputs = { self, nixpkgs, hyprland, home-manager, sops-nix, stylix
-    , tuxedo-nixos, realify, ... }@inputs: {
+    , tuxedo-nixos, ... }@inputs: {
       nixosConfigurations = {
         nix.nixPath = [ "nixpkgs=/home/geri/nixos" ];
         zero = nixpkgs.lib.nixosSystem {

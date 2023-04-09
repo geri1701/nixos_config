@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   environment = {
     defaultPackages = [ ];
     systemPackages = with pkgs; [
