@@ -89,6 +89,7 @@ let
   '');
 in {
   home.packages = with pkgs; [
+    inputs.realify.defaultPackage.x86_64-linux.out
     calcure
     cht-sh
     ddgr
