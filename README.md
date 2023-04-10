@@ -55,3 +55,4 @@ one
 - sops-nix: https://github.com/Mic92/sops-nix
 - sops: https://github.com/mozilla/sops 
 - stylix: https://github.com/danth/stylix
+- hyprland: https://hyprland.org/
