@@ -52,3 +52,5 @@ one
 - Official documentation: https://nixos.org/
 - NobbZ' Blog: https://blog.nobbz.dev/
 - NixOS Wiki: https://nixos.wiki/
+- sops-nix: https://github.com/Mic92/sops-nix
+- sops: https://github.com/mozilla/sops 
