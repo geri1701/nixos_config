@@ -1,6 +1,6 @@
 # My NixOS Configuration
 
-This repository contains the declarative, flake based configurations for two NixOS hosts:
+This repository contains the declarative, flake-based configurations for two NixOS hosts:
  - Desktop Computer `zero`
  - Tuxedo Pulse 15 Gen2 `one`
 
