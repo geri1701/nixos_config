@@ -54,3 +54,4 @@ one
 - NixOS Wiki: https://nixos.wiki/
 - sops-nix: https://github.com/Mic92/sops-nix
 - sops: https://github.com/mozilla/sops 
+- stylix: https://github.com/danth/stylix
