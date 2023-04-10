@@ -98,6 +98,7 @@ in {
     tldr
     toggle_touchpad
     translate-shell
+    transmission-gtk
     typespeed
     unzip
     vscode-extensions.vadimcn.vscode-lldb
