@@ -2,9 +2,6 @@
   environment = {
     defaultPackages = [ ];
     systemPackages = with pkgs; [
-      btrfs-heatmap
-      btrfs-progs
-      btrfs-snap
       crate2nix
       exa
       expect
