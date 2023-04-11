@@ -5,46 +5,48 @@ This repository contains the declarative, flake-based configurations for two Nix
  - Tuxedo Pulse 15 Gen2 `one`
 
 ```
-zero
-  ├── zero-boot.nix
-  ├── zero-system-options.nix
-  ├── system-packages.nix
-  ├── host-zero.nix
-  ├── stylix 
-  └── home-manager
-       ├── config/aerc.nix
-       ├── config/zero-firefox.nix
-       ├── config/foot.nix
-       ├── config/git.nix
-       ├── config/helix.nix
-       ├── config/hyprland.nix
-       ├── config/waybar.nix
-       ├── config/zathura.nix
-       ├── config/zellij.nix
-       ├── config/zsh.nix
-       ├── user-options.nix
-       ├── user-packages.nix
-       └── sops.nix
-one
-  ├── one-boot.nix
-  ├── one-system-options.nix
-  ├── system-packages.nix
-  ├── host-one.nix
-  ├── stylix 
-  └── home-manager
-       ├── config/aerc.nix
-       ├── config/one-firefox.nix
-       ├── config/foot.nix
-       ├── config/git.nix
-       ├── config/helix.nix
-       ├── config/hyprland.nix
-       ├── config/waybar.nix
-       ├── config/zathura.nix
-       ├── config/zellij.nix
-       ├── config/zsh.nix
-       ├── user-options.nix
-       ├── user-packages.nix
-       └── sops.nix
+┌flake.nix
+│
+├──zero
+│    ├── zero-boot.nix
+│    ├── zero-system-options.nix
+│    ├── system-packages.nix
+│    ├── host-zero.nix
+│    ├── stylix 
+│    └── home-manager
+│         ├── config/aerc.nix
+│         ├── config/zero-firefox.nix
+│         ├── config/foot.nix
+│         ├── config/git.nix
+│         ├── config/helix.nix
+│         ├── config/hyprland.nix
+│         ├── config/waybar.nix
+│         ├── config/zathura.nix
+│         ├── config/zellij.nix
+│         ├── config/zsh.nix
+│         ├── user-options.nix
+│         ├── user-packages.nix
+│         └── sops.nix
+└──one
+    ├── one-boot.nix
+    ├── one-system-options.nix
+    ├── system-packages.nix
+    ├── host-one.nix
+    ├── stylix 
+    └── home-manager
+         ├── config/aerc.nix
+         ├── config/one-firefox.nix
+         ├── config/foot.nix
+         ├── config/git.nix
+         ├── config/helix.nix
+         ├── config/hyprland.nix
+         ├── config/waybar.nix
+         ├── config/zathura.nix
+         ├── config/zellij.nix
+         ├── config/zsh.nix
+         ├── user-options.nix
+         ├── user-packages.nix
+         └── sops.nix
 ```
 
 ## Resources
