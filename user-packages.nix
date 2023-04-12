@@ -80,7 +80,6 @@ in {
     luajitPackages.vicious
     lxqt.lxqt-qtplugin
     mpc-cli
-    mpdevil
     mpv
     nm-tray
     nil
