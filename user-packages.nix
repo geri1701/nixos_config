@@ -81,6 +81,7 @@ in {
     lxqt.lxqt-qtplugin
     mpc-cli
     mpv
+    musikcube
     nm-tray
     nil
     libnotify
