@@ -80,7 +80,7 @@ in {
               * {
           border: none;
           border-radius: 0;
-          font-family: Meslo;
+          font-family: Terminus;
           font-size: 12px;
           min-height: 0;
       }
