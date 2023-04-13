@@ -13,7 +13,6 @@
       jq
       libiconv
       libsForQt5.qtstyleplugin-kvantum
-      lynx
       nixfmt
       nixos-option
       nix-prefetch-git
