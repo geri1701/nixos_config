@@ -80,8 +80,8 @@ in {
               * {
           border: none;
           border-radius: 0;
-          font-family: Tamzen;
-          font-size: 14px;
+          font-family: Meslo;
+          font-size: 12px;
           min-height: 0;
       }
       window#waybar {
