@@ -80,8 +80,7 @@ in {
               * {
           border: none;
           border-radius: 0;
-          font-family: Cartograph CF Nerd Font, monospace;
-          font-weight: bold;
+          font-family: Tamzen;
           font-size: 14px;
           min-height: 0;
       }
@@ -103,7 +102,7 @@ in {
           background: #002b36;    
       }
       #workspaces button.active {
-          color: #a6adc8;
+          color:  #859900;
       }
       #workspaces button.focused {
           color: #a6adc8;
@@ -132,6 +131,7 @@ in {
           padding: 0px 10px; 
           margin-top: 3px;
           border: 2px solid #859900;
+          color: #859900;
       }
       #tray {
           border-radius: 10px;
