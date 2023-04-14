@@ -21,6 +21,7 @@
           left = [ "mode" "spinner" ];
           center = [ "file-name" ];
           right = [
+            "version-control"
             "diagnostics"
             "selections"
             "position"
