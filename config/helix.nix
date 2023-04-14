@@ -33,6 +33,7 @@
           mode.insert = "INSERT";
           mode.select = "SELECT";
         };
+        lsp.display-inlay-hints = true;
       };
     };
     languages = [
