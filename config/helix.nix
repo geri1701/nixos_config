@@ -16,6 +16,7 @@
         lsp.display-messages = true;
         indent-guides.render = true;
         indent-guides.character = "╎";
+        soft-wrap.enable = true;
         statusline = {
           left = [ "mode" "spinner" ];
           center = [ "file-name" ];
