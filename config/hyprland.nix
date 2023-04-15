@@ -25,9 +25,9 @@
       general {
           gaps_in=3
           gaps_out=7
-          border_size=1
-          col.active_border= 0x44FF7F00
-          col.inactive_border=0x66333333
+          border_size=2
+          col.active_border= 0x44b58900 
+          col.inactive_border= 0x44002b36
           apply_sens_to_raw=0 
       }
       misc {
