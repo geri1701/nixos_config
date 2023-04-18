@@ -6,7 +6,7 @@
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
-      exec-once=steam
+      exec-once=steam -silent
       exec-once=blueman-applet      
       exec-once=nm-tray      
       input {
