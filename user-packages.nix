@@ -90,6 +90,7 @@ in {
     oldest
     pcmanfm
     p7zip
+    picard
     print_email_ids
     sirula
     siglo
