@@ -9,6 +9,7 @@
       gparted
       graphviz
       helix
+      ifwifi
       inxi
       jq
       libiconv
