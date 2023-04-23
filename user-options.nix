@@ -19,8 +19,13 @@
   };
   programs = {
     home-manager.enable = true;
+    direnv = {
+      enable = true;
+      nix-direnv = { enable = true; };
+    };
     skim.enable = true;
     bottom.enable = true;
+    zsh.enable = true;
     zoxide.enable = true;
     starship.enable = true;
   };
