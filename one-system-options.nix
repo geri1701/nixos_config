@@ -63,9 +63,15 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
+    extraOptions = ''
+      keep-outputs = true      
+      keep-derivations = true
+    '';
   };
   nixpkgs.config.allowUnfree = true;
   programs = {
