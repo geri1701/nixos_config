@@ -66,8 +66,8 @@
       auto-optimise-store = true;
     };
     extraOptions = ''
-      keep-outputs = true;
-      keep-derivations = true; 
+      keep-outputs = true
+      keep-derivations = true 
     '';
   };
   nixpkgs.config.allowUnfree = true;
