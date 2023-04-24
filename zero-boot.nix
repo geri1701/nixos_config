@@ -7,7 +7,7 @@
       verbose = false;
     };
     kernelParams = [ "quiet" ];
-    cleanTmpDir = true;
+    tmp.cleanOnBoot = true;
     plymouth.enable = true;
     consoleLogLevel = 0;
     loader = {

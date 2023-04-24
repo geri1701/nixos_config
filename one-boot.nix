@@ -12,7 +12,7 @@
       "tuxedo_keyboard.brightness=100"
       "tuxedo_keyboard.color_left=0xff0a0a"
     ];
-    cleanTmpDir = true;
+    tmp.cleanOnBoot = true;
     plymouth.enable = true;
     consoleLogLevel = 0;
     loader = {
