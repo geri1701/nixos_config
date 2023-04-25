@@ -101,6 +101,7 @@ in {
     translate-shell
     transmission-gtk
     typespeed
+    typst-fmt
     unzip
     vscode-extensions.vadimcn.vscode-lldb
     watchmate
