@@ -82,7 +82,6 @@ in {
     mpc-cli
     mpv
     musikcube
-    nm-tray
     nil
     libnotify
     obsidian
