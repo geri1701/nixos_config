@@ -23,4 +23,5 @@
       };
     };
   };
+  services.kmscon.hwRender = true;
 }
