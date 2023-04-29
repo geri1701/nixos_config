@@ -109,6 +109,7 @@ in {
     winetricks
     wl-clipboard
     wofi
+    wthrr
     xdg-utils
     yt-dlp
     ytfzf
