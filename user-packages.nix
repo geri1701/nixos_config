@@ -75,6 +75,7 @@ in {
     itd
     joshuto
     kalker
+    kibi
     killall
     libnotify
     libsForQt5.qtstyleplugin-kvantum
