@@ -61,7 +61,6 @@ let
   '');
 in {
   home.packages = with pkgs; [
-    inputs.realify.defaultPackage.x86_64-linux.out
     calcure
     cht-sh
     ddgr
@@ -71,28 +70,31 @@ in {
     fsuae-launcher
     glow
     grim
-    libsixel
     inkscape-with-extensions
+    inputs.realify.defaultPackage.x86_64-linux.out
     itd
     joshuto
     kalker
+    killall
+    libnotify
     libsForQt5.qtstyleplugin-kvantum
+    libsixel
     luajitPackages.vicious
     lxqt.lxqt-qtplugin
     mpc-cli
     mpv
     musikcube
     nil
-    libnotify
     obsidian
     oculante
     oldest
-    pcmanfm
+    ouch
     p7zip
+    pcmanfm
     picard
     print_email_ids
-    sirula
     siglo
+    sirula
     slurp
     swaybg
     tldr
@@ -101,10 +103,9 @@ in {
     transmission-gtk
     typespeed
     typst-fmt
-    unzip
     vscode-extensions.vadimcn.vscode-lldb
-    watchmate
     w3m
+    watchmate
     wine
     winetricks
     wl-clipboard
@@ -113,7 +114,6 @@ in {
     xdg-utils
     yt-dlp
     ytfzf
-    killall
     zsh-autosuggestions
     zsh-you-should-use
   ];
