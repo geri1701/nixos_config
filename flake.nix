@@ -4,8 +4,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    hyprland.url =
-      "github:hyprwm/Hyprland/eb570c88e65171eaf3a25d278640d80e42c3af9a";
+    hyprland.url = "github:hyprwm/Hyprland";
     sops-nix.url = "github:Mic92/sops-nix";
     stylix.url = "github:danth/stylix";
     tuxedo-nixos.url = "github:blitz/tuxedo-nixos";
