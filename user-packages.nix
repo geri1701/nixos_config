@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ pkgs, inputs, ... }:
 let
   print_email_ids = (pkgs.writeShellScriptBin "print_email_ids" ''
     input=$(sed -E 's/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g')
