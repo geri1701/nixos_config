@@ -61,6 +61,7 @@ let
   '');
 in {
   home.packages = with pkgs; [
+    amdgpu_top
     calcure
     cht-sh
     ddgr
