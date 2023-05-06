@@ -1,5 +1,5 @@
 {
-  description = "NixOs configuration for zero";
+  description = "NixOs configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
