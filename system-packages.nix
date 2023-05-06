@@ -1,6 +1,5 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   environment = {
-    defaultPackages = [ ];
     systemPackages = with pkgs; [
       crate2nix
       exa
