@@ -2,7 +2,6 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     initrd = {
-      kernelModules = [ ];
       systemd.enable = true;
       verbose = false;
     };
