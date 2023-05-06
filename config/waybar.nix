@@ -50,8 +50,9 @@ in {
           on-click = "pulsemixer --toggle-mute";
         };
         "custom/weather" = {
-          exec = "curl 'https://wttr.in/?format=1'";
-          interval = 3600;
+          exec =
+            "wthrr -l de | sed -n '5p' | sed -e 's/^[^[:print:]]*//' -e 's/^│s*//' -e 's/s*│s*$//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'";
+          interval = 1800;
         };
         "tray" = {
           icon-size = 21;
