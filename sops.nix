@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   sops = {
     age.keyFile = "/home/geri/.config/sops/age/keys.txt";
     defaultSopsFile = ./sec/zero.yaml;
