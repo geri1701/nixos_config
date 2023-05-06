@@ -105,8 +105,9 @@
   };
   services = {
     openssh = {
-      enable = false;
-      settings = { PasswordAuthentication = false; };
+      enable = true;
+      passwordAuthentication = false;
+      kbdInteractiveAuthentication = false;
     };
     pipewire = {
       enable = true;
