@@ -87,6 +87,7 @@ in {
     mpv
     musikcube
     nil
+    nixpkgs-fmt
     obsidian
     oculante
     oldest

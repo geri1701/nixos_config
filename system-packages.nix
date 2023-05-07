@@ -13,7 +13,6 @@
       libiconv
       libsForQt5.qtstyleplugin-kvantum
       networkmanager
-      nixfmt
       nixos-option
       nix-prefetch-git
       nushell

@@ -52,7 +52,7 @@
       {
         name = "nix";
         auto-format = true;
-        formatter.command = "nixfmt";
+        formatter.command = "nixpkgs-fmt";
       }
     ];
   };
