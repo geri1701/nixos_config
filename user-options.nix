@@ -13,7 +13,7 @@
     };
     pointerCursor = {
       name = "Bibata_Ghost";
-      size = 22;
+      # size = 22;
       package = pkgs.bibata-cursors-translucent;
     };
   };
