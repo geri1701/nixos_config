@@ -59,7 +59,8 @@ let
        esac
      fi
   '');
-in {
+in
+{
   home.packages = with pkgs; [
     amdgpu_top
     calcure
