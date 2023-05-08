@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   home.file.".config/zellij/layouts/default.kdl" = {
     recursive = true;
     text = ''

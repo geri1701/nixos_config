@@ -1,10 +1,14 @@
-{ pkgs, ... }: {
+{
   programs.zsh = {
     enable = true;
-    enableCompletion = false;
+    enableCompletion = true;
     enableSyntaxHighlighting = true;
     enableAutosuggestions = true;
-    initExtra = ''
+    initExtraBeforeCompInit = ''
+      fpath=($HOME/.zsh/ $fpath)
+      source $HOME/.zsh/_zellij
+    '';
+    initExtraFirst = ''
       pfetch
     '';
     sessionVariables = {
