@@ -10,8 +10,16 @@
     tuxedo-nixos.url = "github:blitz/tuxedo-nixos";
     realify.url = "github:geri1701/realify";
   };
-  outputs = { self, nixpkgs, hyprland, home-manager, sops-nix, stylix
-    , tuxedo-nixos, ... }@inputs: {
+  outputs =
+    { self
+    , nixpkgs
+    , hyprland
+    , home-manager
+    , sops-nix
+    , stylix
+    , tuxedo-nixos
+    , ...
+    }@inputs: {
       nixosConfigurations = {
         nix.nixPath = [ "nixpkgs=/home/geri/nixos" ];
         zero = nixpkgs.lib.nixosSystem {
@@ -26,6 +34,7 @@
             {
               home-manager = {
                 useGlobalPkgs = true;
+                useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./config/aerc.nix
@@ -62,6 +71,7 @@
             {
               home-manager = {
                 useGlobalPkgs = true;
+                useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./config/aerc.nix
