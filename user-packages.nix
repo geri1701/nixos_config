@@ -78,7 +78,6 @@ in
     joshuto
     kalker
     kibi
-    killall
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
