@@ -96,7 +96,6 @@ in
     pcmanfm
     picard
     print_email_ids
-    siglo
     sirula
     slurp
     swaybg
