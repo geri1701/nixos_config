@@ -87,6 +87,7 @@ in
     mpv
     musikcube
     nil
+    nixpkgs-review
     nixpkgs-fmt
     obsidian
     oculante
