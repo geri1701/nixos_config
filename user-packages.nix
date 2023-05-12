@@ -95,6 +95,7 @@ in
     ouch
     p7zip
     pcmanfm
+    peep
     picard
     print_email_ids
     sirula
