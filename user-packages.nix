@@ -87,8 +87,8 @@ in
     mpv
     musikcube
     nil
-    nixpkgs-review
     nixpkgs-fmt
+    nixpkgs-review
     obsidian
     oculante
     oldest
@@ -100,6 +100,7 @@ in
     print_email_ids
     sirula
     slurp
+    swappy
     swaybg
     tldr
     toggle_touchpad
