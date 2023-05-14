@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   gtk = { enable = true; };
   home = {
     stateVersion = "22.11";
