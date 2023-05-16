@@ -76,6 +76,7 @@ in
     inputs.realify.defaultPackage.x86_64-linux.out
     itd
     joshuto
+    jq
     kalker
     kibi
     libnotify

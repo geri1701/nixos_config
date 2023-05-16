@@ -9,7 +9,6 @@
       graphviz
       helix
       inxi
-      jq
       libiconv
       libsForQt5.qtstyleplugin-kvantum
       networkmanager
