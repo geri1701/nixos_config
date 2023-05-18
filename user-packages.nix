@@ -104,6 +104,7 @@ in
     slurp
     swappy
     swaybg
+    the-way
     tldr
     toggle_touchpad
     translate-shell
