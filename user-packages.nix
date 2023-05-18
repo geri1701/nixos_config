@@ -65,6 +65,7 @@ in
     amdgpu_top
     calcure
     cht-sh
+    claws-mail
     ddgr
     discord
     exercism
