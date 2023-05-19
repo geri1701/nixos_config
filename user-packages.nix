@@ -110,6 +110,7 @@ in
     translate-shell
     transmission-gtk
     typespeed
+    typst
     typst-fmt
     vscode-extensions.vadimcn.vscode-lldb
     w3m
