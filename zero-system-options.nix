@@ -39,6 +39,7 @@
         tamsyn
         tamzen
         terminus_font
+        garamond-libre
       ];
     };
   hardware.pulseaudio.enable = false;
