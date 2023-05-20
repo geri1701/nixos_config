@@ -20,23 +20,27 @@
       options = [ "defaults" "noatime" "nodiratime" ];
     };
   };
-  fonts.fonts = with pkgs; [
-    dina-font
-    fantasque-sans-mono
-    fira-code
-    fira-code-symbols
-    liberation_ttf
-    meslo-lg
-    mplus-outline-fonts.githubRelease
-    nerdfonts
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    proggyfonts
-    tamsyn
-    tamzen
-    terminus_font
-  ];
+  fonts =
+    {
+      fontDir.enable = true;
+      fonts = with pkgs; [
+        dina-font
+        fantasque-sans-mono
+        fira-code
+        fira-code-symbols
+        liberation_ttf
+        meslo-lg
+        mplus-outline-fonts.githubRelease
+        nerdfonts
+        noto-fonts
+        noto-fonts-cjk
+        noto-fonts-emoji
+        proggyfonts
+        tamsyn
+        tamzen
+        terminus_font
+      ];
+    };
   hardware.pulseaudio.enable = false;
   i18n = {
     defaultLocale = "en_US.UTF-8";
