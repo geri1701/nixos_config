@@ -19,6 +19,12 @@
       fsType = "vfat";
     };
   };
+  #tuxedo control center dependency
+  nixpkgs.config.permittedInsecurePackages = [
+    "nodejs-14.21.3"
+    "openssl-1.1.1t"
+    "electron-13.6.9"
+  ];
   fonts = {
     fontDir.enable = true;
     fonts = with pkgs; [
