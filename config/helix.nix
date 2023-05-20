@@ -37,23 +37,20 @@
         lsp.display-inlay-hints = true;
       };
     };
-    languages = [
-      {
-        name = "awk";
+    languages = {
+      awk = {
         auto-format = true;
         formatter.command = "awk";
         formatter.args = [ "-f-" "-o-" ];
-      }
-      {
-        name = "bash";
+      };
+      bash = {
         file-types = [ "bats" "sh" ];
         comment-token = "#";
-      }
-      {
-        name = "nix";
+      };
+      nix = {
         auto-format = true;
         formatter.command = "nixpkgs-fmt";
-      }
-    ];
+      };
+    };
   };
 }
