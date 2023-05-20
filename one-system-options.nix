@@ -19,23 +19,27 @@
       fsType = "vfat";
     };
   };
-  fonts.fonts = with pkgs; [
-    dina-font
-    fantasque-sans-mono
-    fira-code
-    fira-code-symbols
-    liberation_ttf
-    meslo-lg
-    mplus-outline-fonts.githubRelease
-    nerdfonts
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    proggyfonts
-    tamsyn
-    tamzen
-    terminus_font
-  ];
+  fonts = {
+    fontDir.enable = true;
+    fonts = with pkgs; [
+      dina-font
+      fantasque-sans-mono
+      fira-code
+      fira-code-symbols
+      liberation_ttf
+      meslo-lg
+      mplus-outline-fonts.githubRelease
+      nerdfonts
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      proggyfonts
+      tamsyn
+      tamzen
+      terminus_font
+      garamond-libre
+    ];
+  };
   hardware.brillo.enable = true;
   hardware.pulseaudio.enable = false;
   hardware.tuxedo-keyboard.enable = true;
