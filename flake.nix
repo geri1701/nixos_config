@@ -7,7 +7,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     sops-nix.url = "github:Mic92/sops-nix";
     stylix.url = "github:danth/stylix";
-    tuxedo-nixos.url = "github:blitz/tuxedo-nixos";
+    tuxedo-nixos = {
+      url = "github:blitz/tuxedo-nixos";
+      inputs.nixpkgs.follows = "nixpkgs"; 
+    };
     realify.url = "github:geri1701/realify";
   };
   outputs =
