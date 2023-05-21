@@ -48,8 +48,8 @@
   };
   hardware.brillo.enable = true;
   hardware.pulseaudio.enable = false;
-  hardware.tuxedo-keyboard.enable = true;
-  hardware.tuxedo-control-center.enable = true;
+  # hardware.tuxedo-keyboard.enable = true;
+  # hardware.tuxedo-control-center.enable = true;
   hardware.bluetooth.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
