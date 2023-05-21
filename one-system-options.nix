@@ -134,6 +134,10 @@
       interval = "weekly";
     };
     blueman.enable = true;
+    tuxedo-rs = {
+        enable = true;
+        tailor_gui.enable = true;
+    };
   };
   sound.enable = true;
   systemd.services = {

@@ -11,6 +11,7 @@
       url = "github:blitz/tuxedo-nixos";
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
+    tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
     realify.url = "github:geri1701/realify";
   };
   outputs =
@@ -21,6 +22,7 @@
     , sops-nix
     , stylix
     , tuxedo-nixos
+    ,tuxedo-rs
     , ...
     }@inputs: {
       nixosConfigurations = {
@@ -71,6 +73,7 @@
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             tuxedo-nixos.nixosModules.default
+            tuxedo-rs.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;
