@@ -13,6 +13,7 @@
     # };
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
     realify.url = "github:geri1701/realify";
+    gen-session-name.url = "github:geri1701/gen-session-name";
   };
   outputs =
     { self

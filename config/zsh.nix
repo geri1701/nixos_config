@@ -40,6 +40,7 @@
         "exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons";
       lS = "exa -1 --icons";
       lt = "exa --tree --level=2 --icons";
+      zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
     };
     history = {
       expireDuplicatesFirst = true;
