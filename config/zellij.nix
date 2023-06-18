@@ -1,3 +1,4 @@
+{lib, ...}:
 {
   home.file.".config/zellij/layouts/default.kdl" = {
     recursive = true;
@@ -33,7 +34,7 @@
   programs.zellij = {
     enable = true;
     settings = {
-      theme = "solarized-dark";
+      theme = lib.mkDefault "solarized-dark";
       copy_command = "wl-copy";
       copy_clipboard = "primary";
       scrollback_editor = "hx";
