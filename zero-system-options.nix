@@ -148,6 +148,8 @@
       wantedBy = [ "multi-user.target" ];
     };
   };
+    services.getty.loginOptions = "-p -- geri";
+    services.getty.extraArgs = [ "--noclear" "--skip-login" ];
   time.timeZone = "Europe/Vienna";
   users = {
     defaultUserShell = pkgs.zsh;
