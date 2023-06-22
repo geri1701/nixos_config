@@ -32,6 +32,7 @@
           system = "x86_64-linux";
           modules = [
             ./zero-boot.nix
+            ./system-options.nix
             ./zero-system-options.nix
             ./system-packages.nix
             ./host-zero.nix
@@ -68,6 +69,7 @@
           system = "x86_64-linux";
           modules = [
             ./one-boot.nix
+            ./system-options.nix
             ./one-system-options.nix
             ./system-packages.nix
             ./host-one.nix
