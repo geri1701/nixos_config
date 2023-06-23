@@ -96,6 +96,10 @@
       enable = true;
       interval = "weekly";
     };
+    getty = { 
+       loginOptions = "-p -- geri";
+       extraArgs = [ "--noclear" "--skip-login" ];
+      };
   };
   sound.enable = true;
   systemd.services = {

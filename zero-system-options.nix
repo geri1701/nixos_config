@@ -25,6 +25,4 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
-    services.getty.loginOptions = "-p -- geri";
-    services.getty.extraArgs = [ "--noclear" "--skip-login" ];
 }
