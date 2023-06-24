@@ -59,6 +59,10 @@ let
        esac
      fi
   '');
+  pidgin-with-plugins = pkgs.pidgin.override {
+        ## Add whatever plugins are desired (see nixos.org package listing).
+        plugins = [ pkgs.pidgin-opensteamworks ];
+      };
 in
 {
   home.packages = with pkgs; [
@@ -100,7 +104,10 @@ in
     pcmanfm
     peep
     picard
+    pidgin-with-plugins
+    pidgin-opensteamworks
     print_email_ids
+    purple-plugin-pack
     sirula
     slurp
     swappy
