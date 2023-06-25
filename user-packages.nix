@@ -108,6 +108,7 @@ in
     pidgin-opensteamworks
     print_email_ids
     purple-plugin-pack
+    sfwbar
     sirula
     slurp
     swappy
