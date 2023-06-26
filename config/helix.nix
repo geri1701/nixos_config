@@ -51,6 +51,17 @@
         auto-format = true;
         formatter.command = "nixpkgs-fmt";
       };
-    };
+     # unison = {
+     #  scope = "source.unison";
+     #  injection-regex = "unison";
+     #  file-types = ["u"];
+     #  shebangs = [];
+     #  roots = [];
+     #  auto-format = false;
+     #  comment-token = "--";
+     #  indent = { tab-width = 4; unit = "    "; };
+     #  language-server = { command = "ncat"; args = ["localhost" "5757"]; }; 
+     #    };
+     };
   };
 }
