@@ -60,9 +60,9 @@ let
      fi
   '');
   pidgin-with-plugins = pkgs.pidgin.override {
-        ## Add whatever plugins are desired (see nixos.org package listing).
-        plugins = [ pkgs.pidgin-opensteamworks ];
-      };
+    ## Add whatever plugins are desired (see nixos.org package listing).
+    plugins = [ pkgs.pidgin-opensteamworks ];
+  };
 in
 {
   home.packages = with pkgs; [
@@ -93,6 +93,7 @@ in
     mpc-cli
     mpv
     musikcube
+    nmap
     nil
     nixpkgs-fmt
     nixpkgs-review
@@ -121,6 +122,7 @@ in
     typespeed
     typst
     typst-fmt
+    unison-ucm
     vscode-extensions.vadimcn.vscode-lldb
     w3m
     watchmate

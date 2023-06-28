@@ -2,7 +2,7 @@
   description = "NixOs configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/d2b6f2d154bf6b27a93ed895392f80c503df7cfa";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
     sops-nix.url = "github:Mic92/sops-nix";
@@ -22,8 +22,8 @@
     , home-manager
     , sops-nix
     , stylix
-    # , tuxedo-nixos
-    ,tuxedo-rs
+      # , tuxedo-nixos
+    , tuxedo-rs
     , ...
     }@inputs: {
       nixosConfigurations = {
