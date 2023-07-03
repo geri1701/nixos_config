@@ -150,18 +150,18 @@
   stylix.polarity = "dark";
   stylix.fonts = {
     serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
+      package = pkgs.tamzen;
+      name = "tamzen";
     };
 
     sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "Fantasque Sans";
+      package = pkgs.tamzen;
+      name = "tamzen";
     };
 
     monospace = {
-      package = pkgs.dejavu_fonts;
-      name = "Fantasque Sans Mono";
+      package = pkgs.tamzen;
+      name = "tamzen";
     };
 
     emoji = {
