@@ -6,7 +6,7 @@
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
-      exec-once=steam -no-cef-sandbox 
+      exec-once=steam 
       exec-once=blueman-applet      
       input {
           kb_file=
