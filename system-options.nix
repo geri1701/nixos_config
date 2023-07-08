@@ -148,6 +148,7 @@
   };
   stylix.image = ./wallpaper_logo.png;
   stylix.polarity = "dark";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
   stylix.fonts = {
     serif = {
       package = pkgs.tamzen;
