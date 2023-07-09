@@ -25,4 +25,9 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
+  services = {
+    openssh = {
+      enable = false;
+      settings = { PasswordAuthentication = false; };
+    };
 }

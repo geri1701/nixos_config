@@ -80,10 +80,6 @@
     rtkit.enable = true;
   };
   services = {
-    openssh = {
-      enable = false;
-      settings = { PasswordAuthentication = false; };
-    };
     pipewire = {
       enable = true;
       alsa.enable = true;
