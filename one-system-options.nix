@@ -42,4 +42,5 @@
         KbdInteractiveAuthentication = false;
       };
     };
+};
 }
