@@ -34,4 +34,12 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
+  services = {
+    openssh = {
+      enable = true;
+      settings = {
+        PasswordAuthentication = false;
+        KbdInteractiveAuthentication = false;
+      };
+    };
 }
