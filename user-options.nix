@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   gtk = { enable = true; };
   home = {
     stateVersion = "22.11";
@@ -7,7 +7,7 @@
     sessionVariables = {
       EDITOR = "hx";
       TERM = "foot";
-      QT_STYLE_OVERRIDE = "kvantum";
+      QT_STYLE_OVERRIDE = lib.mkForce "kvantum";
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };

@@ -30,4 +30,5 @@
       enable = false;
       settings = { PasswordAuthentication = false; };
     };
+  };
 }
