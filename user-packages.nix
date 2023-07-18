@@ -112,6 +112,7 @@ in
     sfwbar
     sirula
     slurp
+    sniffnet
     swappy
     swaybg
     the-way
