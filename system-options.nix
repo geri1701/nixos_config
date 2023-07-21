@@ -17,7 +17,7 @@
         noto-fonts
         noto-fonts-cjk
         noto-fonts-emoji
-        proggyfonts
+        iosevka
         tamsyn
         tamzen
         terminus_font
@@ -147,18 +147,18 @@
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
   stylix.fonts = {
     serif = {
-      package = pkgs.tamzen;
-      name = "tamzen";
+      package = pkgs.iosevka;
+      name = "iosevka";
     };
 
     sansSerif = {
       package = pkgs.tamzen;
-      name = "tamzen";
+      name = "iosevka";
     };
 
     monospace = {
       package = pkgs.tamzen;
-      name = "tamzen";
+      name = "iosevka";
     };
 
     emoji = {
