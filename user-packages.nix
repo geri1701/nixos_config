@@ -134,6 +134,7 @@ in
     wofi
     wthrr
     xdg-utils
+    xplr
     yt-dlp
     ytfzf
     zsh-autosuggestions
