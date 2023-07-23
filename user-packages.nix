@@ -109,6 +109,7 @@ in
     pidgin-opensteamworks
     print_email_ids
     purple-plugin-pack
+    rx
     sfwbar
     sirula
     slurp
