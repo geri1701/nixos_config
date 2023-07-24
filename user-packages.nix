@@ -75,6 +75,7 @@ in
     exercism
     fsuae
     fsuae-launcher
+    gimp
     glow
     grim
     inkscape-with-extensions

@@ -26,6 +26,7 @@
       sops
       tree
       virt-manager
+      virtiofsd
       vulkan-tools
       wget
       zoxide
