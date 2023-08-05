@@ -34,10 +34,10 @@
       }
       decoration {
           rounding=8
-          blur=1
-          blur_size=3 # minimum 1
-          blur_passes=1 # minimum 1
-          blur_new_optimizations=1
+          # blur=1
+          # blur_size=3 # minimum 1
+          # blur_passes=1 # minimum 1
+          # blur_new_optimizations=1
       }
         animations {
             enabled=1
