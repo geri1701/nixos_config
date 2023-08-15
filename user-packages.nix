@@ -97,6 +97,7 @@ in
     nil
     nixpkgs-fmt
     nixpkgs-review
+    nwg-drawer
     obsidian
     oculante
     oldest
@@ -107,7 +108,6 @@ in
     print_email_ids
     rx
     sfwbar
-    sirula
     slurp
     sniffnet
     swappy
