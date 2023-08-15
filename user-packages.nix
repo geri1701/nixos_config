@@ -78,7 +78,6 @@ in
     gimp
     glow
     grim
-    inkscape-with-extensions
     inputs.realify.defaultPackage.x86_64-linux.out
     inputs.gen-session-name.defaultPackage.x86_64-linux.out
     itd
@@ -105,11 +104,7 @@ in
     p7zip
     pcmanfm
     peep
-    picard
-    pidgin-with-plugins
-    pidgin-opensteamworks
     print_email_ids
-    purple-plugin-pack
     rx
     sfwbar
     sirula
@@ -125,7 +120,6 @@ in
     typespeed
     typst
     typst-fmt
-    unison-ucm
     vscode-extensions.vadimcn.vscode-lldb
     w3m
     watchmate
