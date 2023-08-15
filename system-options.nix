@@ -6,13 +6,11 @@
     {
       fontDir.enable = true;
       fonts = with pkgs; [
-        dina-font
         fantasque-sans-mono
         fira-code
         fira-code-symbols
         liberation_ttf
         meslo-lg
-        mplus-outline-fonts.githubRelease
         nerdfonts
         noto-fonts
         noto-fonts-cjk
@@ -20,8 +18,6 @@
         iosevka
         tamsyn
         tamzen
-        terminus_font
-        garamond-libre
       ];
     };
   hardware.pulseaudio.enable = false;
