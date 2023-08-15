@@ -66,7 +66,7 @@
       bind=,XF86TouchpadToggle,exec,toggle_touchpad           
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
-      bind=SUPER,P,exec,sirula
+      bind=SUPER,P,exec,nwg-drawer
       bind=,Menu,exec,sirula
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
       bind=SUPER,E,exec,pcmanfm
