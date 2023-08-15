@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      crate2nix
       exa
       expect
       gnupg
@@ -14,7 +13,6 @@
       networkmanager
       nixos-option
       nix-prefetch-git
-      nushell
       openssl
       pfetch
       pinentry
@@ -26,7 +24,6 @@
       sops
       tree
       virt-manager
-      virtiofsd
       vulkan-tools
       wget
       zoxide
