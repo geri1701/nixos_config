@@ -84,6 +84,7 @@ in
     joshuto
     jq
     kalker
+    kbs2
     kibi
     libnotify
     libsForQt5.qtstyleplugin-kvantum
