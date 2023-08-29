@@ -5,7 +5,7 @@
     fonts =
     {
       fontDir.enable = true;
-      fonts = with pkgs; [
+      packages = with pkgs; [
         fantasque-sans-mono
         fira-code
         fira-code-symbols
