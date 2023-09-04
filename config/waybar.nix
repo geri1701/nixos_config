@@ -7,6 +7,7 @@ let
     '';
   }));
 in {
+{
   programs.waybar = {
     enable = true;
     package = waybar_exp;
