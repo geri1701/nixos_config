@@ -1,16 +1,7 @@
 { pkgs, config, ... }:
-let
-  waybar_exp = (pkgs.waybar.overrideAttrs (oldAttrs: {
-    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    postPatch = ''
-      substituteInPlace src/modules/wlr/workspace_manager.cpp --replace "zext_workspace_handle_v1_activate(workspace_handle_);" "const std::string command = \"${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch workspace \" + name_; system(command.c_str());"
-    '';
-  }));
-in {
 {
-  programs.waybar = {
+    programs.waybar = {
     enable = true;
-    package = waybar_exp;
     settings = {
       mainBar = {
         layer = "top";
@@ -19,13 +10,18 @@ in {
         exclusive = true;
         passtrough = false;
         height = 0;
-        modules-left = [ "wlr/workspaces" "network" "battery" ];
+        modules-left = [ "hyprland/workspaces" "network" "battery" ];
         modules-center = [ "hyprland/window" ];
         modules-right = [ "pulseaudio" "custom/weather" "tray" "clock" ];
-        "wlr/workspaces" = {
-          format = "{icon}";
+        "hyprland/workspaces" = {
+          all-outputs = true;
+          active-only =  false;
+          format = "{name}";
           on-click = "activate";
           sort-by-number = true;
+          persistent_workspaces = {
+            "*" = 5;
+          };
         };
         network = {
           format-wifi = "{essid} ({signalStrength}%) ";
