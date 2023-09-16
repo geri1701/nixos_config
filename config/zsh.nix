@@ -31,15 +31,15 @@
       fi
     '';
     shellAliases = {
-      ls = "exa --icons";
-      l = "exa -lbF --git --icons";
-      ll = "exa -lbGF --git --icons";
-      llm = "exa -lbGd --git --sort=modified --icons";
-      la = "exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --icons";
+      ls = "eza --icons";
+      l = "eza -lbF --git --icons";
+      ll = "eza -lbGF --git --icons";
+      llm = "eza -lbGd --git --sort=modified --icons";
+      la = "eza -lbhHigUmuSa --time-style=long-iso --git --color-scale --icons";
       lx =
-        "exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons";
-      lS = "exa -1 --icons";
-      lt = "exa --tree --level=2 --icons";
+        "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons";
+      lS = "eza -1 --icons";
+      lt = "eza --tree --level=2 --icons";
       zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
     };
     history = {
