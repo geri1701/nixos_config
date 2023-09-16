@@ -59,7 +59,6 @@
                   ./user-packages.nix
                   ./sops.nix
                   sops-nix.homeManagerModules.sops
-                  # hyprland.homeManagerModules.default
                 ];
               };
             }
@@ -98,7 +97,6 @@
                   ./user-packages.nix
                   ./sops.nix
                   sops-nix.homeManagerModules.sops
-                  # hyprland.homeManagerModules.default
                 ];
               };
             }
