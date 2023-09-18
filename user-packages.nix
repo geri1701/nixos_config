@@ -70,7 +70,6 @@ in
     calcure
     cht-sh
     claws-mail
-    davfs2
     ddgr
     discord
     exercism

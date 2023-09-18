@@ -92,6 +92,17 @@
        loginOptions = "-p -- geri";
        extraArgs = [ "--noclear" "--skip-login" ];
       };
+    davfs2.enable = true;
+autofs = {
+  enable = true;
+  autoMaster = let
+    mapConf = pkgs.writeText "auto" ''
+      nextcloud -fstype=davfs,conf=/path/to/davfs/conf,uid=myuid :https\:nextcloud.nerdbyte.at/remote.php/dav/files/Geri
+    '';
+  in ''
+    /home/directory/mounts file:${mapConf}
+  '';
+};
   };
   sound.enable = true;
   systemd.services = {
