@@ -42,5 +42,9 @@
         KbdInteractiveAuthentication = false;
       };
     };
+    tuxedo-rs = {
+      enable = true;
+      tailor_gui.enable = true;
+    };
 };
 }

@@ -7,10 +7,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     sops-nix.url = "github:Mic92/sops-nix";
     stylix.url = "github:danth/stylix";
-    # tuxedo-nixos = {
-    #   url = "github:blitz/tuxedo-nixos";
-    #   inputs.nixpkgs.follows = "nixpkgs"; 
-    # };
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
     realify.url = "github:geri1701/realify";
     gen-session-name.url = "github:geri1701/gen-session-name";
@@ -22,7 +18,6 @@
     , home-manager
     , sops-nix
     , stylix
-      # , tuxedo-nixos
     , tuxedo-rs
     , ...
     }@inputs: {
@@ -74,7 +69,6 @@
             ./host-one.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
-            # tuxedo-nixos.nixosModules.default
             tuxedo-rs.nixosModules.default
             {
               home-manager = {
