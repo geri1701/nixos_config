@@ -57,13 +57,13 @@
       pinentryFlavor = "tty";
     };
     dconf.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall =
-        true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall =
-        true; # Open ports in the firewall for Source Dedicated Server
-    };
+    # steam = {
+    #   enable = true;
+    #   remotePlay.openFirewall =
+    #     true; # Open ports in the firewall for Steam Remote Play
+    #   dedicatedServer.openFirewall =
+    #     true; # Open ports in the firewall for Source Dedicated Server
+    # };
     zsh.enable = true;
   };
   qt = {
@@ -93,6 +93,7 @@
        extraArgs = [ "--noclear" "--skip-login" ];
       };
     davfs2.enable = true;
+    flatpak.enable = true;
 autofs = {
   enable = true;
   autoMaster = let

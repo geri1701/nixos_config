@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     initrd = {
       kernelModules = [ "amdgpu" ];
       systemd.enable = true;
