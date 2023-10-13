@@ -26,6 +26,10 @@
   # hardware.tuxedo-keyboard.enable = true;
   # hardware.tuxedo-control-center.enable = true;
   hardware.bluetooth.enable = true;
+    hardware.tuxedo-rs = {
+      enable = true;
+      tailor_gui.enable = true;
+    };
   networking = {
     hostName = "one";
     wireless.enable = false;
@@ -41,10 +45,6 @@
         PasswordAuthentication = false;
         KbdInteractiveAuthentication = false;
       };
-    };
-    tuxedo-rs = {
-      enable = true;
-      tailor_gui.enable = true;
     };
 };
 }
