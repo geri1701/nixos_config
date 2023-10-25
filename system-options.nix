@@ -99,30 +99,30 @@ autofs = {
 };
   };
   sound.enable = true;
-  systemd.services = {
-    mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
-    sort-att-dir = {
-      description = "sort files";
-      serviceConfig = {
-        Type = "oneshot";
-        ExecStart = lib.mkForce (pkgs.writeShellScript "clean_att_dir" ''
-          mkdir -p /home/geri/mail_att/gehalt /home/geri/mail_att/rechnung
-          shopt -s nocaseglob
-          for file in "/home/geri/mail_att"/*{gehalt,rechnung}*; do
-              if [[ -f "$file" ]]; then
-                  if echo "$file" | grep -qi "gehalt"; then
-                      mv "$file" "/home/geri/mail_att/gehalt" >/dev/null 2>&1
-                  elif echo "$file" | grep -qi  -e "rechnung" -e "invoice"; then
-                      mv "$file" "/home/geri/mail_att/rechnung" >/dev/null 2>&1
-                  fi
-              fi
-          done
-          shopt -u nocaseglob
-        '');
-      };
-      wantedBy = [ "multi-user.target" ];
-    };
-  };
+  # systemd.services = {
+  #   mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
+  #   sort-att-dir = {
+  #     description = "sort files";
+  #     serviceConfig = {
+  #       Type = "oneshot";
+  #       ExecStart = lib.mkForce (pkgs.writeShellScript "clean_att_dir" ''
+  #         mkdir -p /home/geri/mail_att/gehalt /home/geri/mail_att/rechnung
+  #         shopt -s nocaseglob
+  #         for file in "/home/geri/mail_att"/*{gehalt,rechnung}*; do
+  #             if [[ -f "$file" ]]; then
+  #                 if echo "$file" | grep -qi "gehalt"; then
+  #                     mv "$file" "/home/geri/mail_att/gehalt" >/dev/null 2>&1
+  #                 elif echo "$file" | grep -qi  -e "rechnung" -e "invoice"; then
+  #                     mv "$file" "/home/geri/mail_att/rechnung" >/dev/null 2>&1
+  #                 fi
+  #             fi
+  #         done
+  #         shopt -u nocaseglob
+  #       '');
+  #     };
+  #     wantedBy = [ "multi-user.target" ];
+  #   };
+  # };
     time.timeZone = "Europe/Vienna";
   users = {
     defaultUserShell = pkgs.zsh;
