@@ -90,6 +90,7 @@ in
     mpc-cli
     mpv
     musikcube
+    nextcloud-client
     nmap
     nil
     nixpkgs-fmt
