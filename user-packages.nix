@@ -87,6 +87,7 @@ in
     libsixel
     luajitPackages.vicious
     lxqt.lxqt-qtplugin
+    marksman
     mpc-cli
     mpv
     musikcube
