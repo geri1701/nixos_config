@@ -1,13 +1,16 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     extraConfig = ''
       monitor=,preferred,auto,auto
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
       exec-once=flatpak run com.valvesoftware.Steam 
+      exec-once=flatpak run org.keepassxc.KeePassXC 
       exec-once=blueman-applet      
+      exec-once=nextcloud      
       input {
           kb_file=
           kb_layout= us

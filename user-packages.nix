@@ -96,6 +96,7 @@ in
     nixpkgs-fmt
     nixpkgs-review
     nwg-drawer
+    nwg-look
     obsidian
     oculante
     oldest

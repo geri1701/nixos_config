@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ lib, pkgs, ... }: {
   gtk = { enable = true; };
   home = {
     stateVersion = "22.11";
@@ -11,11 +11,11 @@
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-    #   pointerCursor = {
-    #     name = "Bibata_Ghost";
-    #     # size = 22;
-    #     package = pkgs.bibata-cursors-translucent;
-    #   };
+      pointerCursor = {
+        name = lib.mkForce "Bibata_Ghost";
+        size = lib.mkForce 22;
+        package = lib.mkForce pkgs.bibata-cursors-translucent;
+      }; 
   };
   programs = {
     home-manager.enable = true;
