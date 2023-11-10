@@ -11,11 +11,11 @@
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-      pointerCursor = {
-        name = lib.mkForce "Bibata_Ghost";
-        size = lib.mkForce 22;
-        package = lib.mkForce pkgs.bibata-cursors-translucent;
-      }; 
+    pointerCursor = {
+      name = lib.mkForce "Bibata_Ghost";
+      size = lib.mkForce 22;
+      package = lib.mkForce pkgs.bibata-cursors-translucent;
+    };
   };
   programs = {
     home-manager.enable = true;
@@ -54,6 +54,5 @@
   stylix.targets.vscode.enable = false;
   stylix.targets.waybar.enable = false;
   stylix.fonts.sizes.terminal = 10;
-  systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   xdg = { enable = true; };
 }

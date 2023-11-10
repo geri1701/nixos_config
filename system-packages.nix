@@ -21,7 +21,6 @@
       rust-analyzer
       sshfs
       starship
-      sops
       tree
       virt-manager
       vulkan-tools

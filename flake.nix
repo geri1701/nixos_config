@@ -5,7 +5,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
-    sops-nix.url = "github:Mic92/sops-nix";
     stylix.url = "github:danth/stylix";
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
     realify.url = "github:geri1701/realify";
@@ -16,7 +15,6 @@
     , nixpkgs
     , hyprland
     , home-manager
-    , sops-nix
     , stylix
     , tuxedo-rs
     , ...
@@ -52,8 +50,6 @@
                   ./config/zsh.nix
                   ./user-options.nix
                   ./user-packages.nix
-                  ./sops.nix
-                  sops-nix.homeManagerModules.sops
                 ];
               };
             }
@@ -89,8 +85,6 @@
                   ./config/zsh.nix
                   ./user-options.nix
                   ./user-packages.nix
-                  ./sops.nix
-                  sops-nix.homeManagerModules.sops
                 ];
               };
             }

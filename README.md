@@ -25,8 +25,7 @@ This repository contains the declarative, flake-based configurations for two Nix
 │         ├── config/zellij.nix
 │         ├── config/zsh.nix
 │         ├── user-options.nix
-│         ├── user-packages.nix
-│         └── sops.nix
+│         └── user-packages.nix
 └──one
     ├── one-boot.nix
     ├── one-system-options.nix
@@ -45,8 +44,7 @@ This repository contains the declarative, flake-based configurations for two Nix
          ├── config/zellij.nix
          ├── config/zsh.nix
          ├── user-options.nix
-         ├── user-packages.nix
-         └── sops.nix
+         └── user-packages.nix
 ```
 
 ## Resources
