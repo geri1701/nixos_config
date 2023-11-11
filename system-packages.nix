@@ -2,14 +2,9 @@
   environment = {
     systemPackages = with pkgs; [
       gparted
-      libiconv
       libsForQt5.qtstyleplugin-kvantum
       networkmanager
-      nixos-option
-      nix-prefetch-git
       openssl
-      pfetch
-      pinentry
       age
       rnix-lsp
       rust-analyzer
@@ -22,6 +17,7 @@
       zoxide
       eza.packages."${pkgs.system}".default
       helix.packages."${pkgs.system}".helix
+      pfetch
     ];
   };
 }

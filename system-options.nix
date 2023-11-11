@@ -1,9 +1,9 @@
-{pkgs, lib, ... }: {
-  system.stateVersion ="22.11";
+{ pkgs, lib, ... }: {
+  system.stateVersion = "22.11";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
-    fonts =
+  fonts =
     {
       fontDir.enable = true;
       packages = with pkgs; [
@@ -82,22 +82,24 @@
       enable = true;
       interval = "weekly";
     };
-    getty = { 
-       loginOptions = "-p -- geri";
-       extraArgs = [ "--noclear" "--skip-login" ];
-      };
+    getty = {
+      loginOptions = "-p -- geri";
+      extraArgs = [ "--noclear" "--skip-login" ];
+    };
     davfs2.enable = true;
     flatpak.enable = true;
-autofs = {
-  enable = true;
-  autoMaster = let
-    mapConf = pkgs.writeText "auto" ''
-      nextcloud -fstype=davfs,conf=/path/to/davfs/conf,uid=myuid :https\:nextcloud.nerdbyte.at/remote.php/dav/files/Geri
-    '';
-  in ''
-    /home/directory/mounts file:${mapConf}
-  '';
-};
+    autofs = {
+      enable = true;
+      autoMaster =
+        let
+          mapConf = pkgs.writeText "auto" ''
+            nextcloud -fstype=davfs,conf=/path/to/davfs/conf,uid=myuid :https\:nextcloud.nerdbyte.at/remote.php/dav/files/Geri
+          '';
+        in
+        ''
+          /home/directory/mounts file:${mapConf}
+        '';
+    };
   };
   sound.enable = true;
   systemd.services = {
@@ -124,7 +126,7 @@ autofs = {
       wantedBy = [ "multi-user.target" ];
     };
   };
-    time.timeZone = "Europe/Vienna";
+  time.timeZone = "Europe/Vienna";
   users = {
     defaultUserShell = pkgs.zsh;
     users.geri = {
