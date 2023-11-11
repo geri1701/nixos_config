@@ -12,7 +12,6 @@
       starship
       tree
       virt-manager
-      vulkan-tools
       wget
       zoxide
       eza.packages."${pkgs.system}".default
