@@ -35,14 +35,11 @@ in
     ddgr
     discord
     exercism
-    fsuae
-    fsuae-launcher
     gimp
     glow
     grim
     inputs.realify.defaultPackage.x86_64-linux.out
     inputs.gen-session-name.defaultPackage.x86_64-linux.out
-    itd
     joshuto
     jq
     kalker

@@ -13,6 +13,7 @@
     helix.inputs.nixpkgs.follows = "nixpkgs";
     eza.url = "github:eza-community/eza";
     eza.inputs.nixpkgs.follows = "nixpkgs";
+    joshuto.url = "github:kamiyaa/joshuto";
   };
   outputs =
     { self
@@ -21,6 +22,7 @@
     , home-manager
     , stylix
     , tuxedo-rs
+    , joshuto
     , ...
     }@inputs: {
       nixosConfigurations = {
@@ -57,6 +59,7 @@
                   ./user-packages.nix
                 ];
               };
+              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };
@@ -93,6 +96,7 @@
                   ./user-packages.nix
                 ];
               };
+              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };
