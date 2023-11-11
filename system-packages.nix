@@ -1,9 +1,7 @@
 { pkgs, helix, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      gnupg
       gparted
-      graphviz
       inxi
       libiconv
       libsForQt5.qtstyleplugin-kvantum
