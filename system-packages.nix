@@ -1,7 +1,6 @@
 { pkgs, helix, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      expect
       gnupg
       gparted
       graphviz
