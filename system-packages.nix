@@ -1,7 +1,6 @@
-{ pkgs, helix, ... }: {
+{ pkgs, helix, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      eza
       expect
       gnupg
       gparted
@@ -25,6 +24,7 @@
       vulkan-tools
       wget
       zoxide
+      eza.packages."${pkgs.system}".default
       helix.packages."${pkgs.system}".helix
     ];
   };

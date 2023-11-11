@@ -35,9 +35,9 @@
       l = "eza -lbF --git --icons";
       ll = "eza -lbGF --git --icons";
       llm = "eza -lbGd --git --sort=modified --icons";
-      la = "eza -lbhHigUmuSa --time-style=long-iso --git --color-scale --icons";
+      la = "eza -lbhHigUmuSa --time-style=long-iso --git --icons --color-scale all";
       lx =
-        "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons";
+        "eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all";
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
       zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
