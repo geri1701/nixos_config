@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, helix, ... }: {
   environment = {
     systemPackages = with pkgs; [
       eza
@@ -6,7 +6,6 @@
       gnupg
       gparted
       graphviz
-      helix
       inxi
       libiconv
       libsForQt5.qtstyleplugin-kvantum
@@ -26,6 +25,7 @@
       vulkan-tools
       wget
       zoxide
+      helix.packages."${pkgs.system}".helix
     ];
   };
 }

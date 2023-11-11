@@ -9,6 +9,7 @@
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
     realify.url = "github:geri1701/realify";
     gen-session-name.url = "github:geri1701/gen-session-name";
+    helix.url = "github:helix-editor/helix/23.10";
   };
   outputs =
     { self
@@ -23,6 +24,7 @@
         nix.nixPath = [ "nixpkgs=/home/geri/nixos" ];
         zero = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = inputs;
           modules = [
             ./zero-boot.nix
             ./system-options.nix
@@ -57,6 +59,7 @@
         };
         one = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = inputs;
           modules = [
             ./one-boot.nix
             ./system-options.nix
