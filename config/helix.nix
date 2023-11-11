@@ -1,6 +1,6 @@
 {
   programs.helix = {
-  enable = true;
+    enable = true;
     settings = {
       theme = "solarized_dark";
       editor = {

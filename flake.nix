@@ -10,6 +10,7 @@
     realify.url = "github:geri1701/realify";
     gen-session-name.url = "github:geri1701/gen-session-name";
     helix.url = "github:helix-editor/helix/23.10";
+    helix.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     { self
