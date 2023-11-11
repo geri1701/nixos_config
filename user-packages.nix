@@ -63,7 +63,6 @@ in
 {
   home.packages = with pkgs; [
     amdgpu_top
-    calcure
     cht-sh
     claws-mail
     ddgr
