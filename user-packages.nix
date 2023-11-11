@@ -66,12 +66,10 @@ in
     nwg-look
     obsidian
     oculante
-    oldest
     ouch
     p7zip
     pcmanfm
     peep
-    print_email_ids
     rx
     sfwbar
     slurp
