@@ -2,7 +2,6 @@
   environment = {
     systemPackages = with pkgs; [
       gparted
-      inxi
       libiconv
       libsForQt5.qtstyleplugin-kvantum
       networkmanager
