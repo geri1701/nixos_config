@@ -1,19 +1,19 @@
 {
   description = "NixOs configuration";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    eza.inputs.nixpkgs.follows = "nixpkgs";
+    eza.url = "github:eza-community/eza";
+    gen-session-name.url = "github:geri1701/gen-session-name";
+    helix.inputs.nixpkgs.follows = "nixpkgs";
+    helix.url = "github:helix-editor/helix/23.10";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager";
     hyprland.url = "github:hyprwm/Hyprland";
+    joshuto.url = "github:kamiyaa/joshuto";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    realify.url = "github:geri1701/realify";
     stylix.url = "github:danth/stylix";
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
-    realify.url = "github:geri1701/realify";
-    gen-session-name.url = "github:geri1701/gen-session-name";
-    helix.url = "github:helix-editor/helix/23.10";
-    helix.inputs.nixpkgs.follows = "nixpkgs";
-    eza.url = "github:eza-community/eza";
-    eza.inputs.nixpkgs.follows = "nixpkgs";
-    joshuto.url = "github:kamiyaa/joshuto";
   };
   outputs =
     { self
