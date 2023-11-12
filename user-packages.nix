@@ -93,6 +93,7 @@ in
     xplr
     yt-dlp
     ytfzf
+    zeal
     zsh-autosuggestions
     zsh-you-should-use
   ];
