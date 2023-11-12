@@ -12,7 +12,6 @@
       rnix-lsp
       rust-analyzer
       sshfs
-      starship
       tree
       virt-manager
       wget

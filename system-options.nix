@@ -58,6 +58,7 @@
       pinentryFlavor = "tty";
     };
     dconf.enable = true;
+    starship.enable = true;
     zsh.enable = true;
   };
   qt = {
