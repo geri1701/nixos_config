@@ -59,6 +59,8 @@ in
     nil
     nixpkgs-fmt
     nixpkgs-review
+    neovim
+    nodejs
     nwg-drawer
     nwg-look
     obsidian
