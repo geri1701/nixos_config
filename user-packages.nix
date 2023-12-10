@@ -54,14 +54,12 @@ in
     marksman
     mpc-cli
     mpv
-    musikcube
     nextcloud-client
     nmap
     nil
     nixpkgs-fmt
     nixpkgs-review
     neovim
-    nodejs
     nwg-drawer
     nwg-look
     obsidian
@@ -71,7 +69,6 @@ in
     pcmanfm
     peep
     rx
-    sfwbar
     slurp
     sniffnet
     swappy
@@ -80,22 +77,18 @@ in
     tldr
     toggle_touchpad
     translate-shell
-    transmission-gtk
     typespeed
     typst
     typst-fmt
     vscode-extensions.vadimcn.vscode-lldb
     w3m
-    watchmate
     wine
     winetricks
     wl-clipboard
-    wofi
     wthrr
     xdg-utils
     xplr
     yt-dlp
-    ytfzf
     zeal
     zsh-autosuggestions
     zsh-you-should-use

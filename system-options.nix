@@ -8,9 +8,9 @@
       fontDir.enable = true;
       packages = with pkgs; [
         fantasque-sans-mono
-        fira-code
+        # fira-code
         fira-code-symbols
-        liberation_ttf
+        # liberation_ttf
         meslo-lg
         nerdfonts
         noto-fonts
@@ -146,6 +146,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+    config.common.default = "*";
   };
   stylix.image = ./wallpaper_logo.png;
   stylix.polarity = "dark";

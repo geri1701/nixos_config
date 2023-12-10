@@ -1,7 +1,7 @@
 { pkgs, helix, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      age
+      # age
       eza.packages."${pkgs.system}".default
       gparted
       helix.packages."${pkgs.system}".helix
@@ -13,7 +13,7 @@
       rust-analyzer
       sshfs
       tree
-      virt-manager
+      # virt-manager
       wget
       zoxide
     ];
