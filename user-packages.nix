@@ -56,6 +56,7 @@ in
     mpv
     nextcloud-client
     nmap
+    nodejs
     nil
     nixpkgs-fmt
     nixpkgs-review
