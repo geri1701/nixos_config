@@ -47,6 +47,10 @@
     '';
   };
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   programs = {
     git = {
       enable = true;
