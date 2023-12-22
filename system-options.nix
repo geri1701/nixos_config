@@ -63,6 +63,7 @@
     };
     dconf.enable = true;
     starship.enable = true;
+    steam.enable = true;
     zsh.enable = true;
     nm-applet.enable = true;
   };
