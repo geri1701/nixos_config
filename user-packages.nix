@@ -42,6 +42,7 @@ in
     joshuto
     jq
     kalker
+    keepassxc
     kbs2
     kibi
     libnotify
