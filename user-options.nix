@@ -24,6 +24,7 @@
       nix-direnv = { enable = true; };
     };
     skim.enable = true;
+    steam.enable = true;
     bottom.enable = true;
     zsh.enable = true;
     zoxide.enable = true;
