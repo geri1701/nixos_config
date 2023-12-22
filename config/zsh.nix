@@ -6,7 +6,7 @@
     enableAutosuggestions = true;
     initExtraBeforeCompInit = ''
       fpath=($HOME/.zsh/ $fpath)
-      source $HOME/.zsh/_zellij
+      # source $HOME/.zsh/_zellij
     '';
     initExtraFirst = ''
       pfetch
@@ -22,9 +22,9 @@
       enable = true;
       plugins = [ "alias-finder" "colored-man-pages" "git" "history" "rust" ];
     };
-    loginExtra = ''
-      eval "$(zellij setup --generate-auto-start zsh)"
-    '';
+    # loginExtra = ''
+    #   eval "$(zellij setup --generate-auto-start zsh)"
+    # '';
     profileExtra = ''
       if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
         Hyprland

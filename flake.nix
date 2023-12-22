@@ -3,7 +3,6 @@
   inputs = {
     eza.inputs.nixpkgs.follows = "nixpkgs";
     eza.url = "github:eza-community/eza";
-    gen-session-name.url = "github:geri1701/gen-session-name";
     helix.inputs.nixpkgs.follows = "nixpkgs";
     helix.url = "github:helix-editor/helix";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +10,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    realify.url = "github:geri1701/realify";
     stylix.url = "github:danth/stylix";
     tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
   };
@@ -44,7 +42,6 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
-                  ./config/aerc.nix
                   ./config/zero-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
@@ -81,7 +78,6 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
-                  ./config/aerc.nix
                   ./config/one-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix

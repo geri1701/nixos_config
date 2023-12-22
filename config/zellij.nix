@@ -33,6 +33,7 @@
   };
   programs.zellij = {
     enable = true;
+    enableZshIntegration = true;
     settings = {
       theme = lib.mkDefault "solarized-dark";
       copy_command = "wl-copy";

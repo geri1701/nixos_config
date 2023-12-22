@@ -39,8 +39,6 @@ in
     glow
     graph-easy
     grim
-    inputs.realify.defaultPackage.x86_64-linux.out
-    inputs.gen-session-name.defaultPackage.x86_64-linux.out
     joshuto
     jq
     kalker
