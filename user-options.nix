@@ -1,7 +1,7 @@
 { lib, pkgs, ... }: {
   gtk = { enable = true; };
   home = {
-    stateVersion = "22.11";
+    stateVersion = "24.05";
     username = "geri";
     homeDirectory = "/home/geri";
     sessionVariables = {
@@ -50,9 +50,9 @@
     pasystray.enable = true;
     gnome-keyring.enable = true;
   };
-  stylix.targets.helix.enable = false;
+  stylix.targets.helix.enable = true;
   stylix.targets.vscode.enable = false;
-  stylix.targets.waybar.enable = false;
+  stylix.targets.waybar.enable = true;
   stylix.fonts.sizes.terminal = 10;
   xdg = { enable = true; };
 }

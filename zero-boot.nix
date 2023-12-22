@@ -10,18 +10,8 @@
     tmp.cleanOnBoot = true;
     plymouth.enable = true;
     consoleLogLevel = 0;
-    loader = {
-      efi.canTouchEfiVariables = true;
-      timeout = 1;
-      grub = {
-        enable = true;
-        device = "/dev/sda";
-        useOSProber = true;
-        extraConfig = ''
-          set timeout_style=hidden
-        '';
-      };
-    };
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
   };
   services.kmscon.hwRender = true;
 }

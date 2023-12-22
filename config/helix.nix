@@ -2,7 +2,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "solarized_dark";
+      # theme = "solarized_dark";
       editor = {
         line-number = "relative";
         mouse = false;

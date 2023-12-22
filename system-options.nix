@@ -1,5 +1,5 @@
 { pkgs, lib, ... }: {
-  system.stateVersion = "22.11";
+  system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -64,6 +64,7 @@
     dconf.enable = true;
     starship.enable = true;
     zsh.enable = true;
+    nm-applet.enable = true;
   };
   qt = {
     enable = true;
@@ -154,7 +155,7 @@
   };
   stylix.image = ./wallpaper_logo.png;
   stylix.polarity = "dark";
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
+  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
   stylix.fonts = {
     serif = {
       package = pkgs.iosevka;
