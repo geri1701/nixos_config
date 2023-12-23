@@ -156,7 +156,7 @@
     config.common.default = "*";
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
-  stylix.image = ./wallpaper_logo.png;
+  stylix.image = ./wallpaper.png;
   stylix.polarity = "dark";
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
   stylix.fonts = {
