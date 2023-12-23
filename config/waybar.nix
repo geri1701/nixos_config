@@ -48,7 +48,8 @@
         };
         "custom/weather" = {
           exec =
-            "wthrr -l de | sed -n '5p' | sed -e 's/^[^[:print:]]*//' -e 's/^│s*//' -e 's/s*│s*$//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'";
+            "wthrr -l de | sed -n '5p' | sed -e 's/^[^[:print:]]*//' -e 's/^│s*//' -e 's/s*│s*$//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'| sed 's/.*/_&_/'
+";
           interval = 1800;
         };
         "tray" = {

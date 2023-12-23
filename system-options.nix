@@ -8,9 +8,9 @@
       fontDir.enable = true;
       packages = with pkgs; [
         fantasque-sans-mono
-        # fira-code
+        fira-code
         fira-code-symbols
-        # liberation_ttf
+        liberation_ttf
         meslo-lg
         nerdfonts
         noto-fonts
@@ -64,6 +64,7 @@
     dconf.enable = true;
     starship.enable = true;
     steam.enable = true;
+    thunar.enable = true;
     zsh.enable = true;
     nm-applet.enable = true;
   };
@@ -153,6 +154,7 @@
     enable = true;
     wlr.enable = true;
     config.common.default = "*";
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
   stylix.image = ./wallpaper_logo.png;
   stylix.polarity = "dark";

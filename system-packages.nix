@@ -1,7 +1,6 @@
 { pkgs, helix, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      # age
       eza.packages."${pkgs.system}".default
       gparted
       helix.packages."${pkgs.system}".helix

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   programs.firefox = {
     enable = true;
     profiles.geri.settings = {
@@ -9,6 +9,7 @@
       "extensions.webextensions.tabhide.enabled" = true;
       "browser.startup.homepage" = "localhost:9090/bookmarks";
       "browser.sessionstore.resume_from_crash" = false;
+      "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
   };
 }
