@@ -6,7 +6,7 @@
       monitor=,highres,auto,1
       exec-once=dunst
       exec-once=waybar 
-      exec-once=swaybg -i /home/geri/nixos/wallpaper.png
+      exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
       exec-once=flatpak run com.valvesoftware.Steam 
       exec-once=flatpak run org.keepassxc.KeePassXC 
       exec-once=blueman-applet      
