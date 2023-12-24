@@ -2,14 +2,11 @@
   description = "NixOs configuration";
   inputs = {
     eza.inputs.nixpkgs.follows = "nixpkgs";
-    # eza.url = "github:eza-community/eza";
     eza.url = "http://rime.cx/v1/github/eza-community/eza.tar.gz";
     helix.inputs.nixpkgs.follows = "nixpkgs";
-    # helix.url = "github:helix-editor/helix";
     helix.url = "http://rime.cx/v1/github/helix-editor/helix.tar.gz";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
-    # hyprland.url = "github:hyprwm/Hyprland";
     hyprland.url = "http://rime.cx/v1/github/hyprwm/Hyprland.tar.gz";
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
