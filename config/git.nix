@@ -3,6 +3,8 @@
     enable = true;
     userName = "geri1701";
     userEmail = "geri@sdf.org";
+    signing.signByDefault = true;
+    signing.key = null;
     delta = {
       enable = true;
       options = {
