@@ -13,8 +13,8 @@
       exec-once=nextcloud      
       input {
           kb_file=
-          kb_layout= us
-          kb_variant= altgr-intl
+          kb_layout= de
+          kb_variant= us
           kb_model=
           kb_options= caps:escape
           kb_rules=
