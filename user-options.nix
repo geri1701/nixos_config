@@ -34,7 +34,12 @@
     platformTheme = "gtk";
   };
   services = {
-    gpg-agent = { enable = true; };
+    gpg-agent = {
+      enable = true;
+      pinentryFlavor = "gnome3";
+      enableSshSupport = true;
+      enableExtraSocket = true;
+    };
     network-manager-applet.enable = true;
     mpd = {
       enable = true;

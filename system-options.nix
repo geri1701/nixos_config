@@ -56,11 +56,6 @@
       enable = true;
       package = pkgs.gitFull;
     };
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-      pinentryFlavor = "tty";
-    };
     dconf.enable = true;
     starship.enable = true;
     steam.enable = true;
