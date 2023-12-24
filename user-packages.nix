@@ -39,6 +39,7 @@ in
     glow
     graph-easy
     grim
+    gnupg
     joshuto
     jq
     kalker
