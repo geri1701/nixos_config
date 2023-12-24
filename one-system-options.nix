@@ -1,3 +1,4 @@
+{ pkgs, ... } :
 {
   fileSystems = {
     "/" = {
@@ -16,15 +17,7 @@
       fsType = "vfat";
     };
   };
-  #tuxedo control center dependency
-  nixpkgs.config.permittedInsecurePackages = [
-    "nodejs-14.21.3"
-    "openssl-1.1.1t"
-    "electron-13.6.9"
-  ];
   hardware.brillo.enable = true;
-  # hardware.tuxedo-keyboard.enable = true;
-  # hardware.tuxedo-control-center.enable = true;
   hardware.bluetooth.enable = true;
   hardware.tuxedo-rs.enable = true;
   hardware.tuxedo-rs.tailor-gui.enable = true;
@@ -36,6 +29,10 @@
       insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
+  environment.systemPackages = [
+    pkgs.linuxKernel.packages.linux_xanmod_latest.tuxedo-keyboard
+    pkgs.tuxedo-rs
+  ];
   services = {
     openssh = {
       enable = true;

@@ -11,7 +11,6 @@
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
-    tuxedo-rs.url = "github:AaronErhardt/tuxedo-rs";
   };
   outputs =
     { self
@@ -19,7 +18,6 @@
     , hyprland
     , home-manager
     , stylix
-    , tuxedo-rs
     , joshuto
     , ...
     }@inputs: {
@@ -71,7 +69,6 @@
             ./host-one.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
-            tuxedo-rs.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;
