@@ -103,6 +103,7 @@
           /home/directory/mounts file:${mapConf}
         '';
     };
+    gnome.gnome-keyring.enable = true;
   };
   sound.enable = true;
   systemd.services = {
