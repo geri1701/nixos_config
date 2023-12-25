@@ -1,9 +1,9 @@
-{ pkgs, helix, eza, ... }: {
+{ pkgs, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
       eza.packages."${pkgs.system}".default
       gparted
-      helix.packages."${pkgs.system}".helix
+      helix
       libsForQt5.qtstyleplugin-kvantum
       networkmanager
       openssl

@@ -2,18 +2,18 @@
 {
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-label/root";
+      device = "/dev/disk/by-uuid/585ba183-6c2b-476f-bf32-2ff6e7017bb6";
       fsType = "ext4";
       options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
     };
     "/home" = {
-      device = "/dev/disk/by-label/home";
+      device = "/dev/disk/by-uuid/654ad835-1384-45e4-bf82-dfb582de0e92";
       fsType = "ext4";
       options = [ "rw" "noatime" "discard" "nodelalloc" "errors=remount-ro" ];
       neededForBoot = true;
     };
-    "/boot/efi" = {
-      device = "/dev/disk/by-label/EFI";
+    "/boot" = {
+      device = "/dev/disk/by-uuid/6C1C-EF49";
       fsType = "vfat";
     };
   };

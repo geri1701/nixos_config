@@ -3,8 +3,6 @@
   inputs = {
     eza.inputs.nixpkgs.follows = "nixpkgs";
     eza.url = "http://rime.cx/v1/github/eza-community/eza.tar.gz";
-    helix.inputs.nixpkgs.follows = "nixpkgs";
-    helix.url = "http://rime.cx/v1/github/helix-editor/helix.tar.gz";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     hyprland.url = "http://rime.cx/v1/github/hyprwm/Hyprland.tar.gz";
