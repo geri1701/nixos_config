@@ -13,7 +13,7 @@
       rust-analyzer
       sshfs
       tree
-      # virt-manager
+      virt-manager
       wget
       zoxide
     ];
