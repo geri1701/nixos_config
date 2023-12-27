@@ -7,7 +7,8 @@
     fsType = "ext4";
   };
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2673-0095";
+    {
+      device = "/dev/disk/by-uuid/2673-0095";
       fsType = "vfat";
     };
   networking.useDHCP = lib.mkDefault true;

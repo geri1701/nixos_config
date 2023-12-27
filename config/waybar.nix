@@ -1,6 +1,6 @@
 { ... }:
 {
-    programs.waybar = {
+  programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
@@ -15,7 +15,7 @@
         modules-right = [ "pulseaudio" "custom/weather" "tray" "clock" ];
         "hyprland/workspaces" = {
           all-outputs = true;
-          active-only =  false;
+          active-only = false;
           format = "{name}";
           on-click = "activate";
           sort-by-number = true;

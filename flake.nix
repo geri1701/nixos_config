@@ -19,6 +19,7 @@
     , joshuto
     , ...
     }@inputs: {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
         zero = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";

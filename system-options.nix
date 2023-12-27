@@ -150,7 +150,7 @@
     enable = true;
     wlr.enable = true;
     config.common.default = "*";
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix.image = ./wallpaper_logo.png;
   stylix.polarity = "dark";
