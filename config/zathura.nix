@@ -6,6 +6,7 @@
       recolor-lightcolor = lib.mkDefault "#002b36";
       recolor = lib.mkDefault "true";
       recolor-reverse-video = "true";
+      selection-clipboard = "clipboard";
     };
   };
 }
