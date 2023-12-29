@@ -61,6 +61,7 @@ in
     nixpkgs-fmt
     nixpkgs-review
     neovim
+    nuclear
     nwg-drawer
     nwg-look
     obsidian
