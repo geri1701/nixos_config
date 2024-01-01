@@ -30,6 +30,7 @@ in
 {
   home.packages = with pkgs; [
     amdgpu_top
+    bogofilter
     cht-sh
     claws-mail
     ddgr
