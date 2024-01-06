@@ -17,7 +17,7 @@
         lsp.display-messages = true;
         indent-guides.render = true;
         indent-guides.character = "╎";
-        rulers = [120];
+        rulers = [ 120 ];
         soft-wrap.enable = true;
         statusline = {
           left = [ "mode" "spinner" ];
@@ -38,14 +38,14 @@
         };
         lsp.display-inlay-hints = true;
       };
-      keys.normal= {
+      keys.normal = {
         A-x = "extend_to_line_bounds";
-        X = ["extend_line_up" "extend_to_line_bounds"];
+        X = [ "extend_line_up" "extend_to_line_bounds" ];
       };
       keys.select = {
         A-x = "extend_to_line_bounds";
-        X = ["extend_line_up" "extend_to_line_bounds"];
-      };  
+        X = [ "extend_line_up" "extend_to_line_bounds" ];
+      };
     };
   };
 }

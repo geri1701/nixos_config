@@ -104,6 +104,7 @@
         '';
     };
     gnome.gnome-keyring.enable = true;
+    offlineimap.enable = true;
   };
   sound.enable = true;
   systemd.services = {

@@ -30,7 +30,9 @@ in
 {
   home.packages = with pkgs; [
     amdgpu_top
+    alot
     bogofilter
+    notmuch-bower
     cht-sh
     claws-mail
     ddgr
@@ -41,6 +43,7 @@ in
     graph-easy
     grim
     gnupg
+    himalaya
     joshuto
     jq
     kalker
@@ -58,6 +61,7 @@ in
     nextcloud-client
     nmap
     nodejs
+    notmuch
     nil
     nixpkgs-fmt
     nixpkgs-review
