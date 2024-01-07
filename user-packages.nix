@@ -39,6 +39,7 @@ in
     ddgr
     discord
     element
+    element-desktop
     exercism
     gimp
     glow
