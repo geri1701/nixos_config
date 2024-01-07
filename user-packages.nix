@@ -38,6 +38,7 @@ in
     claws-mail
     ddgr
     discord
+    element
     exercism
     gimp
     glow
