@@ -1,16 +1,13 @@
-{scale, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    settings = { monitor = scale; };
     extraConfig = ''
-      # monitor=,highres,auto,$(scale)
+      monitor=,highres,auto,1
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
-      exec-once=flatpak run com.valvesoftware.Steam 
-      exec-once=flatpak run org.keepassxc.KeePassXC 
+      exec-once=keepassxc 
       exec-once=blueman-applet      
       exec-once=nextcloud      
       input {
