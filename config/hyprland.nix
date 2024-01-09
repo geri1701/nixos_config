@@ -1,9 +1,11 @@
+{scale, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    settings = { monitor = scale; };
     extraConfig = ''
-      monitor=,highres,auto,1.5
+      # monitor=,highres,auto,$(scale)
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png

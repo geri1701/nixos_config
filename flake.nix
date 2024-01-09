@@ -23,6 +23,7 @@
       nixosConfigurations = {
         zero = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          scale = ''",highres,auto,1"'';
           specialArgs = inputs;
           modules = [
             ./zero-boot.nix
@@ -58,6 +59,7 @@
         };
         one = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          scale = ''",highres,auto,1.5"'';
           specialArgs = inputs;
           modules = [
             ./one-boot.nix
