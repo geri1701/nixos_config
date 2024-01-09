@@ -3,7 +3,7 @@
     enable = true;
     xwayland.enable = true;
     extraConfig = ''
-      monitor=,highres,auto,1.2
+      monitor=,highres,auto,1.5
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
