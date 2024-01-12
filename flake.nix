@@ -82,7 +82,6 @@
                   ./config/git.nix
                   ./config/helix.nix
                   ./config/hyprland.nix
-                  ./config/hyprland_monitor_one.nix
                   ./config/vscode.nix
                   ./config/waybar.nix
                   ./config/zathura.nix
