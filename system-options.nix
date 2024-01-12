@@ -1,5 +1,5 @@
 { pkgs, lib, ... }: {
-  system.stateVersion = "24.05";
+      system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";

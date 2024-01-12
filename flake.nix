@@ -38,19 +38,20 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
+                  ./host-options.nix
+                  ./zero-values.nix
                   ./config/zero-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
                   ./config/hyprland.nix
-                  ./config/hyprland_monitor_zero.nix
                   ./config/vscode.nix
                   ./config/waybar.nix
                   ./config/zathura.nix
                   ./config/zellij.nix
                   ./config/zsh.nix
-                  ./user-options.nix
-                  ./user-packages.nix
+                  ./home-options.nix
+                  ./home-packages.nix
                 ];
               };
               nixpkgs.overlays = [ joshuto.overlays.default ];
@@ -74,6 +75,8 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
+                  ./host-options.nix
+                  ./one-values.nix
                   ./config/one-firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
@@ -85,8 +88,8 @@
                   ./config/zathura.nix
                   ./config/zellij.nix
                   ./config/zsh.nix
-                  ./user-options.nix
-                  ./user-packages.nix
+                  ./home-options.nix
+                  ./home-packages.nix
                 ];
               };
               nixpkgs.overlays = [ joshuto.overlays.default ];

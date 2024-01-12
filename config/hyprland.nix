@@ -1,8 +1,9 @@
-{
+{config, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     extraConfig = ''
+      monitor= ${config.monitorSettingsOption}
       exec-once=dunst
       exec-once=waybar 
       exec-once=swaybg -i /home/geri/nixos/wallpaper_logo.png
