@@ -40,7 +40,7 @@
                 users.geri.imports = [
                   ./host-options.nix
                   ./zero-values.nix
-                  ./config/zero-firefox.nix
+                  ./config/firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
@@ -77,7 +77,7 @@
                 users.geri.imports = [
                   ./host-options.nix
                   ./one-values.nix
-                  ./config/one-firefox.nix
+                  ./config/firefox.nix
                   ./config/foot.nix
                   ./config/git.nix
                   ./config/helix.nix
