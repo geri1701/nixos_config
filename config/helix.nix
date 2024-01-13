@@ -10,9 +10,11 @@
         auto-info = true;
         true-color = true;
         file-picker.hidden = false;
-        cursor-shape.insert = "bar";
-        cursor-shape.normal = "block";
-        cursor-shape.select = "underline";
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
         cursorline = true;
         lsp.display-messages = true;
         indent-guides.render = true;
@@ -32,9 +34,11 @@
             "file-type"
           ];
           separator = "|";
-          mode.normal = "NORMAL";
-          mode.insert = "INSERT";
-          mode.select = "SELECT";
+          mode = {
+            normal = "NORMAL";
+            insert = "INSERT";
+            select = "SELECT";
+          };
         };
         lsp.display-inlay-hints = true;
       };
