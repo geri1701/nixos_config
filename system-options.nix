@@ -153,28 +153,29 @@
     config.common.default = "*";
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-  stylix.image = ./wallpaper_logo.png;
-  stylix.polarity = "dark";
-  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
-  stylix.fonts = {
-    serif = {
-      package = pkgs.iosevka;
-      name = "iosevka";
-    };
+  stylix = {
+    image = ./wallpaper_logo.png;
+    polarity = "dark";
+    fonts = {
+      serif = {
+        package = pkgs.iosevka;
+        name = "iosevka";
+      };
 
-    sansSerif = {
-      package = pkgs.tamzen;
-      name = "iosevka";
-    };
+      sansSerif = {
+        package = pkgs.tamzen;
+        name = "iosevka";
+      };
 
-    monospace = {
-      package = pkgs.tamzen;
-      name = "iosevka";
-    };
+      monospace = {
+        package = pkgs.tamzen;
+        name = "iosevka";
+      };
 
-    emoji = {
-      package = pkgs.noto-fonts-emoji;
-      name = "Noto Color Emoji";
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
     };
   };
 }
