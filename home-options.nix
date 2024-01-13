@@ -62,6 +62,6 @@
       waybar.enable = true;
     };
     fonts.sizes.terminal = 10;
-    xdg = { enable = true; };
   };
+  xdg = { enable = true; };
 }
