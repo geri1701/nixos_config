@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 let
   himalaya = pkgs.himalaya.override { withNotmuchBackend = true; };
-  toggle_touchpad = (pkgs.writeShellScriptBin "toggle_touchpad" ''
+  toggle_touchpad = pkgs.writeShellScriptBin "toggle_touchpad" ''
     readonly hyprland_device="uniw0001:00-093a:0255-touchpad"
     readonly status_file="/run/user/1000/touchpad.status"
     enable_touchpad() {
@@ -26,7 +26,7 @@ let
            enable_touchpad ;;
        esac
      fi
-  '');
+  '';
 in
 {
   home.packages = with pkgs; [
