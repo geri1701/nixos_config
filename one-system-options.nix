@@ -17,10 +17,12 @@
       fsType = "vfat";
     };
   };
-  hardware.brillo.enable = true;
-  hardware.bluetooth.enable = true;
-  hardware.tuxedo-rs.enable = true;
-  hardware.tuxedo-rs.tailor-gui.enable = true;
+  hardware = {
+    brillo.enable = true;
+    bluetooth.enable = true;
+    tuxedo-rs.enable = true;
+    tuxedo-rs.tailor-gui.enable = true;
+  };
   networking = {
     hostName = "one";
     wireless.enable = false;
