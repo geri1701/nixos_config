@@ -1,4 +1,10 @@
 { lib, pkgs, ... }: {
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+  };
   gtk = { enable = true; };
   home = {
     stateVersion = "24.05";
