@@ -5,7 +5,6 @@
     eza.url = "http://rime.cx/v1/github/eza-community/eza.tar.gz";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
-    hyprland.url = "http://rime.cx/v1/github/hyprwm/Hyprland.tar.gz";
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
@@ -13,7 +12,6 @@
   outputs =
     { self
     , nixpkgs
-    , hyprland
     , home-manager
     , stylix
     , joshuto
