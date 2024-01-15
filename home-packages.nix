@@ -62,6 +62,7 @@ in
     marksman
     mpc-cli
     mpv
+    mpvpaper
     nextcloud-client
     nmap
     nodejs

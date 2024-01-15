@@ -154,7 +154,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix = {
-    image = ./wallpaper_logo.png;
+    image = ./stylix_colors.png;
     polarity = "dark";
     fonts = {
       serif = {
