@@ -139,8 +139,11 @@
       description = "geri";
       extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "video" ];
     };
+    users.geri.initialPassword = "firstboot";
   };
   virtualisation = {
+    # vmVariant = {
+    # };
     docker = {
       enable = true;
       enableOnBoot = true;
