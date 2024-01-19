@@ -43,5 +43,6 @@
         KbdInteractiveAuthentication = false;
       };
     };
+    blueman.enable = true;
   };
 }
