@@ -22,9 +22,6 @@
       enable = true;
       plugins = [ "alias-finder" "colored-man-pages" "git" "history" "rust" ];
     };
-    # loginExtra = ''
-    #   eval "$(zellij setup --generate-auto-start zsh)"
-    # '';
     profileExtra = ''
       if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
         Hyprland
@@ -48,6 +45,34 @@
       size = 1200;
       save = 1200;
     };
+    initExtra = ''
+    id-filter-address() {
+    local n=$#
+    local select_string=".[] | select(.from.addr | "
+    for ((i = 1; i <= n; i++)); do
+        select_string+="contains(\"''\${(P)''\${i}}\")"
+        if ((i < n)); then
+            select_string+=", "
+        fi
+    done
+    select_string+=") | .id"
+    local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' | xargs"
+    eval "$himalaya_command"
+    }
+    id-filter-name() {
+    local n=$#
+    local select_string=".[] | select(.from.name | "
+    for ((i = 1; i <= n; i++)); do
+        select_string+="contains(\"''\${(P)''\${i}}\")"
+        if ((i < n)); then
+            select_string+=", "
+        fi
+    done
+    select_string+=") | .id"
+    local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' 2>/dev/null| xargs"
+    eval "$himalaya_command"
+    }
+    ''; 
   };
 }
 
