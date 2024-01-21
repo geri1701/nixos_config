@@ -45,8 +45,8 @@
     history = {
       expireDuplicatesFirst = true;
       ignoreDups = true;
-      size = 600;
-      save = 600;
+      size = 1200;
+      save = 1200;
     };
   };
 }
