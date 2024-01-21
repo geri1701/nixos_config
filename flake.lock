@@ -198,8 +198,8 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1704985614,
-        "narHash": "sha256-PItKMPaqDG8L0dYHl8cLoyieljNpP41HLIFfpcLerNg=",
+        "lastModified": 1705773604,
+        "narHash": "sha256-FcBfi87D3+7MLCBW1+9eZCKSDioDJsZ4u3e6KGvQ3kc=",
         "type": "tarball",
         "url": "http://rime.cx/v1/github/eza-community/eza.tar.gz"
       },
@@ -509,11 +509,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1702999755,
-        "narHash": "sha256-la0hkylMg7ksJr8gZvODEEpKJSzXZUJ5up9uzY5CXLU=",
+        "lastModified": 1705780180,
+        "narHash": "sha256-0PH/Jo8GJk+vFUcUsMv/uRTbo7uWRRYjiev2EetueSo=",
         "owner": "kamiyaa",
         "repo": "joshuto",
-        "rev": "71332cd70a6aec7d57164735555259108a4c310d",
+        "rev": "33a5dba41cfc76d6f900c4f4522ad9ced9aa26ab",
         "type": "github"
       },
       "original": {
