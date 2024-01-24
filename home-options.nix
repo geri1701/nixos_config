@@ -5,7 +5,13 @@
       uris = [ "qemu:///system" ];
     };
   };
-  gtk = { enable = true; };
+  gtk = { 
+  enable = true;
+  theme = {
+    name = lib.mkForce "SolArc-Dark";
+    package = lib.mkForce pkgs.solarc-gtk-theme;
+  };
+   };
   home = {
     stateVersion = "24.05";
     username = "geri";

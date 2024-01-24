@@ -5,10 +5,11 @@
     extraConfig = ''
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
-      exec-once=waybar 
+      exec-once=waybar
       exec-once=mpvpaper -vs -o "no-audio loop" ${config.outputDeviceOption} /home/geri/nixos/wallpaper_logo.mp4
       exec-once=keepassxc 
-      exec-once=blueman-applet      
+      exec-once=blueman-applet
+      exec-once=nm-tray      
       exec-once=nextcloud      
       input {
           kb_file=

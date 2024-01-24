@@ -61,7 +61,6 @@
     steam.enable = true;
     thunar.enable = true;
     zsh.enable = true;
-    nm-applet.enable = true;
   };
   qt = {
     enable = true;

@@ -60,6 +60,7 @@ in
     luajitPackages.vicious
     lxqt.lxqt-qtplugin
     marksman
+    meson
     mpc-cli
     mpv
     mpvpaper
@@ -71,6 +72,8 @@ in
     nixpkgs-fmt
     nixpkgs-review
     neovim
+    nm-tray
+    networkmanagerapplet
     nuclear
     nwg-drawer
     nwg-look
@@ -94,6 +97,9 @@ in
     typst-fmt
     vscode-extensions.vadimcn.vscode-lldb
     w3m
+    wayland-protocols
+    wayland-utils
+    wlroots
     wine
     winetricks
     wl-clipboard
