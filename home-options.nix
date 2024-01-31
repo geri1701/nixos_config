@@ -23,10 +23,13 @@
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-    pointerCursor = {
-      name = lib.mkForce "Bibata_Ghost";
-      size = lib.mkForce 22;
-      package = lib.mkForce pkgs.bibata-cursors-translucent;
+    pointerCursor = lib.mkForce {
+    gtk.enable = true;
+      name = "Fuchsia-Red";
+      size = 22;
+      package =  pkgs.fuchsia-cursor.override {
+          themeVariants = [ "Fuchsia-Red" ];
+        };
     };
   };
   programs = {

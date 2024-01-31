@@ -30,7 +30,8 @@
           border_size=2
           col.active_border= 0x44b58900 
           col.inactive_border= 0x44002b36
-          apply_sens_to_raw=0 
+          apply_sens_to_raw=0
+         cursor_inactive_timeout = 3  
       }
       misc {
          disable_hyprland_logo=true
