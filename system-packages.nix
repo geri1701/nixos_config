@@ -1,6 +1,7 @@
 { pkgs, eza, ... }: {
   environment = {
     systemPackages = with pkgs; [
+      docfd
       eza.packages."${pkgs.system}".default
       gparted
       helix
