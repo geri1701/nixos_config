@@ -25,11 +25,9 @@
     };
     pointerCursor = lib.mkForce {
     gtk.enable = true;
-      name = "Fuchsia-Red";
-      size = 22;
-      package =  pkgs.fuchsia-cursor.override {
-          themeVariants = [ "Fuchsia-Red" ];
-        };
+    name = "material_cursors";
+    size = 22;
+    package =  pkgs.material-cursors;
     };
   };
   programs = {
