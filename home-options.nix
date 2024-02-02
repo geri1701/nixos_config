@@ -5,13 +5,13 @@
       uris = [ "qemu:///system" ];
     };
   };
-  gtk = { 
-  enable = true;
-  theme = {
-    name = lib.mkForce "SolArc-Dark";
-    package = lib.mkForce pkgs.solarc-gtk-theme;
+  gtk = {
+    enable = true;
+    theme = {
+      name = lib.mkForce "SolArc-Dark";
+      package = lib.mkForce pkgs.solarc-gtk-theme;
+    };
   };
-   };
   home = {
     stateVersion = "24.05";
     username = "geri";
@@ -24,10 +24,10 @@
       MOZ_ENABLE_WAYLAND = 1;
     };
     pointerCursor = lib.mkForce {
-    gtk.enable = true;
-    name = "material_cursors";
-    size = 22;
-    package =  pkgs.material-cursors;
+      gtk.enable = true;
+      name = "material_cursors";
+      size = 22;
+      package = pkgs.material-cursors;
     };
   };
   programs = {

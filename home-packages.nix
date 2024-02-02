@@ -38,7 +38,9 @@ in
     cht-sh
     claws-mail
     ddgr
-    discord
+    (discord.override {
+      withOpenASAR = true;
+    })
     element
     element-desktop
     exercism
