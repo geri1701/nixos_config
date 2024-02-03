@@ -14,8 +14,7 @@ This repository contains the declarative, flake-based configurations for two Nix
 │    ├── host-zero.nix
 │    ├── stylix 
 │    └── home-manager
-│         ├── config/aerc.nix
-│         ├── config/zero-firefox.nix
+│         ├── config/firefox.nix
 │         ├── config/foot.nix
 │         ├── config/git.nix
 │         ├── config/helix.nix
@@ -24,8 +23,8 @@ This repository contains the declarative, flake-based configurations for two Nix
 │         ├── config/zathura.nix
 │         ├── config/zellij.nix
 │         ├── config/zsh.nix
-│         ├── user-options.nix
-│         └── user-packages.nix
+│         ├── home-options.nix
+│         └── home-packages.nix
 └──one
     ├── one-boot.nix
     ├── one-system-options.nix
@@ -33,8 +32,7 @@ This repository contains the declarative, flake-based configurations for two Nix
     ├── host-one.nix
     ├── stylix 
     └── home-manager
-         ├── config/aerc.nix
-         ├── config/one-firefox.nix
+         ├── config/firefox.nix
          ├── config/foot.nix
          ├── config/git.nix
          ├── config/helix.nix
@@ -43,8 +41,8 @@ This repository contains the declarative, flake-based configurations for two Nix
          ├── config/zathura.nix
          ├── config/zellij.nix
          ├── config/zsh.nix
-         ├── user-options.nix
-         └── user-packages.nix
+         ├── home-options.nix
+         └── home-packages.nix
 ```
 
 ## Resources
@@ -52,7 +50,5 @@ This repository contains the declarative, flake-based configurations for two Nix
 - Official documentation: https://nixos.org/
 - NobbZ' Blog: https://blog.nobbz.dev/
 - NixOS Wiki: https://nixos.wiki/
-- sops-nix: https://github.com/Mic92/sops-nix
-- sops: https://github.com/mozilla/sops 
 - stylix: https://github.com/danth/stylix
 - hyprland: https://hyprland.org/
