@@ -43,6 +43,7 @@ in
     })
     element
     element-desktop
+    etlegacy
     exercism
     gimp
     glow
