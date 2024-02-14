@@ -529,11 +529,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1705780180,
-        "narHash": "sha256-0PH/Jo8GJk+vFUcUsMv/uRTbo7uWRRYjiev2EetueSo=",
+        "lastModified": 1707865220,
+        "narHash": "sha256-y1Cen946nTf0Z2Q342kUShGGIasCwgKGz7eQqgZXyxg=",
         "owner": "kamiyaa",
         "repo": "joshuto",
-        "rev": "33a5dba41cfc76d6f900c4f4522ad9ced9aa26ab",
+        "rev": "4acace666d3d87bccf42e12e298bc0995c2e77e0",
         "type": "github"
       },
       "original": {
