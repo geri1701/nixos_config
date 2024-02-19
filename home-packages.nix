@@ -45,6 +45,7 @@ in
     element-desktop
     etlegacy
     exercism
+    gbar
     gimp
     glow
     graph-easy
