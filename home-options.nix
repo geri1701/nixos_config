@@ -22,6 +22,7 @@
       QT_STYLE_OVERRIDE = lib.mkForce "kvantum";
       GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
+
     };
     pointerCursor = lib.mkForce {
       gtk.enable = true;
@@ -41,6 +42,7 @@
     zsh.enable = true;
     zoxide.enable = true;
     starship.enable = true;
+    command-not-found.enable = false;
   };
   qt = {
     enable = true;

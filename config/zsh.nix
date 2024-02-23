@@ -46,34 +46,43 @@
       save = 1200;
     };
     initExtra = ''
-        id-filter-address() {
-        local n=$#
-        local select_string=".[] | select(.from.addr | "
-        for ((i = 1; i <= n; i++)); do
-            select_string+="contains(\"''\${(P)''\${i}}\")"
-            if ((i < n)); then
-                select_string+=", "
-            fi
-        done
-        select_string+=") | .id"
-        local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' | xargs"
-        eval "$himalaya_command"
-        }
-        id-filter-name() {
-        local n=$#
-        local select_string=".[] | select(.from.name | "
-        for ((i = 1; i <= n; i++)); do
-            select_string+="contains(\"''\${(P)''\${i}}\")"
-            if ((i < n)); then
-                select_string+=", "
-            fi
-        done
-        select_string+=") | .id"
-        local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' 2>/dev/null| xargs"
-        eval "$himalaya_command"
-        }
-        ''; 
+                  id-filter-address() {
+                  local n=$#
+                  local select_string=".[] | select(.from.addr | "
+                  for ((i = 1; i <= n; i++)); do
+                      select_string+="contains(\"''\${(P)''\${i}}\")"
+                      if ((i < n)); then
+                          select_string+=", "
+                      fi
+                  done
+                  select_string+=") | .id"
+                  local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' | xargs"
+                  eval "$himalaya_command"
+                  }
+                  id-filter-name() {
+                  local n=$#
+                  local select_string=".[] | select(.from.name | "
+                  for ((i = 1; i <= n; i++)); do
+                      select_string+="contains(\"''\${(P)''\${i}}\")"
+                      if ((i < n)); then
+                          select_string+=", "
+                      fi
+                  done
+                  select_string+=") | .id"
+                  local himalaya_command="himalaya envelope list -o json | jq -r '$select_string' 2>/dev/null| xargs"
+                  eval "$himalaya_command"
+                  }
+                  command_not_found_handler() {
+                  local cmd="$1"
+                  shift
+                  echo "Command '$cmd' not found, starting nix search in nixpkgs..."
+                  nix search nixpkgs#"$cmd"
+                 } 
+          '';
       };
 }
+
+
+
 
 
