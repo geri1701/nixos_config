@@ -75,8 +75,8 @@
                   command_not_found_handler() {
                   local cmd="$1"
                   shift
-                  echo "Command '$cmd' not found, starting nix search in nixpkgs..."
-                  nix search nixpkgs#"$cmd"
+                  echo "Command '$cmd' not found; attempting execution with nix run..."
+                  nix run nixpkgs#"$cmd" "$@"
                  } 
           '';
       };
