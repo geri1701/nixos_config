@@ -41,6 +41,7 @@ in
     (discord.override {
       withOpenASAR = true;
     })
+    dstask
     element
     element-desktop
     etlegacy
