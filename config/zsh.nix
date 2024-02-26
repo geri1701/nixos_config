@@ -1,4 +1,5 @@
-{
+{ pkgs, ... }: {
+  home.packages = [ pkgs.nix-zsh-completions ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -7,6 +8,7 @@
     initExtraBeforeCompInit = ''
       fpath=($HOME/.zsh/ $fpath)
       # source $HOME/.zsh/_zellij
+      source $HOME/.dstask/_task
     '';
     initExtraFirst = ''
       pfetch
@@ -38,6 +40,7 @@
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
       zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
+      task = "dstask";
     };
     history = {
       expireDuplicatesFirst = true;
@@ -46,6 +49,7 @@
       save = 1200;
     };
     initExtra = ''
+                  bindkey "''${key[Up]}" up-line-or-search
                   id-filter-address() {
                   local n=$#
                   local select_string=".[] | select(.from.addr | "
@@ -81,6 +85,8 @@
           '';
       };
 }
+
+
 
 
 

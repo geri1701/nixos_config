@@ -9,9 +9,9 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
     ironbar = {
-    url = "github:JakeStanger/ironbar";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+      url = "github:JakeStanger/ironbar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     { self

@@ -1,5 +1,5 @@
-{inputs, ...}: {
-        imports = [ inputs.ironbar.homeManagerModules.default ];
+{ inputs, ... }: {
+  imports = [ inputs.ironbar.homeManagerModules.default ];
   programs.ironbar = {
     enable = true;
     systemd = true;
@@ -7,7 +7,7 @@
       position = "top";
       anchor_to_edges = true;
       start = [
-       { type = "workspaces"; }
+        { type = "workspaces"; }
       ];
       end = [
         { type = "tray"; }
