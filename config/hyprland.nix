@@ -105,6 +105,9 @@
       bind=SUPER,mouse_up,workspace,e-1
       bind = SUPER,Tab,cyclenext,          # change focus
       bind = SUPER,Tab,bringactivetotop,   # to top
+      bind = SUPER, t, togglegroup
+      bind = SUPER+ALT, J, changegroupactive, f
+      bind = SUPER+ALT, K, changegroupactive, b
     '';
   };
 }
