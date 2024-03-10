@@ -93,6 +93,7 @@ in
     sniffnet
     swappy
     swaybg
+    steamcmd
     the-way
     tldr
     toggle_touchpad
