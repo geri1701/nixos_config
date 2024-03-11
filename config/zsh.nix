@@ -81,7 +81,8 @@
                   shift
                   echo "Command '$cmd' not found; attempting execution with nix run..."
                   nix run nixpkgs#"$cmd" "$@"
-                 } 
+                 }
+                eval "$(atuin init zsh)" 
           '';
       };
 }

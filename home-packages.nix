@@ -33,6 +33,7 @@ in
     afew
     amdgpu_top
     alot
+    atuin
     bogofilter
     notmuch-bower
     cht-sh
