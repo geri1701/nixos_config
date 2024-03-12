@@ -10,7 +10,7 @@
       openssl
       pfetch
       pinentry-gnome
-      rnix-lsp
+      # rnix-lsp
       rust-analyzer
       sshfs
       tree
