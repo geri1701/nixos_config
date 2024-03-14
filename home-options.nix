@@ -51,7 +51,7 @@
   services = {
     gpg-agent = {
       enable = true;
-      pinentryFlavor = "gnome2";
+      pinentryPackage = pkgs.pinentry-gnome3;
       enableSshSupport = true;
       enableExtraSocket = true;
     };
