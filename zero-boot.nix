@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_stable;
+    kernelPackages = pkgs.linuxPackages_cachyos;
     initrd = {
       kernelModules = [ "amdgpu" ];
       systemd.enable = true;

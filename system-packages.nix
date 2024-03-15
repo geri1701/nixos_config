@@ -9,8 +9,7 @@
       networkmanager
       openssl
       pfetch
-      # pinentry-gnome
-      # rnix-lsp
+      scx
       rust-analyzer
       sshfs
       tree
