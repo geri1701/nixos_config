@@ -7,6 +7,7 @@
     home-manager.url = "github:nix-community/home-manager";
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     stylix.url = "github:danth/stylix";
     ironbar = {
       url = "github:JakeStanger/ironbar";
@@ -16,6 +17,7 @@
   outputs =
     { self
     , nixpkgs
+    , chaotic
     , home-manager
     , stylix
     , joshuto
@@ -34,6 +36,7 @@
             ./host-zero.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
+            chaotic.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;
@@ -59,6 +62,7 @@
             ./host-one.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
+            chaotic.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;
