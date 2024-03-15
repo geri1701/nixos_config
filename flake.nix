@@ -1,5 +1,5 @@
 {
-  description = "NixOs configuration";
+  description = "Configuration for zero and one";
   inputs = {
     eza.inputs.nixpkgs.follows = "nixpkgs";
     eza.url = "http://rime.cx/v1/github/eza-community/eza.tar.gz";
