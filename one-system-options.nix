@@ -2,7 +2,7 @@
 {
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/585ba183-6c2b-476f-bf32-2ff6e7017bb6";
+      device = "/dev/disk/by-uuid/51c54e88-7be4-4df9-849d-49fec9013bbd";
       fsType = "ext4";
       options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
     };

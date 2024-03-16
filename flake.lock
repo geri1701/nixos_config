@@ -830,11 +830,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1710545740,
-        "narHash": "sha256-vapQMBElnKRr6DSN6keAp4TmHt5wumQJfaRHOk1liB4=",
+        "lastModified": 1710546809,
+        "narHash": "sha256-8OvaL6HqsJjBAbksR4EpC/ZgvdBSKlB37PP77p3T3PY=",
         "owner": "kamiyaa",
         "repo": "joshuto",
-        "rev": "ba68e91dd9897617930a05b25e8b743e6874446e",
+        "rev": "2a392e85633d73a7bfc55feb80c62ecabe70de75",
         "type": "github"
       },
       "original": {
