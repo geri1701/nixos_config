@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   boot = {
-    kernelPackages = pkgs.linux_xanmod_stable;
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     initrd = {
       systemd.enable = true;
       verbose = false;
