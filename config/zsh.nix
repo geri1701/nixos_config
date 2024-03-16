@@ -4,7 +4,7 @@
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    enableAutosuggestions = true;
+    autosuggestions.enable = true;
     initExtraBeforeCompInit = ''
       fpath=($HOME/.zsh/ $fpath)
       # source $HOME/.zsh/_zellij
