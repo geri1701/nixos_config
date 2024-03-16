@@ -47,7 +47,6 @@ in
     element-desktop
     etlegacy
     exercism
-    firedragon
     gbar
     gimp
     glow

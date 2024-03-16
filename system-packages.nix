@@ -9,7 +9,6 @@
       networkmanager
       openssl
       pfetch
-      scx
       rust-analyzer
       sshfs
       tree
