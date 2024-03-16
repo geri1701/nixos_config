@@ -158,7 +158,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   chaotic = {
-    mesa-git.enable = true;
+    # mesa-git.enable = true;
     scx.enable = true;
     scx.scheduler = "scx_rusty";
   };
