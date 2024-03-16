@@ -45,4 +45,9 @@
     };
     blueman.enable = true;
   };
+    chaotic = {
+    mesa-git.enable = true;
+    scx.enable = true;
+    scx.scheduler = "scx_rusty";
+  };
 }

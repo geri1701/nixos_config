@@ -157,11 +157,6 @@
     config.common.default = "*";
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-  chaotic = {
-    # mesa-git.enable = true;
-    scx.enable = true;
-    scx.scheduler = "scx_rusty";
-  };
   stylix = {
     image = ./stylix_colors.png;
     polarity = "dark";
