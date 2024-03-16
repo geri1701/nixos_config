@@ -159,6 +159,8 @@
   };
   chaotic = {
     mesa-git.enable = true;
+    scx.enable = true;
+    scx.scheduler = "scx_rusty";
   };
   stylix = {
     image = ./stylix_colors.png;
