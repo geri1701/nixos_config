@@ -47,6 +47,11 @@
       keep-outputs = true
       keep-derivations = true 
     '';
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 7d";
+    };
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
