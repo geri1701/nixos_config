@@ -804,11 +804,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1710456214,
-        "narHash": "sha256-3vfy0JNh6thzdIx/ZDz/hIzY33yvA2gJ2fm1PG68HUY=",
+        "lastModified": 1710684776,
+        "narHash": "sha256-tNNQFeo3QXdM9EpEE+7kuRXJu7JO+oETXGXGUGY5+n8=",
         "owner": "JakeStanger",
         "repo": "ironbar",
-        "rev": "94f7d873f4b6d227bc8963e177b1d3e9d764a9b5",
+        "rev": "5a3ba08ddd9b39ab7108d76332f6258b8b3fe795",
         "type": "github"
       },
       "original": {
@@ -1258,11 +1258,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1710451336,
-        "narHash": "sha256-pP86Pcfu3BrAvRO7R64x7hs+GaQrjFes+mEPowCfkxY=",
+        "lastModified": 1710631334,
+        "narHash": "sha256-rL5LSYd85kplL5othxK5lmAtjyMOBg390sGBTb3LRMM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d691274a972b3165335d261cc4671335f5c67de9",
+        "rev": "c75037bbf9093a2acb617804ee46320d6d1fea5a",
         "type": "github"
       },
       "original": {
@@ -1513,11 +1513,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1710420453,
-        "narHash": "sha256-F/JfpPRpIkFqvYEtt55lZyaFd+/vhn9SrcQrXIZCkOU=",
+        "lastModified": 1710688879,
+        "narHash": "sha256-3Zv7wQ4iB+bxHfaW3mRyNAEuZTDsFOl3JSguWyLh9zY=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "eb64377e66122de7a36ca7a611aa97ddf4c8e5e8",
+        "rev": "d4f1636c9341b314fac01c179162a93bf59bc27f",
         "type": "github"
       },
       "original": {
