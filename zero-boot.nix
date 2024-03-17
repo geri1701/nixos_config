@@ -10,7 +10,10 @@
     tmp.cleanOnBoot = true;
     plymouth.enable = true;
     consoleLogLevel = 0;
-    loader.systemd-boot.enable = true;
+    loader.systemd-boot = {
+      enable = true;
+      configurationLimit = 10;
+    };
     loader.efi.canTouchEfiVariables = true;
   };
   services.kmscon.hwRender = true;
