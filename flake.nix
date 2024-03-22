@@ -23,11 +23,16 @@
       url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     { self
     , nixpkgs
     , chaotic
+    , nixos-cosmic
     , home-manager
     , stylix
     , joshuto
@@ -47,6 +52,7 @@
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             chaotic.nixosModules.default
+            nixos-cosmic.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;

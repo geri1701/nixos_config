@@ -42,6 +42,8 @@
       auto-optimise-store = true;
       max-jobs= "auto";
       cores = 16;
+      substituters = [ "https://cosmic.cachix.org/" ];
+      trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
     };
     extraOptions = ''
       keep-outputs = true
@@ -111,6 +113,8 @@
     };
     gnome.gnome-keyring.enable = true;
     offlineimap.enable = true;
+    desktopManager.cosmic.enable = true;
+    displayManager.cosmic-greeter.enable = true;
   };
   sound.enable = true;
   systemd.services = {
