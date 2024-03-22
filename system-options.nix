@@ -41,7 +41,7 @@
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
       max-jobs= "auto";
-      cores = 0;
+      cores = 16;
     };
     extraOptions = ''
       keep-outputs = true
