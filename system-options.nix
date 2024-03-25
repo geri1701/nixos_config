@@ -163,7 +163,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix = {
-    image = ./stylix_colors.png;
+    image = ./wallpaper.png;
     polarity = "dark";
     fonts = {
       serif = {
