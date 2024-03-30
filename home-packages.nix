@@ -53,6 +53,7 @@ in
     graph-easy
     grim
     gnupg
+    gpt4all
     himalaya
     joshuto
     jq
