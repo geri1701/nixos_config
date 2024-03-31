@@ -111,6 +111,7 @@ in
     wine
     winetricks
     wl-clipboard
+    wofi
     wthrr
     xdg-utils
     xplr
