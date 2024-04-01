@@ -148,8 +148,6 @@
     users.geri.initialPassword = "firstboot";
   };
   virtualisation = {
-    # vmVariant = {
-    # };
     docker = {
       enable = true;
       enableOnBoot = true;
