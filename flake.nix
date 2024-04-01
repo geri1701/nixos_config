@@ -9,6 +9,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     stylix.url = "github:danth/stylix";
+    helix.url = "github:helix-editor/helix";
+    helix.inputs.nixpkgs.follows = "nixpkgs";
     ironbar = {
       url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
