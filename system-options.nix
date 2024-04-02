@@ -161,7 +161,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix = {
-    image = ./wallpaper.png;
+    image = /home/geri/nixos/wallpaper.png;
     polarity = "dark";
     fonts = {
       serif = {
