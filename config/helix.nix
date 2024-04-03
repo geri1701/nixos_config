@@ -2,7 +2,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = lib.mkDefault "merionette";
+      theme = lib.mkForce "merionette";
       editor = {
         line-number = "relative";
         mouse = false;
