@@ -8,7 +8,7 @@
     joshuto.url = "github:kamiyaa/joshuto";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    stylix.url = "github:danth/stylix//2221c7d61b2e10b17df6c6795b4678fb59a0a92a";
+    stylix.url = "github:danth/stylix/2221c7d61b2e10b17df6c6795b4678fb59a0a92a";
     ironbar = {
       url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
