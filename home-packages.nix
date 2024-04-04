@@ -54,6 +54,7 @@ in
     grim
     gnupg
     gpt4all
+    helix-gpt
     himalaya
     joshuto
     jq
