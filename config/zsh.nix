@@ -19,6 +19,8 @@
       DISABLE_AUTO_TITLE = "false";
       ENABLE_CORRECTION = "false";
       HIST_STAMPS = "%y-%m-%d";
+      COPILOT_API_KEY = "$(</home/geri/pilot.txt)";
+      HANDLER="copilot";
     };
     oh-my-zsh = {
       enable = true;
