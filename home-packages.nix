@@ -42,6 +42,7 @@ in
     (discord.override {
       withOpenASAR = true;
     })
+    docker-compose
     dstask
     element
     element-desktop
