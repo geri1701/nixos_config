@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 let
   # himalaya = pkgs.himalaya.override { withNotmuchBackend = true; };
   toggle_touchpad = pkgs.writeShellScriptBin "toggle_touchpad" ''
