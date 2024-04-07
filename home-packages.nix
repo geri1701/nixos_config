@@ -57,6 +57,7 @@ in
     gpt4all
     helix-gpt
     himalaya
+    hyprshade
     joshuto
     jq
     kalker
