@@ -48,6 +48,7 @@ in
     element-desktop
     etlegacy
     exercism
+    geogebra
     gbar
     gimp
     glow
