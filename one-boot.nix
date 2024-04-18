@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   boot = {
-    kernelPackages = pkgs.linuxPackages_stable;
+    kernelPackages = pkgs.linuxPackages_latest;
     initrd = {
       systemd.enable = true;
       verbose = false;
