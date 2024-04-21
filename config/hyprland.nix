@@ -80,6 +80,7 @@
       bind=SUPER,l,movefocus,r
       bind=SUPER,k,movefocus,u
       bind=SUPER,j,movefocus,d
+      bind=SUPER,H,swapwindow,l
       bind=SUPER,1,workspace,1
       bind=SUPER,2,workspace,2
       bind=SUPER,3,workspace,3
