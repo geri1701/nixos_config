@@ -42,6 +42,7 @@ in
     (discord.override {
       withOpenASAR = true;
     })
+    distrobox
     docker-compose
     dstask
     element
