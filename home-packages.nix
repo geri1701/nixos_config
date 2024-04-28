@@ -55,6 +55,7 @@ in
     glow
     graph-easy
     grim
+    grex
     gnupg
     gpt4all
     helix-gpt
