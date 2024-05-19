@@ -96,6 +96,7 @@ in
     p7zip
     pcmanfm
     peep
+    protonmail-desktop
     rx
     slurp
     sniffnet
