@@ -104,6 +104,7 @@ in
     swaybg
     steamcmd
     the-way
+    thunderbird
     tldr
     toggle_touchpad
     translate-shell
