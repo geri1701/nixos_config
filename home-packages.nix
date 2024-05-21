@@ -97,6 +97,7 @@ in
     pcmanfm
     peep
     protonmail-desktop
+    protonmail-bridge
     rx
     slurp
     sniffnet
