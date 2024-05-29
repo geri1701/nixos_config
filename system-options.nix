@@ -97,6 +97,10 @@
     };
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
+    ollama = {
+      enable = true;
+      acceleration = "rocm";
+    };
   };
   sound.enable = true;
   systemd.services = {
