@@ -100,6 +100,10 @@
     ollama = {
       enable = true;
       acceleration = "rocm";
+      environmentVariables = {
+      # ROCR_VISIBLE_DEVICES= "1";
+      HSA_OVERRIDE_GFX_VERSION = "10.3.6"; 
+      };
     };
   };
   sound.enable = true;
