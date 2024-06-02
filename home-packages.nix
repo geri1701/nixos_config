@@ -57,7 +57,7 @@ in
     grim
     grex
     gnupg
-    gpt4all
+    gpt4all-cuda
     helix-gpt
     himalaya
     hyprshade
