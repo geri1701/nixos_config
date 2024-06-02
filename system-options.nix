@@ -7,6 +7,7 @@
     {
       fontDir.enable = true;
       packages = with pkgs; [
+        commit-mono
         fantasque-sans-mono
         fira-code
         fira-code-symbols
@@ -159,18 +160,18 @@
     polarity = "dark";
     fonts = {
       serif = {
+        package = pkgs.commit-mono;
+        name = "commit-mono";
+      };
+
+      sansSerif = {
         package = pkgs.iosevka;
         name = "iosevka";
       };
 
-      sansSerif = {
-        package = pkgs.tamzen;
-        name = "iosevka";
-      };
-
       monospace = {
-        package = pkgs.tamzen;
-        name = "iosevka";
+        package = pkgs.commit-mono;
+        name = "commit-mono";
       };
 
       emoji = {
