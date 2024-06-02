@@ -161,17 +161,17 @@
     fonts = {
       serif = {
         package = pkgs.commit-mono;
-        name = "commit-mono";
+        name = "CommitMono";
       };
 
       sansSerif = {
         package = pkgs.iosevka;
-        name = "iosevka";
+        name = "CommitMono";
       };
 
       monospace = {
         package = pkgs.commit-mono;
-        name = "commit-mono";
+        name = "CommitMono";
       };
 
       emoji = {
