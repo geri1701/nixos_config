@@ -40,6 +40,12 @@
           system = "x86_64-linux";
           specialArgs = inputs;
           modules = [
+          {
+              nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            };
+          }
             ./zero-boot.nix
             ./system-options.nix
             ./zero-system-options.nix
