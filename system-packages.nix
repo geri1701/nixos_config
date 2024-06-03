@@ -1,8 +1,8 @@
-{ pkgs, eza, ... }: {
+{ pkgs, ... }: {
   environment = {
     systemPackages = with pkgs; [
       docfd
-      eza.packages."${pkgs.system}".default
+      eza
       gparted
       helix
       libsForQt5.qtstyleplugin-kvantum
