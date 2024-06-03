@@ -1,10 +1,6 @@
 {
   description = "Configuration for zero and one";
   inputs = {
-    eza = {
-       url = "http://rime.cx/v1/github/eza-community/eza.tar.gz"; 
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = { 
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
