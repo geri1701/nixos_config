@@ -201,11 +201,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1717521667,
-        "narHash": "sha256-Bwr8tsHjjUKYY6r6SoUC6FwGFAbodxuhwKsTBJoID0k=",
+        "lastModified": 1717528911,
+        "narHash": "sha256-6ImAUkJxe8IFo0B62BuHokoGaIUflOx1HmyeH6z3DQk=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "c6441c87684c2a27b6c12cc168fa5353424261f0",
+        "rev": "68d6b39ced87cfe5410fc11185081beb91d3408d",
         "type": "github"
       },
       "original": {
