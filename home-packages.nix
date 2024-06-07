@@ -67,6 +67,8 @@ in
     keepassxc
     kbs2
     kibi
+    kitty
+    kitty-themes
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
