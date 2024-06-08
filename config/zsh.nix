@@ -51,6 +51,7 @@
       save = 1200;
     };
     initExtra = ''
+                  path+=('/home/geri/.local/bin')
                   bindkey "''${key[Up]}" up-line-or-search
                   id-filter-address() {
                   local n=$#
