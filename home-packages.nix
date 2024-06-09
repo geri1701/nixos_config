@@ -69,6 +69,7 @@ in
     kibi
     kitty
     kitty-themes
+    kiwix
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
