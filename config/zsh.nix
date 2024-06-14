@@ -11,6 +11,9 @@
       source $HOME/.dstask/_task
     '';
     initExtraFirst = ''
+      if [ -z "$TMUX" ]; then
+      tmux new-session \; split-window -h \;
+      fi
       pfetch
     '';
     sessionVariables = {
