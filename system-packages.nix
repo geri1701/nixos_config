@@ -10,6 +10,7 @@
       openssl
       pfetch
       rust-analyzer
+      screen
       sshfs
       tree
       virt-manager

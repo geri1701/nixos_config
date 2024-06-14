@@ -41,7 +41,7 @@
         "eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all";
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
-      zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
+      # zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
       task = "dstask";
     };
     history = {
