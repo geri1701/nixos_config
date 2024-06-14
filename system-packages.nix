@@ -12,6 +12,7 @@
       rust-analyzer
       screen
       sshfs
+      tmux
       tree
       virt-manager
       wget
