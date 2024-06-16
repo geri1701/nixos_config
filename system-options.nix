@@ -41,8 +41,8 @@
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
-      max-jobs= "auto";
-      cores = 0;
+      max-jobs= 4;
+      cores = 16;
     };
     extraOptions = ''
       keep-outputs = true
@@ -99,13 +99,13 @@
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
     ollama = {
-      enable = true;
-      acceleration = "rocm";
-      environmentVariables = {
-      # ROCR_VISIBLE_DEVICES= "1";
-      HSA_OVERRIDE_GFX_VERSION = "10.3.6"; 
-      };
+    enable = true;
+    acceleration = "rocm";
+    environmentVariables = {
+    # ROCR_VISIBLE_DEVICES= "1";
+    HSA_OVERRIDE_GFX_VERSION = "10.3.6"; 
     };
+   };
   };
   sound.enable = true;
   systemd.services = {
