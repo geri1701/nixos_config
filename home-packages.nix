@@ -53,6 +53,7 @@ in
     gbar
     gimp
     glow
+    glicol-cli
     graph-easy
     grim
     grex
@@ -107,6 +108,7 @@ in
     swappy
     swaybg
     steamcmd
+    sonic-pi
     the-way
     thunderbird
     tldr
