@@ -3,6 +3,7 @@
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+  documentation.man.generateCaches = true;
   fonts =
     {
       fontDir.enable = true;

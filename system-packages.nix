@@ -6,6 +6,9 @@
       gparted
       helix
       libsForQt5.qtstyleplugin-kvantum
+      linux-manual
+      man-pages
+      man-pages-posix
       networkmanager
       openssl
       pfetch
