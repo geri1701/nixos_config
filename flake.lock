@@ -158,11 +158,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1719245054,
-        "narHash": "sha256-VqwLfutqy3bSPg4OObre4WyCZlazbExs5zFXIMxy6N0=",
+        "lastModified": 1719323409,
+        "narHash": "sha256-BHrFBuU2EwAn6XbvcHmRZrROkAesJTTlopD9dZq8h/M=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "283a86abc60ee3642ee1a98bc1ca255b88b5e6b0",
+        "rev": "6759b61a46ce0dfef0ca786934067b53509d34c9",
         "type": "github"
       },
       "original": {
@@ -510,11 +510,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1718914518,
-        "narHash": "sha256-wjL7KiQFGRbf2CnCDi/VeSIr30ndOVt/PUpBauI+RAE=",
+        "lastModified": 1719310238,
+        "narHash": "sha256-AFqooELYPC+0k8IbDMpFjBbyFYarlA8SV2DWvHtzr+g=",
         "owner": "JakeStanger",
         "repo": "ironbar",
-        "rev": "a9d728f1911007afa1edf6aac2ca1148b4c22d6c",
+        "rev": "6a06fa534a8f02aa1fa3fe04a9da59697a3fff25",
         "type": "github"
       },
       "original": {
