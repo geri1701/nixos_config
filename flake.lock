@@ -510,11 +510,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1719310238,
-        "narHash": "sha256-AFqooELYPC+0k8IbDMpFjBbyFYarlA8SV2DWvHtzr+g=",
+        "lastModified": 1719927553,
+        "narHash": "sha256-8DBU91zfxyEZF1mCy1qmvA7mb/ee7AwqEUAT6ScJu40=",
         "owner": "JakeStanger",
         "repo": "ironbar",
-        "rev": "6a06fa534a8f02aa1fa3fe04a9da59697a3fff25",
+        "rev": "bcaa13deae4e47caa5fffa7fdaa0981af1fec297",
         "type": "github"
       },
       "original": {
@@ -835,11 +835,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1719690277,
-        "narHash": "sha256-0xSej1g7eP2kaUF+JQp8jdyNmpmCJKRpO12mKl/36Kc=",
+        "lastModified": 1719848872,
+        "narHash": "sha256-H3+EC5cYuq+gQW8y0lSrrDZfH71LB4DAf+TDFyvwCNA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2741b4b489b55df32afac57bc4bfd220e8bf617e",
+        "rev": "00d80d13810dbfea8ab4ed1009b09100cca86ba8",
         "type": "github"
       },
       "original": {
