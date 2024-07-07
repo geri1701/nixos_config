@@ -17,7 +17,6 @@
     , chaotic
     , home-manager
     , stylix
-    , joshuto
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -44,7 +43,6 @@
                   ./zero-values.nix
                 ];
               };
-              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };
@@ -70,7 +68,6 @@
                   ./one-values.nix
                 ];
               };
-              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };
