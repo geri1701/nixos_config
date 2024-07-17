@@ -1,4 +1,5 @@
 { lib, pkgs, ... }: {
+    # home-manager.backupFileExtension = "backup";
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];

@@ -51,6 +51,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./hm-imports.nix
