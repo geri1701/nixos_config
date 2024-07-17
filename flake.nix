@@ -5,10 +5,6 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
-    joshuto = { 
-       url = "github:kamiyaa/joshuto";
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     stylix = { 
@@ -31,7 +27,6 @@
     , nixos-cosmic
     , home-manager
     , stylix
-    , joshuto
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -65,7 +60,6 @@
                   ./zero-values.nix
                 ];
               };
-              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };
@@ -91,7 +85,6 @@
                   ./one-values.nix
                 ];
               };
-              nixpkgs.overlays = [ joshuto.overlays.default ];
             }
           ];
         };

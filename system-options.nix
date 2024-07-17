@@ -116,7 +116,7 @@
     desktopManager.cosmic.enable = true;
     displayManager.cosmic-greeter.enable = true;
   };
-  sound.enable = true;
+  # sound.enable = true;
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
     sort-att-dir = {
