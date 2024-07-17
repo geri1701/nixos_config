@@ -44,6 +44,7 @@
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
       task = "dstask";
+      cosmic-term = "kitty";
     };
     history = {
       expireDuplicatesFirst = true;
