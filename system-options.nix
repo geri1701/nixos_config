@@ -42,15 +42,8 @@
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
-<<<<<<< HEAD
-      max-jobs= "auto";
-      cores = 16;
-      # substituters = [ "https://cosmic.cachix.org/" ];
-      # trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-=======
       max-jobs= 4;
       cores = 16;
->>>>>>> main
     };
     extraOptions = ''
       keep-outputs = true
@@ -106,11 +99,8 @@
     };
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
-<<<<<<< HEAD
-    offlineimap.enable = true;
     desktopManager.cosmic.enable = true;
     displayManager.cosmic-greeter.enable = true;
-=======
     ollama = {
     enable = true;
     # acceleration = "rocm";
@@ -119,7 +109,6 @@
     HSA_OVERRIDE_GFX_VERSION = "10.3.6"; 
     };
    };
->>>>>>> main
   };
   # sound.enable = true;
   systemd.services = {
