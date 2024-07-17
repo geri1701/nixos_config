@@ -9,7 +9,6 @@
     ./config/vscode.nix
     # ./config/waybar.nix
     ./config/zathura.nix
-    ./config/zellij.nix
     ./config/zsh.nix
     ./home-options.nix
     ./home-packages.nix

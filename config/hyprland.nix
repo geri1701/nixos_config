@@ -1,6 +1,6 @@
 { config, ... }: {
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = false;
     xwayland.enable = true;
     extraConfig = ''
       monitor= ${config.monitorSettingsOption}
