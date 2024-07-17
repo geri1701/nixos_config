@@ -11,6 +11,9 @@
       source $HOME/.dstask/_task
     '';
     initExtraFirst = ''
+      if [ -z "$TMUX" ]; then
+      tmux new-session \; split-window -h \;
+      fi
       pfetch
     '';
     sessionVariables = {
@@ -19,6 +22,8 @@
       DISABLE_AUTO_TITLE = "false";
       ENABLE_CORRECTION = "false";
       HIST_STAMPS = "%y-%m-%d";
+      COPILOT_API_KEY = "$(</home/geri/pilot.txt)";
+      HANDLER="copilot";
     };
     oh-my-zsh = {
       enable = true;
@@ -39,7 +44,7 @@
         "eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all";
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
-      zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
+      # zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
       task = "dstask";
     };
     history = {
@@ -49,6 +54,7 @@
       save = 1200;
     };
     initExtra = ''
+                  path+=('/home/geri/.local/bin')
                   bindkey "''${key[Up]}" up-line-or-search
                   id-filter-address() {
                   local n=$#

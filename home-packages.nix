@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 let
   # himalaya = pkgs.himalaya.override { withNotmuchBackend = true; };
   toggle_touchpad = pkgs.writeShellScriptBin "toggle_touchpad" ''
@@ -42,24 +42,35 @@ in
     (discord.override {
       withOpenASAR = true;
     })
+    distrobox
+    docker-compose
     dstask
     element
     element-desktop
     etlegacy
     exercism
+    geogebra
     gbar
     gimp
     glow
+    glicol-cli
     graph-easy
     grim
+    grex
     gnupg
+    gpt4all
+    helix-gpt
     himalaya
+    hyprshade
     joshuto
     jq
     kalker
     keepassxc
     kbs2
     kibi
+    kitty
+    kitty-themes
+    kiwix
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
@@ -89,13 +100,17 @@ in
     p7zip
     pcmanfm
     peep
+    protonmail-desktop
+    protonmail-bridge
     rx
     slurp
     sniffnet
     swappy
     swaybg
     steamcmd
+    sonic-pi
     the-way
+    thunderbird
     tldr
     toggle_touchpad
     translate-shell
@@ -110,6 +125,7 @@ in
     wine
     winetricks
     wl-clipboard
+    wofi
     wthrr
     xdg-utils
     xplr

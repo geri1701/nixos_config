@@ -3,10 +3,12 @@
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+  documentation.man.generateCaches = false;
   fonts =
     {
       fontDir.enable = true;
       packages = with pkgs; [
+        commit-mono
         fantasque-sans-mono
         fira-code
         fira-code-symbols
@@ -40,10 +42,15 @@
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
+<<<<<<< HEAD
       max-jobs= "auto";
       cores = 16;
       # substituters = [ "https://cosmic.cachix.org/" ];
       # trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+=======
+      max-jobs= 4;
+      cores = 16;
+>>>>>>> main
     };
     extraOptions = ''
       keep-outputs = true
@@ -97,24 +104,22 @@
       loginOptions = "-p -- geri";
       extraArgs = [ "--noclear" "--skip-login" ];
     };
-    davfs2.enable = true;
     flatpak.enable = true;
-    autofs = {
-      enable = true;
-      autoMaster =
-        let
-          mapConf = pkgs.writeText "auto" ''
-            nextcloud -fstype=davfs,conf=/path/to/davfs/conf,uid=myuid :https\:nextcloud.nerdbyte.at/remote.php/dav/files/Geri
-          '';
-        in
-        ''
-          /home/directory/mounts file:${mapConf}
-        '';
-    };
     gnome.gnome-keyring.enable = true;
+<<<<<<< HEAD
     offlineimap.enable = true;
     desktopManager.cosmic.enable = true;
     displayManager.cosmic-greeter.enable = true;
+=======
+    ollama = {
+    enable = true;
+    # acceleration = "rocm";
+    environmentVariables = {
+    # ROCR_VISIBLE_DEVICES= "1";
+    HSA_OVERRIDE_GFX_VERSION = "10.3.6"; 
+    };
+   };
+>>>>>>> main
   };
   # sound.enable = true;
   systemd.services = {
@@ -152,8 +157,6 @@
     users.geri.initialPassword = "firstboot";
   };
   virtualisation = {
-    # vmVariant = {
-    # };
     docker = {
       enable = true;
       enableOnBoot = true;
@@ -167,22 +170,22 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix = {
-    image = ./stylix_colors.png;
+    image = /home/geri/nixos/wallpaper.png;
     polarity = "dark";
     fonts = {
       serif = {
-        package = pkgs.iosevka;
-        name = "iosevka";
+        package = pkgs.commit-mono;
+        name = "CommitMono";
       };
 
       sansSerif = {
-        package = pkgs.tamzen;
-        name = "iosevka";
+        package = pkgs.iosevka;
+        name = "CommitMono";
       };
 
       monospace = {
-        package = pkgs.tamzen;
-        name = "iosevka";
+        package = pkgs.commit-mono;
+        name = "CommitMono";
       };
 
       emoji = {

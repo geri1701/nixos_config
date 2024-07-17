@@ -6,7 +6,7 @@
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
       exec-once=waybar
-      exec-once=mpvpaper -vs -o "no-audio loop" ${config.outputDeviceOption} /home/geri/nixos/wallpaper_logo.mp4
+      exec-once=swaybg -i /home/geri/nixos/wallpaper.png
       exec-once=keepassxc 
       exec-once=blueman-applet
       exec-once=nm-tray      
@@ -31,8 +31,10 @@
           col.active_border= 0x44b58900 
           col.inactive_border= 0x44002b36
           apply_sens_to_raw=0
-          cursor_inactive_timeout = 3  
       }
+     #  cursor {
+     #    inactive_timeout = 3
+     # }
       misc {
          disable_hyprland_logo=true
       }
@@ -60,8 +62,8 @@
       }
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
-      bind=SUPER,Q,exec,foot -L
-      bind=SUPER,RETURN,exec,foot -L
+      bind=SUPER,Q,exec,kitty
+      bind=SUPER,RETURN,exec,kitty
       bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-           
       bind=,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+           
       bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle           
@@ -70,8 +72,7 @@
       bind=,XF86TouchpadToggle,exec,toggle_touchpad           
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
-      bind=SUPER,P,exec,nwg-drawer
-      bind=,Menu,exec,sirula
+      bind=SUPER,P,exec,wofi -I --show drun
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
       bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
@@ -81,6 +82,7 @@
       bind=SUPER,l,movefocus,r
       bind=SUPER,k,movefocus,u
       bind=SUPER,j,movefocus,d
+      bind=SUPER,H,swapwindow,l
       bind=SUPER,1,workspace,1
       bind=SUPER,2,workspace,2
       bind=SUPER,3,workspace,3
@@ -108,6 +110,7 @@
       bind = SUPER, t, togglegroup
       bind = SUPER+ALT, J, changegroupactive, f
       bind = SUPER+ALT, K, changegroupactive, b
+      env = WLR_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
     '';
   };
 }

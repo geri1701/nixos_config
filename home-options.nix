@@ -46,7 +46,7 @@
   };
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme.name = "gtk2";
   };
   services = {
     gpg-agent = {

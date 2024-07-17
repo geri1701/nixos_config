@@ -1,8 +1,8 @@
-{
+{lib, ...}: {
   programs.helix = {
     enable = true;
     settings = {
-      # theme = "solarized_dark";
+      theme = lib.mkForce "kanagawa";
       editor = {
         line-number = "relative";
         mouse = false;
