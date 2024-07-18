@@ -4,7 +4,7 @@
     ./config/foot.nix
     ./config/git.nix
     ./config/helix.nix
-    # ./config/hyprland.nix
+    ./config/hyprland.nix
     # ./config/ironbar.nix
     ./config/vscode.nix
     # ./config/waybar.nix
