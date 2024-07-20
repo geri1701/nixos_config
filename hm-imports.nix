@@ -7,7 +7,7 @@
     ./config/hyprland.nix
     # ./config/ironbar.nix
     ./config/vscode.nix
-    # ./config/waybar.nix
+    ./config/waybar.nix
     ./config/zathura.nix
     ./config/zsh.nix
     ./home-options.nix
