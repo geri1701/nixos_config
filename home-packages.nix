@@ -40,7 +40,7 @@ in
     claws-mail
     ddgr
     (discord.override {
-      withOpenASAR = true;
+      withOpenASAR = false;
     })
     distrobox
     docker-compose
