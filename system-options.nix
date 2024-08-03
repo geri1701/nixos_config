@@ -118,7 +118,7 @@
     desktopManager.cosmic.enable = true;
     displayManager.cosmic-greeter.enable = true;
     ollama = {
-    enable = true;
+    enable = false;
     # acceleration = "rocm";
     environmentVariables = {
     # ROCR_VISIBLE_DEVICES= "1";
