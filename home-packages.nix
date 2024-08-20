@@ -45,8 +45,8 @@ in
     distrobox
     docker-compose
     dstask
-    element
-    element-desktop
+    # element
+    # element-desktop
     etlegacy
     exercism
     geogebra
