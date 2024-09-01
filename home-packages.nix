@@ -40,13 +40,13 @@ in
     claws-mail
     ddgr
     (discord.override {
-      withOpenASAR = true;
+      withOpenASAR = false;
     })
     distrobox
     docker-compose
     dstask
-    element
-    element-desktop
+    # element
+    # element-desktop
     etlegacy
     exercism
     geogebra

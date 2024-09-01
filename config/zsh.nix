@@ -7,7 +7,6 @@
     autosuggestion.enable = true;
     initExtraBeforeCompInit = ''
       fpath=($HOME/.zsh/ $fpath)
-      # source $HOME/.zsh/_zellij
       source $HOME/.dstask/_task
     '';
     initExtraFirst = ''
@@ -44,8 +43,8 @@
         "eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all";
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
-      # zellij = ''zellij -s "$(gen-session-name ~/data.txt)"'';
       task = "dstask";
+      cosmic-term = "kitty";
     };
     history = {
       expireDuplicatesFirst = true;
