@@ -63,7 +63,7 @@
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
       bind=SUPER,Q,exec,kitty
-      bind=SUPER,RETURN,exec,kitty
+      bind=SUPER,RETURN,exec,kitty -e tmux new-session \; split-window -h \;
       bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-           
       bind=,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+           
       bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle           
