@@ -73,14 +73,17 @@
   };
   qt = {
     enable = true;
-    platformTheme = "gtk2";
-    style = "gtk2";
+    platformTheme = "kde";
+    style = "kvantum";
   };
   security = {
     polkit.enable = true;
     rtkit.enable = true;
   };
   services = {
+  displayManager.sddm.enable = true;
+  displayManager.sddm.wayland.enable = true;
+  desktopManager.plasma6.enable = true;
   interception-tools =
   let
     itools = pkgs.interception-tools;
@@ -89,7 +92,6 @@
   {
     enable = true;
     plugins = [ itools-caps ];
-    # requires explicit paths: https://github.com/NixOS/nixpkgs/issues/126681
     udevmonConfig = pkgs.lib.mkDefault ''
       - JOB: "${itools}/bin/intercept -g $DEVNODE | ${itools-caps}/bin/caps2esc -m 1 | ${itools}/bin/uinput -d $DEVNODE"
         DEVICE:
@@ -126,7 +128,6 @@
     };
    };
   };
-  # sound.enable = true;
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
     sort-att-dir = {

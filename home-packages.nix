@@ -64,6 +64,7 @@ in
     hyprshade
     joshuto
     jq
+    kdePackages.krohnkite
     kalker
     keepassxc
     kbs2
@@ -118,6 +119,7 @@ in
     typst
     typst-fmt
     vscode-extensions.vadimcn.vscode-lldb
+    wgnord
     w3m
     wayland-protocols
     wayland-utils
