@@ -76,6 +76,7 @@
     platformTheme = "kde";
     style = "kvantum";
   };
+  kdeconnect.enable = true;
   security = {
     polkit.enable = true;
     rtkit.enable = true;
