@@ -70,13 +70,13 @@
     steam.enable = true;
     thunar.enable = true;
     zsh.enable = true;
+    kdeconnect.enable = true;
   };
   qt = {
     enable = true;
     platformTheme = "kde";
     style = "kvantum";
   };
-  kdeconnect.enable = true;
   security = {
     polkit.enable = true;
     rtkit.enable = true;
