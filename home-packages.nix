@@ -102,6 +102,7 @@ in
     p7zip
     pcmanfm
     peep
+    plasma-panel-colorizer
     protonmail-desktop
     protonmail-bridge
     rx
