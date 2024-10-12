@@ -135,6 +135,7 @@ in
     xplr
     yt-dlp
     zeal
+    zellij
     zsh-autosuggestions
     zsh-you-should-use
   ];
