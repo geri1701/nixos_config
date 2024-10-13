@@ -112,6 +112,7 @@ in
     swaybg
     steamcmd
     sonic-pi
+    taskwarrior
     the-way
     thunderbird
     tldr
