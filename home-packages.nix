@@ -45,7 +45,6 @@ in
     })
     distrobox
     docker-compose
-    dstask
     # element
     # element-desktop
     etlegacy

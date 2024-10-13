@@ -40,7 +40,6 @@
         "eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all";
       lS = "eza -1 --icons";
       lt = "eza --tree --level=2 --icons";
-      task = "dstask";
       cosmic-term = "kitty";
     };
     history = {
