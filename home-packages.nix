@@ -112,7 +112,8 @@ in
     swaybg
     steamcmd
     sonic-pi
-    taskwarrior
+    taskwarrior3
+    taskwarrior-tui
     the-way
     thunderbird
     tldr
