@@ -45,8 +45,6 @@ in
     })
     distrobox
     docker-compose
-    # element
-    # element-desktop
     etlegacy
     exercism
     geogebra
@@ -58,7 +56,7 @@ in
     grim
     grex
     gnupg
-    gpt4all
+    # gpt4all-cuda
     helix-gpt
     himalaya
     hyprshade
