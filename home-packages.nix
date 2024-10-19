@@ -103,6 +103,7 @@ in
     protonmail-desktop
     protonmail-bridge
     rx
+    scriptisto
     slurp
     sniffnet
     swappy
