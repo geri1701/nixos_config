@@ -13,13 +13,13 @@
     sessionVariables = {
       EDITOR = "hx";
       TERM = "foot";
-      QT_STYLE_OVERRIDE = lib.mkForce "kvantum";
-      GTK_USE_PORTAL = 1;
+      # QT_STYLE_OVERRIDE = lib.mkForce "kvantum";
+      # GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
 
     };
     pointerCursor = lib.mkForce {
-      gtk.enable = true;
+      # gtk.enable = true;
       name = "material_cursors";
       size = 22;
       package = pkgs.material-cursors;
@@ -40,7 +40,7 @@
   };
   qt = {
     enable = true;
-    platformTheme.name = "gtk2";
+    # platformTheme.name = "gtk2";
   };
   services = {
     gpg-agent = {
