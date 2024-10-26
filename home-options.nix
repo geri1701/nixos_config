@@ -18,12 +18,6 @@
       MOZ_ENABLE_WAYLAND = 1;
 
     };
-    pointerCursor = lib.mkForce {
-      # gtk.enable = true;
-      name = "material_cursors";
-      size = 22;
-      package = pkgs.material-cursors;
-    };
   };
   programs = {
     home-manager.enable = true;
