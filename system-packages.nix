@@ -17,6 +17,7 @@
       sshfs
       tmux
       tree
+      via
       virt-manager
       wget
       zoxide

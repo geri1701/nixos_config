@@ -83,6 +83,7 @@
     rtkit.enable = true;
   };
   services = {
+    udev.packages = [ pkgs.via ];
     displayManager.ly = { enable = true;
   };
   desktopManager.plasma6.enable = true;
