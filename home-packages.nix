@@ -32,7 +32,6 @@ in
   home.packages = with pkgs; [
     afew
     amdgpu_top
-    alot
     aseprite
     atuin
     bogofilter
