@@ -13,6 +13,7 @@
       openssl
       pfetch
       rust-analyzer
+      qmk-udev-rules
       screen
       sshfs
       tmux
