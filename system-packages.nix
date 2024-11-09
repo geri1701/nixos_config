@@ -3,6 +3,7 @@
     systemPackages = with pkgs; [
       docfd
       eza
+      gamemode
       gparted
       helix
       libsForQt5.qtstyleplugin-kvantum
