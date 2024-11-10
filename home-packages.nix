@@ -132,6 +132,7 @@ in
     wthrr
     xdg-utils
     xplr
+    yazi
     yt-dlp
     zeal
     zellij
