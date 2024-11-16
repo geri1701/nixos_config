@@ -20,6 +20,7 @@
       HIST_STAMPS = "%y-%m-%d";
       COPILOT_API_KEY = "$(</home/geri/pilot.txt)";
       HANDLER="copilot";
+      LOCALE_ARCHIVE="/usr/lib/locale/locale-archive";
     };
     oh-my-zsh = {
       enable = true;
