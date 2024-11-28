@@ -11,6 +11,7 @@
       man-pages
       man-pages-posix
       networkmanager
+      nordvpn
       openssl
       pfetch
       rust-analyzer
