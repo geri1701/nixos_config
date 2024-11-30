@@ -8,17 +8,16 @@
     {
       fontDir.enable = true;
       packages = with pkgs; [
-        commit-mono
+        nerd-fonts.commit-mono
         fantasque-sans-mono
-        fira-code
+        nerd-fonts.fira-code
         fira-code-symbols
         liberation_ttf
         meslo-lg
-        nerdfonts
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
-        iosevka
+        nerd-fonts.iosevka
         tamsyn
         tamzen
       ];
