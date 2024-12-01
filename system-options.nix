@@ -9,17 +9,18 @@
       fontDir.enable = true;
       packages = with pkgs; [
         nerd-fonts.commit-mono
-        fantasque-sans-mono
+        nerd-fonts.fantasque-sans-mono
         nerd-fonts.fira-code
         fira-code-symbols
         liberation_ttf
-        meslo-lg
+        nerd-fonts.meslo-lg
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
         nerd-fonts.iosevka
         tamsyn
         tamzen
+        iosevka
       ];
     };
   hardware.pulseaudio.enable = false;
