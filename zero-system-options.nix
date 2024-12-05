@@ -15,6 +15,8 @@
     };
   };
   services = {
+    scx.enable = true;
+    scx.scheduler = "scx_lavd";
     openssh = {
       enable = false;
       settings = { PasswordAuthentication = false; };
@@ -22,8 +24,6 @@
   };
   chaotic = {
     mesa-git.enable = true;
-    # scx.enable = true;
-    # scx.scheduler = "scx_lavd";
   };
 
 }
