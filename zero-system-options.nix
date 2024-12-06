@@ -16,7 +16,7 @@
   };
   services = {
     scx.enable = true;
-    scx.scheduler = "scx_lavd";
+    scx.scheduler = "scx_bpfland";
     openssh = {
       enable = false;
       settings = { PasswordAuthentication = false; };
