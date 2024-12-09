@@ -135,6 +135,7 @@ in
     yazi
     yt-dlp
     zeal
+    zed-editor_git
     zellij
     zsh-autosuggestions
     zsh-you-should-use
