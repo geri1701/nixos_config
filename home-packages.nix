@@ -46,6 +46,7 @@ in
     docker-compose
     etlegacy
     exercism
+    gdal
     geogebra
     gbar
     gimp
