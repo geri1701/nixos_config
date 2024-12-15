@@ -46,6 +46,8 @@ in
     docker-compose
     etlegacy
     exercism
+    gh
+    github-copilot-cli
     gdal
     geogebra
     gbar
