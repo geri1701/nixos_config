@@ -11,6 +11,7 @@
     '';
     initExtraFirst = ''
     eval "$(zellij setup --generate-auto-start zsh)"
+    eval "$(github-copilot-cli alias -- "$0")"
     '';
     sessionVariables = {
       EDITOR = "hx";
