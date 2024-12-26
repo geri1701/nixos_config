@@ -132,6 +132,7 @@ in
     winetricks
     wl-clipboard
     wofi
+    wolfram-engine
     wthrr
     xdg-utils
     xplr
