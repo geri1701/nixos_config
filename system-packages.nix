@@ -1,9 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, ghostty, ... }: {
   environment = {
     systemPackages = with pkgs; [
       docfd
       eza
       gamemode
+      ghostty.packages.x86_64-linux.default
       gparted
       helix
       libsForQt5.qtstyleplugin-kvantum
