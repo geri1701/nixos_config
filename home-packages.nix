@@ -46,6 +46,7 @@ in
     docker-compose
     etlegacy
     exercism
+    fastfetch
     gh
     github-copilot-cli
     gdal
