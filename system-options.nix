@@ -71,6 +71,7 @@
     steam.enable = true;
     thunar.enable = true;
     zsh.enable = true;
+    fish.enable = true;
     kdeconnect.enable = true;
   };
   qt = {
@@ -157,7 +158,7 @@
   };
   time.timeZone = "Europe/Vienna";
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
     users.geri = {
       isNormalUser = true;
       description = "geri";
