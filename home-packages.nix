@@ -51,7 +51,6 @@ in
     github-copilot-cli
     gdal
     geogebra
-    gbar
     gimp
     glow
     glicol-cli
