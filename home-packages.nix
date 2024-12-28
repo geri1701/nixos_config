@@ -76,7 +76,6 @@ in
     libsForQt5.qtstyleplugin-kvantum
     libsixel
     luajitPackages.vicious
-    lxqt.lxqt-qtplugin
     marksman
     meson
     mpc-cli
@@ -99,7 +98,6 @@ in
     oculante
     ouch
     p7zip
-    pcmanfm
     peep
     plasma-panel-colorizer
     protonmail-desktop
@@ -114,7 +112,7 @@ in
     sonic-pi
     taskwarrior3
     taskwarrior-tui
-    the-way
+    # the-way
     thunderbird
     tldr
     toggle_touchpad
