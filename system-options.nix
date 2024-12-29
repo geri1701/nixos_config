@@ -18,6 +18,7 @@
         noto-fonts-cjk-sans
         noto-fonts-emoji
         nerd-fonts.iosevka
+        nerd-fonts.iosevka-term
         tamsyn
         tamzen
         iosevka
