@@ -22,6 +22,7 @@
         tamsyn
         tamzen
         iosevka
+        iosevka-comfy.comfy
       ];
     };
   hardware.pulseaudio.enable = false;
