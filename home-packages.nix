@@ -101,7 +101,7 @@ in
     peep
     plasma-panel-colorizer
     protonmail-desktop
-    protonmail-bridge
+    proton-pass
     rx
     scriptisto
     slurp
