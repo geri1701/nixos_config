@@ -2,7 +2,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = lib.mkForce "ferra";
+      theme = lib.mkForce "dark_plus";
       editor = {
         line-number = "relative";
         mouse = false;
