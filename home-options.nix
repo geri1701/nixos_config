@@ -1,5 +1,4 @@
 { lib, pkgs, ... }: {
-    # home-manager.backupFileExtension = "backup";
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -13,8 +12,6 @@
     sessionVariables = {
       EDITOR = "hx";
       TERM = "foot";
-      # QT_STYLE_OVERRIDE = lib.mkForce "kvantum";
-      # GTK_USE_PORTAL = 1;
       MOZ_ENABLE_WAYLAND = 1;
 
     };
@@ -34,7 +31,6 @@
   };
   qt = {
     enable = true;
-    # platformTheme.name = "gtk2";
   };
   services = {
     gpg-agent = {
@@ -43,7 +39,7 @@
       enableSshSupport = true;
       enableExtraSocket = true;
     };
-    network-manager-applet.enable = true;
+    network-manager-applet.enable = false;
     mpd = {
       enable = true;
       musicDirectory = "~/music";
@@ -55,7 +51,7 @@
       '';
     };
     dunst = { enable = true; };
-    pasystray.enable = true;
+    pasystray.enable = false;
     gnome-keyring.enable = true;
   };
   stylix = {
