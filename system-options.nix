@@ -64,6 +64,7 @@
   ];
 
   programs = {
+    wireshark.enable = true;
     git = {
       enable = true;
       package = pkgs.gitFull;
@@ -164,14 +165,14 @@
     users.geri = {
       isNormalUser = true;
       description = "geri";
-      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "video" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "video" "wireshark" ];
     };
     users.geri.initialPassword = "firstboot";
   };
   virtualisation = {
     docker = {
-      enable = true;
-      enableOnBoot = true;
+      enable = false;
+      enableOnBoot = false;
     };
     libvirtd.enable = true;
   };

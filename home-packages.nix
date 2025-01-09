@@ -121,7 +121,7 @@ in
     typst
     typst-fmt
     vscode-extensions.vadimcn.vscode-lldb
-    wgnord
+    # wgnord
     w3m
     wayland-protocols
     wayland-utils
