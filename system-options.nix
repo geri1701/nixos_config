@@ -65,6 +65,7 @@
 
   programs = {
     wireshark.enable = true;
+    wireshark.package = pkgs.wireshark;
     git = {
       enable = true;
       package = pkgs.gitFull;
