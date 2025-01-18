@@ -173,7 +173,7 @@
   virtualisation = {
     docker = {
       enable = true;
-      enableOnBoot = false;
+      enableOnBoot = true;
     };
     libvirtd.enable = true;
   };
