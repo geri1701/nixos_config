@@ -3,7 +3,9 @@
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
-  documentation.man.generateCaches = false;
+  documentation.man.generateCaches = true;
+  documentation.dev.enable = true;
+  documentation.nixos.includeAllModules = true;
   fonts =
     {
       fontDir.enable = true;
