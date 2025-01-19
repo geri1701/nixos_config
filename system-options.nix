@@ -164,29 +164,29 @@
     config.common.default = "*";
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-  stylix = {
-    image = /home/geri/nixos/wallpaper.png;
-    polarity = "dark";
-    fonts = {
-      serif = {
-        package = pkgs.commit-mono;
-        name = "CommitMono";
-      };
+  # stylix = {
+  #   image = /home/geri/nixos/wallpaper.png;
+  #   polarity = "dark";
+  #   fonts = {
+  #     serif = {
+  #       package = pkgs.commit-mono;
+  #       name = "CommitMono";
+      # };
 
-      sansSerif = {
-        package = pkgs.iosevka;
-        name = "CommitMono";
-      };
+    #   sansSerif = {
+    #     package = pkgs.iosevka;
+    #     name = "CommitMono";
+    #   };
 
-      monospace = {
-        package = pkgs.commit-mono;
-        name = "CommitMono";
-      };
+    #   monospace = {
+    #     package = pkgs.commit-mono;
+    #     name = "CommitMono";
+    #   };
 
-      emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
-      };
-    };
-  };
+    #   emoji = {
+    #     package = pkgs.noto-fonts-emoji;
+    #     name = "Noto Color Emoji";
+    #   };
+    # };
+  # };
 }

@@ -54,13 +54,13 @@
     pasystray.enable = false;
     gnome-keyring.enable = true;
   };
-  stylix = {
-    targets = {
-      helix.enable = true;
-      vscode.enable = false;
-      waybar.enable = true;
-    };
-    fonts.sizes.terminal = 10;
-  };
-  xdg = { enable = true; };
-}
+#   stylix = {
+#     targets = {
+#       helix.enable = true;
+#       vscode.enable = false;
+#       waybar.enable = true;
+#     };
+#     fonts.sizes.terminal = 10;
+#   };
+#   xdg = { enable = true; };
+ }

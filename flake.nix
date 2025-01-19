@@ -8,7 +8,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -20,7 +20,7 @@
     , chaotic
     , nixos-cosmic
     , home-manager
-    , stylix
+    # , stylix
     , ghostty
     , ...
     }@inputs: {
@@ -42,7 +42,7 @@
             ./system-packages.nix
             ./host-zero.nix
             home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
+            # stylix.nixosModules.stylix
             chaotic.nixosModules.default
             nixos-cosmic.nixosModules.default
             {
@@ -69,7 +69,7 @@
             ./system-packages.nix
             ./host-one.nix
             home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
+            # stylix.nixosModules.stylix
             chaotic.nixosModules.default
             {
               home-manager = {
