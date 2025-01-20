@@ -3,7 +3,7 @@
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
-  documentation.man.generateCaches = true;
+  documentation.man.generateCaches = false;
   documentation.dev.enable = true;
   documentation.nixos.includeAllModules = true;
   fonts =
@@ -125,7 +125,7 @@
       loginOptions = "-p -- geri";
       extraArgs = [ "--noclear" "--skip-login" ];
     };
-    flatpak.enable = true;
+    # flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
     desktopManager.cosmic.enable = false;
     displayManager.cosmic-greeter.enable = false;
