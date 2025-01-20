@@ -12,7 +12,7 @@
       man-pages
       man-pages-posix
       networkmanager
-      # nordvpn
+      obsidian
       openssl
       pfetch
       rust-analyzer

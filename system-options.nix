@@ -26,7 +26,7 @@
         iosevka
         iosevka-comfy.comfy
       ];
-    };
+    };  
   services.pulseaudio.enable = false;
   hardware.keyboard.qmk.enable = true;
   i18n = {

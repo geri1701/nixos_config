@@ -94,7 +94,6 @@ in
     nuclear
     nwg-drawer
     nwg-look
-    obsidian
     oculante
     ouch
     p7zip
