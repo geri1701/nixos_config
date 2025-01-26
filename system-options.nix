@@ -28,6 +28,7 @@
       ];
     };  
   services.pulseaudio.enable = false;
+  services.gvfs.enable = true;
   hardware.keyboard.qmk.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
