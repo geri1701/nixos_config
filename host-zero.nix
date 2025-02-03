@@ -17,6 +17,10 @@
     lib.mkDefault config.hardware.enableRedistributableFirmware;
   # hardware.graphics.enable = lib.mkDefault true;
   hardware = {
+  opengl.extraPackages = with pkgs; [
+  rocmPackages.clr.icd
+  amdvlk
+];
   graphics = {
       enable = lib.mkDefault true;
       enable32Bit = true;

@@ -77,6 +77,7 @@ in
     libsixel
     luajitPackages.vicious
     marksman
+    mangohud
     meson
     mpc-cli
     mpv
