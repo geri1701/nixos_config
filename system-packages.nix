@@ -23,6 +23,7 @@
       tree
       via
       virt-manager
+      vscode
       wget
       zoxide
     ];
