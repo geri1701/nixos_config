@@ -8,6 +8,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:PedroHLC/nixpkgs/revert-376078";
     # stylix.url = "github:danth/stylix";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
