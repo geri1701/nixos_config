@@ -17,13 +17,14 @@
     lib.mkDefault config.hardware.enableRedistributableFirmware;
   # hardware.graphics.enable = lib.mkDefault true;
   hardware = {
-  graphics.extraPackages = with pkgs; [
-  rocmPackages.clr.icd
-  amdvlk
-];
-  graphics = {
+    graphics = {
       enable = lib.mkDefault true;
       enable32Bit = true;
-      };
-};
+      extraPackages = with pkgs; [
+        rocmPackages.clr.icd
+        amdvlk
+        libvdpau-va-gl
+      ];
+    };
+  };
 }
