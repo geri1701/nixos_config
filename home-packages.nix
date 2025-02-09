@@ -120,7 +120,7 @@ in
     typespeed
     typst
     typst-fmt
-    vscode-extensions.vadimcn.vscode-lldb
+    # vscode-extensions.vadimcn.vscode-lldb
     # wgnord
     w3m
     wayland-protocols
