@@ -131,11 +131,11 @@
     desktopManager.cosmic.enable = false;
     displayManager.cosmic-greeter.enable = false;
     ollama = {
-    enable = false;
+    enable = true;
     acceleration = "rocm";
     environmentVariables = {
     ROCR_VISIBLE_DEVICES= "1";
-    HSA_OVERRIDE_GFX_VERSION = "10.3.0"; 
+    # HSA_OVERRIDE_GFX_VERSION = "10.3.0"; 
     };
    };
   };
