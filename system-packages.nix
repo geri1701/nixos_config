@@ -1,4 +1,4 @@
-{ pkgs, ghostty, ... }: {
+{ pkgs, ghostty, zen-browser, ... }: {
   environment = {
     systemPackages = with pkgs; [
       docfd
@@ -25,6 +25,7 @@
       virt-manager
       vscode
       wget
+      zen-browser.packages."${system}".default
       zoxide
     ];
   };
