@@ -2,7 +2,7 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_cachyos;
     initrd = {
-      kernelModules = [ "amdgpu" ];
+      kernelModules = [ "amdgpu" "nct6775" "lm78" ];
       systemd.enable = true;
       verbose = false;
     };

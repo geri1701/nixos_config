@@ -9,6 +9,7 @@
       helix
       libsForQt5.qtstyleplugin-kvantum
       linux-manual
+      lm_sensors
       man-pages
       man-pages-posix
       networkmanager
