@@ -94,7 +94,7 @@
     udev.packages = with pkgs; [ via ];
     displayManager.ly = { enable = true;
   };
-  desktopManager.plasma6.enable = true;
+  desktopManager.plasma6.enable = false;
   interception-tools =
   let
     itools = pkgs.interception-tools;
@@ -163,7 +163,7 @@
     enable = true;
     wlr.enable = true;
     config.common.default = "*";
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   # stylix = {
   #   image = /home/geri/nixos/wallpaper.png;

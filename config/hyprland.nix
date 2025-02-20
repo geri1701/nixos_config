@@ -10,7 +10,8 @@
       exec-once=keepassxc 
       exec-once=blueman-applet
       exec-once=nm-tray      
-      exec-once=nextcloud      
+      exec-once=nextcloud
+      env=XDG_CURRENT_DESKTOP,Hyprland      
       input {
           kb_file=
           kb_layout= de
@@ -24,6 +25,11 @@
           }
           sensitivity=0 # -1.0 - 1.0, 0 means no modification.
       }
+      master {
+         orientation = center
+         slave_count_for_center_master = 2
+         mfact = 0.5
+      }
       general {
           gaps_in=3
           gaps_out=7
@@ -31,6 +37,7 @@
           col.active_border= 0x44b58900 
           col.inactive_border= 0x44002b36
           # apply_sens_to_raw=0
+          layout=master
       }
      #  cursor {
      #    inactive_timeout = 3
@@ -54,14 +61,15 @@
             animation = fade, 1, 8, default
             animation = workspaces, 1, 6, overshot, slidevert
       }
-      dwindle {
-          pseudotile=0 # enable pseudotiling on dwindle
-      }
       gestures {
           workspace_swipe=no
       }
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
+      bind=SHIFT,right,resizeactive,10 0
+      bind=SHIFT,left,resizeactive,-10 0
+      bind=SHIFT,up,resizeactive, 0 -10
+      bind=SHIFT,down,resizeactive,0 10
       bind=SUPER,Q,exec,kitty
       bind=SUPER,RETURN,exec,ghostty
       bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-           
@@ -111,6 +119,7 @@
       bind = SUPER+ALT, J, changegroupactive, f
       bind = SUPER+ALT, K, changegroupactive, b
       env = WLR_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1
+      env = HYPRCURSOR_THEME,rose-pine-hyprcursor
     '';
   };
 }

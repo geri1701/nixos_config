@@ -7,6 +7,7 @@
       ghostty.packages.x86_64-linux.default
       gparted
       helix
+      hyprcursor
       libsForQt5.qtstyleplugin-kvantum
       linux-manual
       lm_sensors
