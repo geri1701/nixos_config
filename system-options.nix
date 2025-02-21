@@ -148,7 +148,7 @@
     users.geri = {
       isNormalUser = true;
       description = "geri";
-      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "video" "wireshark" ];
+      extraGroups = [ "i2c" "networkmanager" "wheel" "docker" "libvirtd" "video" "wireshark" ];
     };
     users.geri.initialPassword = "firstboot";
   };
