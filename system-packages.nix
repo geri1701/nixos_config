@@ -1,8 +1,8 @@
 { pkgs, ghostty, zen-browser, ... }: {
   environment = {
     systemPackages = with pkgs; [
-      brightnessctl
       docfd
+      ddcutil
       eza
       gamemode
       ghostty.packages.x86_64-linux.default
