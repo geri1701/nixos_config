@@ -30,6 +30,7 @@
   services.pulseaudio.enable = false;
   services.gvfs.enable = true;
   hardware.keyboard.qmk.enable = true;
+  hardware.i2c.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -92,6 +93,9 @@
   };
   services = {
     udev.packages = with pkgs; [ via ];
+    udev.extraRules = ''
+        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
     displayManager.ly = { enable = false;
   };
   desktopManager.plasma6.enable = false;

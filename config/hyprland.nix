@@ -118,7 +118,7 @@
       bind = SUPER, t, togglegroup
       bind = SUPER+ALT, J, changegroupactive, f
       bind = SUPER+ALT, K, changegroupactive, b
-      # env = WLR_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1
+      env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
       env = HYPRCURSOR_THEME,rose-pine-hyprcursor
     '';
   };
