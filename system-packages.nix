@@ -1,6 +1,7 @@
 { pkgs, ghostty, zen-browser, ... }: {
   environment = {
     systemPackages = with pkgs; [
+      brightnessctl
       docfd
       eza
       gamemode
@@ -8,6 +9,7 @@
       gparted
       helix
       hyprcursor
+      rose-pine-hyprcursor
       libsForQt5.qtstyleplugin-kvantum
       linux-manual
       lm_sensors

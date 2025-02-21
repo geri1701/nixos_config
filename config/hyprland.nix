@@ -5,7 +5,7 @@
     extraConfig = ''
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
-      exec-once=waybar
+      exec-once=nwg-panel
       exec-once=swaybg -i /home/geri/nixos/wallpaper.png
       exec-once=keepassxc 
       exec-once=blueman-applet
@@ -118,7 +118,7 @@
       bind = SUPER, t, togglegroup
       bind = SUPER+ALT, J, changegroupactive, f
       bind = SUPER+ALT, K, changegroupactive, b
-      env = WLR_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1
+      # env = WLR_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1
       env = HYPRCURSOR_THEME,rose-pine-hyprcursor
     '';
   };

@@ -1,4 +1,8 @@
 { lib, pkgs, ... }: {
+  home.pointerCursor.hyprcursor.enable = true;
+  home.pointerCursor.name = "rose-pine-hyprcursor";
+  home.pointerCursor.package = pkgs.rose-pine-hyprcursor;
+  home.pointerCursor.gtk.enable = true;
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -54,13 +58,13 @@
     pasystray.enable = false;
     gnome-keyring.enable = true;
   };
-#   stylix = {
-#     targets = {
-#       helix.enable = true;
-#       vscode.enable = false;
-#       waybar.enable = true;
-#     };
-#     fonts.sizes.terminal = 10;
-#   };
-#   xdg = { enable = true; };
+  stylix = {
+    targets = {
+      helix.enable = true;
+      vscode.enable = false;
+      gtk.enable = true;
+    };
+    fonts.sizes.terminal = 12;
+  };
+  xdg = { enable = true; };
  }

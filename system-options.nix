@@ -1,11 +1,11 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, stylix, ... }: {
   system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
   documentation.man.generateCaches = false;
   documentation.dev.enable = true;
-  documentation.nixos.includeAllModules = true;
+  # documentation.nixos.includeAllModules = true;
   fonts =
     {
       fontDir.enable = true;
@@ -92,7 +92,7 @@
   };
   services = {
     udev.packages = with pkgs; [ via ];
-    displayManager.ly = { enable = true;
+    displayManager.ly = { enable = false;
   };
   desktopManager.plasma6.enable = false;
   interception-tools =
@@ -163,16 +163,16 @@
     enable = true;
     wlr.enable = true;
     config.common.default = "*";
-    # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-  # stylix = {
-  #   image = /home/geri/nixos/wallpaper.png;
-  #   polarity = "dark";
-  #   fonts = {
-  #     serif = {
-  #       package = pkgs.commit-mono;
-  #       name = "CommitMono";
-      # };
+  stylix = {
+    image = /home/geri/nixos/wallpaper.png;
+    polarity = "dark";
+    fonts = {
+      serif = {
+        package = pkgs.commit-mono;
+        name = "CommitMono";
+    };
 
     #   sansSerif = {
     #     package = pkgs.iosevka;
@@ -188,6 +188,6 @@
     #     package = pkgs.noto-fonts-emoji;
     #     name = "Noto Color Emoji";
     #   };
-    # };
-  # };
+    };
+  };
 }

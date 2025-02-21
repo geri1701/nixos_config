@@ -5,12 +5,13 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:PedroHLC/nixpkgs/revert-376078";
-    # stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -22,9 +23,10 @@
     , chaotic
     , nixos-cosmic
     , home-manager
-    # , stylix
+    , stylix
     , ghostty
     , zen-browser
+    , rose-pine-hyprcursor
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -45,7 +47,7 @@
             ./system-packages.nix
             ./host-zero.nix
             home-manager.nixosModules.home-manager
-            # stylix.nixosModules.stylix
+            stylix.nixosModules.stylix
             chaotic.nixosModules.default
             nixos-cosmic.nixosModules.default
             {

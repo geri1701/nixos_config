@@ -62,6 +62,7 @@ in
     helix-gpt
     himalaya
     hyprshade
+    nwg-panel
     joshuto
     jq
     kdePackages.krohnkite
