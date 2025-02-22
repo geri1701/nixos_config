@@ -2,14 +2,20 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    extraConfig = ''
+    systemd.enable = true;
+    settings = {
+       exec-once = [
+          # Fixes cursor themes in gnome apps under hyprland
+               "gsettings set org.gnome.desktop.interface cursor-theme 'rose-pine-hyprcursor'"
+                "gsettings set org.gnome.desktop.interface cursor-size 24"
+              ];
+           };
+     extraConfig = ''
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
       exec-once=nwg-panel
       exec-once=swaybg -i /home/geri/nixos/wallpaper.png
       exec-once=keepassxc 
-      exec-once=blueman-applet
-      exec-once=nm-tray      
       exec-once=nextcloud
       env=XDG_CURRENT_DESKTOP,Hyprland      
       input {
@@ -39,9 +45,6 @@
           # apply_sens_to_raw=0
           layout=master
       }
-     #  cursor {
-     #    inactive_timeout = 3
-     # }
       misc {
          disable_hyprland_logo=true
       }
