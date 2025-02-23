@@ -81,9 +81,9 @@
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,wofi -I --show drun
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
-      bind=SUPER,E,exec,pcmanfm
+      #bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
-      bind=ALT,SPACE,exec,~/.config/wofi/bin/app-launcher.sh
+      bind=ALT,SPACE,exec,pkill -f -64 nwg-panel
       bind=SUPER,V,pseudo
       bind=SUPER,h,movefocus,l
       bind=SUPER,l,movefocus,r
