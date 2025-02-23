@@ -17,6 +17,8 @@
       exec-once=swaybg -i /home/geri/nixos/wallpaper.png
       exec-once=keepassxc 
       exec-once=nextcloud
+      exec-once = dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
+      exec = hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland      
       input {
           kb_file=
@@ -40,8 +42,8 @@
           gaps_in=3
           gaps_out=7
           border_size=2
-          col.active_border= 0x44b58900 
-          col.inactive_border= 0x44002b36
+          col.active_border= rgba(FF731Dee) 
+          col.inactive_border= rgba(32603Fee)
           # apply_sens_to_raw=0
           layout=master
       }
@@ -117,6 +119,7 @@
       bind=SUPER,mouse_down,workspace,e+1
       bind=SUPER,mouse_up,workspace,e-1
       bind = SUPER,Tab,cyclenext,          # change focus
+      bind = SUPER+SHIFT,Tab,swapnext,          # change focus
       bind = SUPER,Tab,bringactivetotop,   # to top
       bind = SUPER, t, togglegroup
       bind = SUPER+ALT, J, changegroupactive, f
