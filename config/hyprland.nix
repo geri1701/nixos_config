@@ -28,10 +28,6 @@
           kb_options= caps:escape
           kb_rules=
           follow_mouse=1
-          touchpad {
-              natural_scroll=no
-          }
-          sensitivity=0 # -1.0 - 1.0, 0 means no modification.
       }
       master {
          orientation = center
@@ -75,21 +71,19 @@
       bind=SHIFT,left,resizeactive,-10 0
       bind=SHIFT,up,resizeactive, 0 -10
       bind=SHIFT,down,resizeactive,0 10
-      bind=SUPER,Q,exec,kitty
       bind=SUPER,RETURN,exec,ghostty
       bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-           
       bind=,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+           
       bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle           
       bind=,XF86MonBrightnessDown,exec,brillo -U 1
-      bind=,XF86MonBrightnessUp,exec,brillo -A 1            
-      bind=,XF86TouchpadToggle,exec,toggle_touchpad           
+      bind=,XF86MonBrightnessUp,exec,brillo -A 1                       
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,wofi -I --show drun
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
       bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
-      bind=ALT,SPACE,exec,~/.config/rofi/bin/app-launcher.sh
+      bind=ALT,SPACE,exec,~/.config/wofi/bin/app-launcher.sh
       bind=SUPER,V,pseudo
       bind=SUPER,h,movefocus,l
       bind=SUPER,l,movefocus,r
