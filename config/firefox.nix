@@ -1,6 +1,6 @@
 { config, ... }: {
   programs.firefox = {
-    enable = true;
+    enable = false;
     profiles.geri.settings = {
       "media.ffmpeg.vaapi.enabled" = true;
       "gfx.webrender.all" = true;
