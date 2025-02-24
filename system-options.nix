@@ -30,6 +30,7 @@
   services.pulseaudio.enable = false;
   services.gvfs.enable = true;
   hardware.keyboard.qmk.enable = true;
+  hardware.brillo.enable = true;
   hardware.i2c.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -92,6 +93,16 @@
     rtkit.enable = true;
   };
   services = {
+    greetd = {
+       enable = true;
+       settings = rec {
+       initial_session = {
+       command = "${pkgs.hyprland}/bin/Hyprland";
+       user = "geri";
+     };
+       default_session = initial_session;
+  };
+    };
     udev.packages = with pkgs; [ via ];
     udev.extraRules = ''
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
