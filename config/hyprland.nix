@@ -3,13 +3,13 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    settings = {
-       exec-once = [
-          # Fixes cursor themes in gnome apps under hyprland
-               "gsettings set org.gnome.desktop.interface cursor-theme 'rose-pine-hyprcursor'"
-                "gsettings set org.gnome.desktop.interface cursor-size 24"
-              ];
-           };
+    # settings = {
+    #    exec-once = [
+    #       # Fixes cursor themes in gnome apps under hyprland
+    #            "gsettings set org.gnome.desktop.interface cursor-theme 'rose-pine-hyprcursor'"
+    #             "gsettings set org.gnome.desktop.interface cursor-size 24"
+    #           ];
+    #        };
      extraConfig = ''
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
@@ -21,12 +21,9 @@
       exec = hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland      
       input {
-          kb_file=
           kb_layout= de
           kb_variant= us
-          kb_model=
           kb_options= caps:escape
-          kb_rules=
           follow_mouse=1
       }
       master {
@@ -40,7 +37,6 @@
           border_size=2
           col.active_border= rgba(FF731Dee) 
           col.inactive_border= rgba(32603Fee)
-          # apply_sens_to_raw=0
           layout=master
       }
       misc {
@@ -48,10 +44,7 @@
       }
       decoration {
           rounding=8
-          # blur=1
-          # blur_size=3 # minimum 1
-          # blur_passes=1 # minimum 1
-          # blur_new_optimizations=1
+          rounding_power=4
       }
         animations {
             enabled=1
@@ -79,7 +72,7 @@
       bind=,XF86MonBrightnessUp,exec,brillo -A 1                       
       bind=SUPER,C,killactive,
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
-      bind=SUPER,P,exec,wofi -I --show drun
+      bind=SUPER,P,exec,anyrun
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
       #bind=SUPER,E,exec,pcmanfm
       bind=SUPER,F,togglefloating,
@@ -113,7 +106,7 @@
       bind=SUPER,mouse_down,workspace,e+1
       bind=SUPER,mouse_up,workspace,e-1
       bind = SUPER,Tab,cyclenext,          # change focus
-      bind = SUPER+SHIFT,Tab,swapnext,          # change focus
+      bind = SUPER+SHIFT,Tab,swapnext,          # change position
       bind = SUPER,Tab,bringactivetotop,   # to top
       bind = SUPER, t, togglegroup
       bind = SUPER+ALT, J, changegroupactive, f

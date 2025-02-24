@@ -30,6 +30,7 @@ let
 in
 {
   home.packages = with pkgs; [
+    anyrun
     afew
     amdgpu_top
     aseprite
@@ -113,7 +114,6 @@ in
     sonic-pi
     taskwarrior3
     taskwarrior-tui
-    # the-way
     thunderbird
     tldr
     toggle_touchpad
@@ -121,8 +121,6 @@ in
     typespeed
     typst
     typst-fmt
-    # vscode-extensions.vadimcn.vscode-lldb
-    # wgnord
     w3m
     wayland-protocols
     wayland-utils
@@ -130,7 +128,6 @@ in
     wine
     winetricks
     wl-clipboard
-    wofi
     wolfram-engine
     wthrr
     xdg-utils
