@@ -3,13 +3,6 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    # settings = {
-    #    exec-once = [
-    #       # Fixes cursor themes in gnome apps under hyprland
-    #            "gsettings set org.gnome.desktop.interface cursor-theme 'rose-pine-hyprcursor'"
-    #             "gsettings set org.gnome.desktop.interface cursor-size 24"
-    #           ];
-    #        };
      extraConfig = ''
       monitor= ${config.monitorSettingsOption}
       exec-once=dunst
@@ -30,6 +23,9 @@
          orientation = center
          slave_count_for_center_master = 2
          mfact = 0.5
+      }
+      cursor {
+        inactive_timeout = 3  
       }
       general {
           gaps_in=3
