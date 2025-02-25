@@ -68,5 +68,14 @@
     };
     fonts.sizes.terminal = 14;
   };
-  xdg = { enable = true; };
+  xdg = {
+   enable = true;
+   desktopEntries = {
+   steam-dgpu = {
+      name = "steam-dgpu";
+      exec = "DRI_PRIME=1 steam steam://open/games";
+      terminal = false;
+    };
+   };
+  };
  }

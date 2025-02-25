@@ -17,4 +17,6 @@
     loader.efi.canTouchEfiVariables = true;
   };
   services.kmscon.hwRender = true;
+  hardware.amdgpu.initrd.enable = true;
+  hardware.amdgpu.amdvlk.enable = true;
 }
