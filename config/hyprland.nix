@@ -10,6 +10,7 @@
       exec-once=swaybg -i /home/geri/nixos/wallpaper.png
       exec-once=keepassxc 
       exec-once=nextcloud
+      exec-once=flameshot
       exec-once = dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
       exec = hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland      

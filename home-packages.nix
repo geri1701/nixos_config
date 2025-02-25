@@ -36,6 +36,7 @@ in
     # aseprite
     atuin
     bogofilter
+    (flameshot.override { enableWlrSupport = true; })
     notmuch-bower
     cht-sh
     claws-mail
