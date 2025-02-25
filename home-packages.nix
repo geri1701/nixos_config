@@ -65,6 +65,7 @@ in
     gdal
     geogebra
     gimp
+    gmic-qt-gimp
     glow
     glicol-cli
     graph-easy
