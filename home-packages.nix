@@ -33,7 +33,7 @@ in
     anyrun
     afew
     amdgpu_top
-    aseprite
+    # aseprite
     atuin
     bogofilter
     notmuch-bower
@@ -73,7 +73,6 @@ in
     kibi
     kitty
     kitty-themes
-    kiwix
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
