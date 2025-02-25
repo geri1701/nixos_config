@@ -64,8 +64,7 @@ in
     github-copilot-cli
     gdal
     geogebra
-    gimp
-    gmic-qt-gimp
+    gimp-with-plugins
     glow
     glicol-cli
     graph-easy
