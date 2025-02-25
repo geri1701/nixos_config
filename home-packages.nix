@@ -27,9 +27,20 @@ let
        esac
      fi
   '';
+      toggle-sink = pkgs.writeShellScriptBin "toggle-sink"  ''
+          SINK_A="alsa_output.pci-0000_1a_00.6.pro-output-0"
+          SINK_B="alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0"
+          CURRENT_SINK=$(pactl info | grep "Default Sink" | awk '{print $3}')
+          if [ "$CURRENT_SINK" = "$SINK_A" ]; then
+            pactl set-default-sink "$SINK_B"
+          else
+            pactl set-default-sink "$SINK_A"
+          fi
+        '';
 in
 {
   home.packages = with pkgs; [
+    toggle-sink
     anyrun
     afew
     amdgpu_top

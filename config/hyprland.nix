@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -11,8 +11,9 @@
       exec-once=keepassxc 
       exec-once=nextcloud
       exec-once=flameshot
-      exec-once = dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
-      exec = hyprshade auto
+      exec-once=dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
+      exec-once=pactl set-default-sink alsa_output.pci-0000_1a_00.6.pro-output-0
+      exec=hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland      
       input {
           kb_layout= de
@@ -71,7 +72,7 @@
       bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
       bind=SUPER,P,exec,anyrun
       bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
-      #bind=SUPER,E,exec,pcmanfm
+      bind=SUPER,E,exec,toggle-sink
       bind=SUPER,F,togglefloating,
       bind=ALT,SPACE,exec,pkill -f -64 nwg-panel
       bind=SUPER,V,pseudo
