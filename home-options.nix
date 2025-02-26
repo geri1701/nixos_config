@@ -1,10 +1,11 @@
 { lib, pkgs, ... }: {
   home.pointerCursor.hyprcursor.enable = true;
-  home.pointerCursor.name = "BreezeX-RosePine-Linux";
-  home.pointerCursor.package = pkgs.rose-pine-cursor;
+  home.pointerCursor.name = lib.mkForce "BreezeX-RosePine-Linux";
+  home.pointerCursor.package = lib.mkForce pkgs.rose-pine-cursor;
   home.pointerCursor.gtk.enable = true;
-  home.pointerCursor.x11.enable = true;
-  home.pointerCursor.size = 24;
+  home.pointerCursor.x11.enable = lib.mkDefault true;
+  xsession.pointerCursor.size = lib.mkDefault 24;
+  home.pointerCursor.size = lib.mkDefault 24;
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -17,7 +18,7 @@
     homeDirectory = "/home/geri";
     sessionVariables = {
       EDITOR = "hx";
-      TERM = "foot";
+      TERM = "ghostty";
       MOZ_ENABLE_WAYLAND = 1;
 
     };
@@ -61,6 +62,7 @@
     gnome-keyring.enable = true;
   };
   stylix = {
+    cursor.size = 24;
     targets = {
       helix.enable = true;
       vscode.enable = false;

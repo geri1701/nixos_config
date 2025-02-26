@@ -52,7 +52,7 @@
             nixos-cosmic.nixosModules.default
             {
               home-manager = {
-                useGlobalPkgs = true;
+                # useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };

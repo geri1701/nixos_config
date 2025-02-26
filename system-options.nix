@@ -6,6 +6,7 @@
   documentation.man.generateCaches = false;
   documentation.dev.enable = true;
   # documentation.nixos.includeAllModules = true;
+  home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
       fontDir.enable = true;
@@ -85,8 +86,8 @@
   };
   qt = {
     enable = true;
-    platformTheme = "kde";
-    style = "kvantum";
+    # platformTheme = "kde";
+    # style = "kvantum";
   };
   security = {
     polkit.enable = true;
@@ -127,6 +128,7 @@
   };
     pipewire = {
       enable = true;
+      audio.enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
@@ -181,6 +183,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   stylix = {
+    enable = true;
     image = /home/geri/nixos/wallpaper.png;
     polarity = "dark";
     fonts = {

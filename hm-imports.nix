@@ -1,7 +1,6 @@
 {
   imports = [
     ./config/firefox.nix
-    ./config/foot.nix
     ./config/git.nix
     ./config/helix.nix
     ./config/hyprland.nix

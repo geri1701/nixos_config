@@ -11,10 +11,14 @@
       exec-once=keepassxc 
       exec-once=nextcloud
       exec-once=flameshot
+      exec-once = clipse -listen
       exec-once=dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
-      exec-once=pactl set-default-sink alsa_output.pci-0000_1a_00.6.pro-output-0
+      # exec-once=pactl set-default-sink alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0
       exec=hyprshade auto
-      env=XDG_CURRENT_DESKTOP,Hyprland      
+      env=XDG_CURRENT_DESKTOP,Hyprland
+      env = HYPRCURSOR_SIZE,24
+      windowrulev2 = float, class:clipse
+      windowrulev2 = size 622 652, class:clipse      
       input {
           kb_layout= de
           kb_variant= us
@@ -75,7 +79,7 @@
       bind=SUPER,E,exec,toggle-sink
       bind=SUPER,F,togglefloating,
       bind=ALT,SPACE,exec,pkill -f -64 nwg-panel
-      bind=SUPER,V,pseudo
+      bind=SUPER,V,exec,ghostty -e 'clipse'
       bind=SUPER,h,movefocus,l
       bind=SUPER,l,movefocus,r
       bind=SUPER,k,movefocus,u
