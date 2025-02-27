@@ -68,9 +68,14 @@
     gnome-keyring.enable = true;
   };
   stylix = {
+    enable = true;
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    image = /home/geri/nixos/wallpaper.png;
+    polarity = "dark";
     cursor.size = 24;
     targets = {
       helix.enable = true;
+      kde.enable = false;
       vscode.enable = false;
       gtk.enable = true;
     };

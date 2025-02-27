@@ -11,7 +11,15 @@
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:PedroHLC/nixpkgs/revert-376078";
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
+    stylix = {
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
+
+      url = "github:danth/stylix";
+    };
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       # inputs.nixpkgs.follows = "nixpkgs";

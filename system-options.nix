@@ -186,11 +186,11 @@
     enable = true;
     image = /home/geri/nixos/wallpaper.png;
     polarity = "dark";
-    fonts = {
-      serif = {
-        package = pkgs.commit-mono;
-        name = "CommitMono";
-    };
+  #   fonts = {
+  #     serif = {
+  #       package = pkgs.commit-mono;
+  #       name = "CommitMono";
+  #   };
 
     #   sansSerif = {
     #     package = pkgs.iosevka;
@@ -206,6 +206,6 @@
     #     package = pkgs.noto-fonts-emoji;
     #     name = "Noto Color Emoji";
     #   };
-    };
+    # };
   };
 }

@@ -79,7 +79,7 @@ in
     nwg-panel
     joshuto
     jq
-    kdePackages.krohnkite
+    # kdePackages.krohnkite
     kalker
     keepassxc
     kbs2
