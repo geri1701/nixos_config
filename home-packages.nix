@@ -113,7 +113,7 @@ in
     ouch
     p7zip
     peep
-    plasma-panel-colorizer
+    # plasma-panel-colorizer
     protonmail-desktop
     proton-pass
     rx

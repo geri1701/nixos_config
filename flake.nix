@@ -1,5 +1,5 @@
 {
-  description = "Configuration for zero and one";
+  description = "Configuration for zero";
   inputs = {
     home-manager = { 
        url = "github:nix-community/home-manager";
@@ -10,19 +10,10 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:PedroHLC/nixpkgs/revert-376078";
-    # stylix.url = "github:danth/stylix";
-    stylix = {
-      inputs = {
-        home-manager.follows = "home-manager";
-        nixpkgs.follows = "nixpkgs";
-      };
-
-      url = "github:danth/stylix";
-    };
+    stylix.url = "github:danth/stylix";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs =
@@ -60,38 +51,12 @@
             nixos-cosmic.nixosModules.default
             {
               home-manager = {
-                # useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./hm-imports.nix
                   ./zero-values.nix
-                ];
-              };
-            }
-          ];
-        };
-        one = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = inputs;
-          modules = [
-            ./one-boot.nix
-            ./system-options.nix
-            ./one-system-options.nix
-            ./system-packages.nix
-            ./host-one.nix
-            home-manager.nixosModules.home-manager
-            # stylix.nixosModules.stylix
-            chaotic.nixosModules.default
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = { inherit inputs; };
-                users.geri.imports = [
-                  ./hm-imports.nix
-                  ./one-values.nix
                 ];
               };
             }

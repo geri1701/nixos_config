@@ -111,21 +111,21 @@
     displayManager.ly = { enable = false;
   };
   desktopManager.plasma6.enable = false;
-  interception-tools =
-  let
-    itools = pkgs.interception-tools;
-    itools-caps = pkgs.interception-tools-plugins.caps2esc;
-  in
-  {
-    enable = true;
-    plugins = [ itools-caps ];
-    udevmonConfig = pkgs.lib.mkDefault ''
-      - JOB: "${itools}/bin/intercept -g $DEVNODE | ${itools-caps}/bin/caps2esc -m 1 | ${itools}/bin/uinput -d $DEVNODE"
-        DEVICE:
-          EVENTS:
-            EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
-    '';
-  };
+  # interception-tools =
+  # let
+  #   itools = pkgs.interception-tools;
+  #   itools-caps = pkgs.interception-tools-plugins.caps2esc;
+  # in
+  # {
+  #   enable = true;
+  #   plugins = [ itools-caps ];
+  #   udevmonConfig = pkgs.lib.mkDefault ''
+  #     - JOB: "${itools}/bin/intercept -g $DEVNODE | ${itools-caps}/bin/caps2esc -m 1 | ${itools}/bin/uinput -d $DEVNODE"
+  #       DEVICE:
+  #         EVENTS:
+  #           EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
+  #   '';
+  # };
     pipewire = {
       enable = true;
       audio.enable = true;
@@ -184,7 +184,7 @@
   };
   stylix = {
     enable = true;
-    image = /home/geri/nixos/wallpaper.png;
+    image = ./wallpaper.png;
     polarity = "dark";
   #   fonts = {
   #     serif = {

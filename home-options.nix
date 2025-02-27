@@ -69,8 +69,9 @@
   };
   stylix = {
     enable = true;
+    autoEnable = false;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    image = /home/geri/nixos/wallpaper.png;
+    image = ./wallpaper.png;
     polarity = "dark";
     cursor.size = 24;
     targets = {
