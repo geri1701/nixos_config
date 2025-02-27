@@ -28,7 +28,7 @@ let
      fi
   '';
       toggle-sink = pkgs.writeShellScriptBin "toggle-sink"  ''
-          SINK_A="alsa_output.pci-0000_1a_00.6.pro-output-0"
+          SINK_A="alsa_output.pci-0000_03_00.1.hdmi-stereo"
           SINK_B="alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0"
           CURRENT_SINK=$(pactl info | grep "Default Sink" | awk '{print $3}')
           if [ "$CURRENT_SINK" = "$SINK_A" ]; then
@@ -47,7 +47,6 @@ in
     # aseprite
     atuin
     bogofilter
-    (flameshot.override { enableWlrSupport = true; })
     notmuch-bower
     cht-sh
     claws-mail

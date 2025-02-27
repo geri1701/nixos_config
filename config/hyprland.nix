@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
     systemd.enable = true;
      extraConfig = ''
@@ -8,17 +9,18 @@
       exec-once=dunst
       exec-once=nwg-panel
       exec-once=swaybg -i /home/geri/nixos/wallpaper.png
-      exec-once=keepassxc 
-      exec-once=nextcloud
-      exec-once=flameshot
       exec-once = clipse -listen
+      exec-once=flameshot
+      exec-once=keepassxc 
       exec-once=dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
-      # exec-once=pactl set-default-sink alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0
+      # exec-once=pactl set-default-sink alsa_output.pci-0000_03_00.1.hdmi-stereo
       exec=hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland
       env = HYPRCURSOR_SIZE,24
+      env = XCURSOR_SIZE,24
       windowrulev2 = float, class:clipse
       windowrulev2 = size 622 652, class:clipse      
+      exec-once=nextcloud
       input {
           kb_layout= de
           kb_variant= us

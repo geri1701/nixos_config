@@ -3,8 +3,6 @@
   home.pointerCursor.name = lib.mkForce "BreezeX-RosePine-Linux";
   home.pointerCursor.package = lib.mkForce pkgs.rose-pine-cursor;
   home.pointerCursor.gtk.enable = true;
-  home.pointerCursor.x11.enable = lib.mkDefault true;
-  xsession.pointerCursor.size = lib.mkDefault 24;
   home.pointerCursor.size = lib.mkDefault 24;
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
@@ -40,6 +38,14 @@
     enable = true;
   };
   services = {
+   flameshot = {
+      package = (pkgs.flameshot.override { enableWlrSupport = true; });
+      enable = true;
+      settings.General = {
+      showStartupLaunchMessage = false;
+      saveLastRegion = true;
+     };
+   };
     gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-gnome3;
