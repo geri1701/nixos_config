@@ -73,16 +73,16 @@
   programs = {
     wireshark.enable = true;
     wireshark.package = pkgs.wireshark;
-    git = {
-      enable = true;
-      package = pkgs.gitFull;
-    };
+    # git = {
+    #   enable = true;
+    #   package = pkgs.gitFull;
+    # };
     dconf.enable = true;
-    starship.enable = true;
+    # starship.enable = true;
     steam.enable = true;
     thunar.enable = true;
-    zsh.enable = true;
-    fish.enable = true;
+    # zsh.enable = true;
+    # fish.enable = true;
     kdeconnect.enable = true;
   };
   qt = {

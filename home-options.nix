@@ -1,26 +1,27 @@
+#refac
 { lib, pkgs, ... }: {
-  home.pointerCursor.hyprcursor.enable = true;
-  home.pointerCursor.name = lib.mkForce "BreezeX-RosePine-Linux";
-  home.pointerCursor.package = lib.mkForce pkgs.rose-pine-cursor;
-  home.pointerCursor.gtk.enable = true;
-  home.pointerCursor.size = lib.mkDefault 24;
+  # home.pointerCursor.hyprcursor.enable = true;
+  # home.pointerCursor.name = lib.mkForce "BreezeX-RosePine-Linux";
+  # home.pointerCursor.package = lib.mkForce pkgs.rose-pine-cursor;
+  # home.pointerCursor.gtk.enable = true;
+  # home.pointerCursor.size = lib.mkDefault 24;
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
       uris = [ "qemu:///system" ];
     };
   };
-  home = {
-    stateVersion = "24.05";
-    username = "geri";
-    homeDirectory = "/home/geri";
-    sessionVariables = {
-      EDITOR = "hx";
-      TERM = "ghostty";
-      MOZ_ENABLE_WAYLAND = 1;
+  # home = {
+  #   stateVersion = "24.05";
+  #   username = "geri";
+  #   homeDirectory = "/home/geri";
+  #   sessionVariables = {
+  #     EDITOR = "hx";
+  #     TERM = "ghostty";
+  #     MOZ_ENABLE_WAYLAND = 1;
 
-    };
-  };
+  #   };
+  # };
   programs = {
     home-manager.enable = true;
     direnv = {
@@ -29,9 +30,9 @@
     };
     skim.enable = true;
     bottom.enable = true;
-    zsh.enable = true;
+    # zsh.enable = true;
     zoxide.enable = true;
-    starship.enable = true;
+    # starship.enable = true;
     command-not-found.enable = false;
   };
   qt = {
