@@ -276,11 +276,11 @@
         "zig2nix": "zig2nix"
       },
       "locked": {
-        "lastModified": 1740698717,
-        "narHash": "sha256-QwHcm3jeeHB0Jnv26EKYrk2pHy9z/7hFPyqG9xOeZok=",
+        "lastModified": 1740781899,
+        "narHash": "sha256-6hjhUgIxhKEy9/UeMyvva6HnRQ8km0G9NgLBXmtlGIc=",
         "owner": "ghostty-org",
         "repo": "ghostty",
-        "rev": "ef88d1cba9f3c6f00cc2bd4908df866a23e4faf8",
+        "rev": "5accc069fb284a178b08e58ba72d913b111c280f",
         "type": "github"
       },
       "original": {
@@ -727,11 +727,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1740644467,
-        "narHash": "sha256-i2ArXwncE2OmneLBllo5OlpLB2UsXU5JX+T+7or5OX4=",
+        "lastModified": 1740769934,
+        "narHash": "sha256-iyxUwII/NQNClT77VqQiDpaXJz1r0Z8tNVxgY64mLak=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "e7c09d206680e6fe6771e1ac9a83515313feaf95",
+        "rev": "de4ee5899042801b62f988687acd454d4d411075",
         "type": "github"
       },
       "original": {
