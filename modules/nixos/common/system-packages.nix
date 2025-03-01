@@ -28,8 +28,7 @@
     vscode
     wget
     zoxide
-    # Pakete aus externen Flakes (zugänglich via `inputs` dank specialArgs):
-    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.ghostty
+    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}."ghostty"
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}."zen-browser"
     inputs.rose-pine-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}."rose-pine-hyprcursor"
   ];

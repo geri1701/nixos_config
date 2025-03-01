@@ -70,46 +70,46 @@
     "electron-25.9.0"
   ];
 
-  programs = {
-    wireshark.enable = true;
-    wireshark.package = pkgs.wireshark;
+  # programs = {
+    # wireshark.enable = true;
+    # wireshark.package = pkgs.wireshark;
     # git = {
     #   enable = true;
     #   package = pkgs.gitFull;
     # };
-    dconf.enable = true;
+    # dconf.enable = true;
     # starship.enable = true;
-    steam.enable = true;
-    thunar.enable = true;
+    # steam.enable = true;
+    # thunar.enable = true;
     # zsh.enable = true;
     # fish.enable = true;
-    kdeconnect.enable = true;
-  };
-  qt = {
-    enable = true;
+    # kdeconnect.enable = true;
+  # };
+  # qt = {
+    # enable = true;
     # platformTheme = "kde";
     # style = "kvantum";
-  };
-  security = {
-    polkit.enable = true;
-    rtkit.enable = true;
-  };
-  services = {
-    greetd = {
-       enable = true;
-       settings = rec {
-       initial_session = {
-       command = "${pkgs.hyprland}/bin/Hyprland";
-       user = "geri";
-     };
-       default_session = initial_session;
-  };
-    };
-    udev.packages = with pkgs; [ via ];
+  # };
+  # security = {
+  #   polkit.enable = true;
+  #   rtkit.enable = true;
+  # };
+  # services = {
+  #   greetd = {
+  #      enable = true;
+  #      settings = rec {
+  #      initial_session = {
+  #      command = "${pkgs.hyprland}/bin/Hyprland";
+  #      user = "geri";
+  #    };
+  #      default_session = initial_session;
+  # };
+  #   };
+  #   udev.packages = with pkgs; [ via ];
     udev.extraRules = ''
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-    displayManager.ly = { enable = false;
+    # displayManager.ly = { enable = false;
   };
   desktopManager.plasma6.enable = false;
   # interception-tools =
@@ -127,36 +127,36 @@
   #           EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
   #   '';
   # };
-    pipewire = {
-      enable = true;
-      audio.enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-    };
+    # pipewire = {
+    #   enable = true;
+    #   audio.enable = true;
+    #   alsa.enable = true;
+    #   alsa.support32Bit = true;
+    #   pulse.enable = true;
+    #   jack.enable = true;
+    # };
     printing.enable = true;
-    fstrim = {
-      enable = true;
-      interval = "weekly";
-    };
-    getty = {
-      loginOptions = "-p -- geri";
-      extraArgs = [ "--noclear" "--skip-login" ];
-    };
+    # fstrim = {
+    #   enable = true;
+    #   interval = "weekly";
+    # };
+    # getty = {
+    #   loginOptions = "-p -- geri";
+    #   extraArgs = [ "--noclear" "--skip-login" ];
+    # };
     # flatpak.enable = true;
-    gnome.gnome-keyring.enable = true;
-    desktopManager.cosmic.enable = false;
-    displayManager.cosmic-greeter.enable = false;
-    ollama = {
-    enable = true;
-    acceleration = "rocm";
-    environmentVariables = {
-    ROCR_VISIBLE_DEVICES= "1";
-    # HSA_OVERRIDE_GFX_VERSION = "10.3.0"; 
-    };
-   };
-  };
+    # gnome.gnome-keyring.enable = true;
+    # desktopManager.cosmic.enable = false;
+    # displayManager.cosmic-greeter.enable = false;
+   #  ollama = {
+   #  enable = true;
+   #  acceleration = "rocm";
+   #  environmentVariables = {
+   #  ROCR_VISIBLE_DEVICES= "1";
+   #  # HSA_OVERRIDE_GFX_VERSION = "10.3.0"; 
+   #  };
+   # };
+  # };
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   };
