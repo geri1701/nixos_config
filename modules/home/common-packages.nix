@@ -79,7 +79,6 @@ in
     nwg-panel
     joshuto
     jq
-    # kdePackages.krohnkite
     kalker
     keepassxc
     kbs2
@@ -113,7 +112,6 @@ in
     ouch
     p7zip
     peep
-    # plasma-panel-colorizer
     protonmail-desktop
     proton-pass
     rx
@@ -153,3 +151,4 @@ in
     zsh-you-should-use
   ];
 }
+
