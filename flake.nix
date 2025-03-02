@@ -33,20 +33,22 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-parts, home-manager, nixos-cosmic, stylix, chaotic, ghostty, zen-browser, rose-pine-hyprcursor, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-parts, home-manager, nixos-cosmic
+    , stylix, chaotic, ghostty, zen-browser, rose-pine-hyprcursor, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
       flake = {
         # Code formatter (nixpkgs-fmt)
-        formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+        formatter.x86_64-linux =
+          nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
         # Export custom packages
         # packages.x86_64-linux = { };
         nixosConfigurations = {
           zero = nixpkgs.lib.nixosSystem {
-            system    = "x86_64-linux";
+            system = "x86_64-linux";
             specialArgs = { inherit inputs; };
-            modules   = [
+            modules = [
               # Global
               ./modules/nixos/common/system-options.nix
               ./modules/nixos/common/system-packages.nix
@@ -71,9 +73,7 @@
           geri = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = { inherit inputs; };
-            modules = [
-              ./modules/home/geri.nix
-            ];
+            modules = [ ./modules/home/geri.nix ];
           };
         };
       };
