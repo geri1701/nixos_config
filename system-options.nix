@@ -180,7 +180,7 @@
     enable = true;
     wlr.enable = true;
     config.common.default = "*";
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.kdePackages.xdg-desktop-portal-kde ];
   };
   stylix = {
     enable = true;

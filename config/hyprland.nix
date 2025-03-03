@@ -16,6 +16,7 @@
       # exec-once=pactl set-default-sink alsa_output.pci-0000_03_00.1.hdmi-stereo
       exec=hyprshade auto
       env=XDG_CURRENT_DESKTOP,Hyprland
+      env=QT_QPA_PLATFORM,wayland
       env = HYPRCURSOR_SIZE,24
       env = XCURSOR_SIZE,24
       windowrulev2 = float, class:clipse
