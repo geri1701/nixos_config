@@ -47,7 +47,6 @@ in
     # aseprite
     atuin
     bogofilter
-    notmuch-bower
     cht-sh
     claws-mail
     clipse
@@ -99,7 +98,6 @@ in
     nextcloud-client
     nmap
     nodejs
-    notmuch
     nil
     nixpkgs-fmt
     nixpkgs-review
