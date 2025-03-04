@@ -1,4 +1,4 @@
-{ pkgs, lib, stylix, ... }: {
+{ pkgs, ... }: {
   system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
@@ -86,8 +86,6 @@
   };
   qt = {
     enable = true;
-    # platformTheme = "kde";
-    # style = "kvantum";
   };
   security = {
     polkit.enable = true;
@@ -111,21 +109,6 @@
     displayManager.ly = { enable = false;
   };
   desktopManager.plasma6.enable = false;
-  # interception-tools =
-  # let
-  #   itools = pkgs.interception-tools;
-  #   itools-caps = pkgs.interception-tools-plugins.caps2esc;
-  # in
-  # {
-  #   enable = true;
-  #   plugins = [ itools-caps ];
-  #   udevmonConfig = pkgs.lib.mkDefault ''
-  #     - JOB: "${itools}/bin/intercept -g $DEVNODE | ${itools-caps}/bin/caps2esc -m 1 | ${itools}/bin/uinput -d $DEVNODE"
-  #       DEVICE:
-  #         EVENTS:
-  #           EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
-  #   '';
-  # };
     pipewire = {
       enable = true;
       audio.enable = true;
@@ -143,7 +126,6 @@
       loginOptions = "-p -- geri";
       extraArgs = [ "--noclear" "--skip-login" ];
     };
-    # flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
     desktopManager.cosmic.enable = false;
     displayManager.cosmic-greeter.enable = false;
@@ -152,7 +134,6 @@
     acceleration = "rocm";
     environmentVariables = {
     ROCR_VISIBLE_DEVICES= "1";
-    # HSA_OVERRIDE_GFX_VERSION = "10.3.0"; 
     };
    };
   };
@@ -186,26 +167,5 @@
     enable = true;
     image = ./wallpaper.png;
     polarity = "dark";
-  #   fonts = {
-  #     serif = {
-  #       package = pkgs.commit-mono;
-  #       name = "CommitMono";
-  #   };
-
-    #   sansSerif = {
-    #     package = pkgs.iosevka;
-    #     name = "CommitMono";
-    #   };
-
-    #   monospace = {
-    #     package = pkgs.commit-mono;
-    #     name = "CommitMono";
-    #   };
-
-    #   emoji = {
-    #     package = pkgs.noto-fonts-emoji;
-    #     name = "Noto Color Emoji";
-    #   };
-    # };
   };
 }
