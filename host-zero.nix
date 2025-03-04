@@ -24,7 +24,13 @@
         rocmPackages.clr.icd
         amdvlk
         libvdpau-va-gl
+        vulkan-loader
+        vulkan-validation-layers
+        vulkan-extension-layer
       ];
     };
-  };
+    opengl.extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+  ];
+ };
 }

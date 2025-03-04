@@ -1,11 +1,10 @@
 {
   imports = [
     ./config/firefox.nix
-    ./config/git.nix
-    ./config/helix.nix
-    ./config/hyprland.nix
+    ./modules/home/programs/git/git.nix
+    ./modules/home/programs/helix/helix.nix
+    ./modules/home/programs/hyprland/hyprland.nix
     ./config/vscode.nix
-    ./config/waybar.nix
     ./config/zathura.nix
     ./config/zsh.nix
     ./home-options.nix
