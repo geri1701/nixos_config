@@ -1,6 +1,5 @@
 { pkgs, ... }:
 let
-  # himalaya = pkgs.himalaya.override { withNotmuchBackend = true; };
   toggle_touchpad = pkgs.writeShellScriptBin "toggle_touchpad" ''
     readonly hyprland_device="uniw0001:00-093a:0255-touchpad"
     readonly status_file="/run/user/1000/touchpad.status"
@@ -42,7 +41,6 @@ in
   home.packages = with pkgs; [
     toggle-sink
     anyrun
-    afew
     amdgpu_top
     # aseprite
     atuin
@@ -73,12 +71,10 @@ in
     gnupg
     gpt4all-cuda
     helix-gpt
-    himalaya
     hyprshade
     nwg-panel
     joshuto
     jq
-    # kdePackages.krohnkite
     kalker
     keepassxc
     kbs2
@@ -111,7 +107,6 @@ in
     ouch
     p7zip
     peep
-    # plasma-panel-colorizer
     protonmail-desktop
     proton-pass
     rx
@@ -145,7 +140,6 @@ in
     yazi
     yt-dlp
     zeal
-    # zed-editor_git
     zellij
     zsh-autosuggestions
     zsh-you-should-use
