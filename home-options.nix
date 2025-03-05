@@ -63,7 +63,6 @@
         }
       '';
     };
-    dunst = { enable = true; };
     pasystray.enable = false;
     gnome-keyring.enable = true;
   };

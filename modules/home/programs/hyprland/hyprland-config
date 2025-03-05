@@ -1,6 +1,5 @@
 monitor= DP-2,3440x1440@120.00Hz,0x0,1.0
-exec-once=dunst
-exec-once=nwg-panel
+exec-once=hyprpanel
 exec-once=swaybg -i /home/geri/nixos/wallpaper.png
 exec-once = clipse -listen
 exec-once=flameshot

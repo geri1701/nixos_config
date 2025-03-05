@@ -11,6 +11,8 @@
     ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,6 +28,7 @@
     , ghostty
     , zen-browser
     , rose-pine-hyprcursor
+    , hyprpanel
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -57,6 +60,7 @@
                 users.geri.imports = [
                   ./hm-imports.nix
                   ./zero-values.nix
+                  inputs.hyprpanel.homeManagerModules.hyprpanel
                 ];
               };
             }

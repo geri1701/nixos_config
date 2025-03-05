@@ -6,5 +6,7 @@
     enable = true;
     xwayland.enable = true;
   };
+  programs.hyprpanel.enable = true;
+  programs.hyprpanel.overlay.enable = true;
  }
 
