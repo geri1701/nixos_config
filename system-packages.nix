@@ -1,6 +1,7 @@
 { pkgs, ghostty, zen-browser, ... }: {
   environment = {
     systemPackages = with pkgs; [
+      hyprpanel
       brillo
       docfd
       ddcutil

@@ -37,6 +37,7 @@
           system = "x86_64-linux";
           specialArgs = inputs;
           modules = [
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           {
               nix.settings = {
               substituters = [ "https://cosmic.cachix.org/" ];
@@ -57,10 +58,9 @@
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
-                users.geri.imports = [
-                  ./hm-imports.nix
-                  ./zero-values.nix
-                  inputs.hyprpanel.homeManagerModules.hyprpanel
+                  users.geri.imports = [
+                    ./hm-imports.nix
+                    ./zero-values.nix
                 ];
               };
             }
