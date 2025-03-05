@@ -29,7 +29,7 @@
         vulkan-extension-layer
       ];
     };
-    opengl.extraPackages32 = with pkgs; [
+    graphics.extraPackages32 = with pkgs; [
       driversi686Linux.amdvlk
   ];
  };

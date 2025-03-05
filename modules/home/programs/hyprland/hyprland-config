@@ -1,6 +1,6 @@
 monitor= DP-2,3440x1440@120.00Hz,0x0,1.0
 exec-once=hyprpanel
-exec-once=wpaperd -d
+exec-once=nwg-panel
 exec-once = clipse -listen
 exec-once=flameshot
 exec-once=keepassxc 
