@@ -115,6 +115,7 @@ in
     sniffnet
     swappy
     swaybg
+    swww
     steamcmd
     sonic-pi
     taskwarrior3
@@ -134,6 +135,7 @@ in
     winetricks
     wl-clipboard
     wolfram-engine
+    wpaperd
     wthrr
     xdg-utils
     xplr
