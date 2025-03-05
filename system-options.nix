@@ -5,7 +5,7 @@
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
   documentation.man.generateCaches = false;
   documentation.dev.enable = true;
-  # documentation.nixos.includeAllModules = true;
+  programs.fish.enable = true;
   home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
@@ -81,7 +81,6 @@
     steam.enable = true;
     thunar.enable = true;
     zsh.enable = true;
-    fish.enable = true;
     kdeconnect.enable = true;
   };
   qt = {

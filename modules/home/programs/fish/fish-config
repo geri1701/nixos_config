@@ -1,0 +1,25 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    set -U fish_greeting
+    zoxide init fish | source
+    if test "$SHLVL" -eq 1
+        fastfetch
+    end
+end
+alias -- l='eza -lbF --git --icons'
+alias -- lS='eza -1 --icons'
+alias -- la='eza -lbhHigUmuSa --time-style=long-iso --git --icons --color-scale all'
+alias -- ll='eza -lbGF --git --icons'
+alias -- llm='eza -lbGd --git --sort=modified --icons'
+alias -- ls='eza --icons'
+alias -- lt='eza --tree --level=2 --icons'
+alias -- lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all'
+alias -- 'git!'='github-copilot-cli git-assist'
+alias -- 'gh!'='github-copilot-cli gh-assist'
+alias -- wts='github-copilot-cli what-the-shell'
+function fish_command_not_found
+    set cmd $argv[1] # Extract the first argument
+    set args $argv[2..-1] # Extract all other arguments
+    echo "Command '$cmd' not found; attempting execution with nix run..."
+    nix run nixpkgs#$cmd -- $args
+end
