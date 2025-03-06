@@ -44,11 +44,9 @@
                 trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
               };
             }
-            ./modules/system/zero/zero-boot.nix
             ./system-options.nix
-            ./modules/system/zero/zero-system-options.nix
             ./system-packages.nix
-            ./host-zero.nix
+            ./modules/system/zero/host.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             chaotic.nixosModules.default
@@ -60,7 +58,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./hm-imports.nix
-                  ./modules/system/zero/zero-values.nix
+                  # ./modules/system/zero/zero-values.nix
                 ];
               };
             }
