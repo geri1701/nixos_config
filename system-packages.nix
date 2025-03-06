@@ -1,4 +1,4 @@
-{ pkgs, ghostty, zen-browser, ... }: {
+{ pkgs,inputs, ... }: {
   environment = {
     systemPackages = with pkgs; [
       hyprpanel
@@ -7,7 +7,7 @@
       ddcutil
       eza
       gamemode
-      ghostty.packages.x86_64-linux.default
+      inputs.ghostty.packages.x86_64-linux.default
       gparted
       helix
       hyprcursor
@@ -31,7 +31,7 @@
       virt-manager
       vscode
       wget
-      zen-browser.packages."${system}".default
+      inputs.zen-browser.packages."${system}".default
       zoxide
     ];
   };

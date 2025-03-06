@@ -1,9 +1,9 @@
 {
   description = "Configuration for zero";
   inputs = {
-    home-manager = { 
-       url = "github:nix-community/home-manager";
-       inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     zen-browser.url = "github:youwen5/zen-browser-flake";
@@ -35,18 +35,18 @@
       nixosConfigurations = {
         zero = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = inputs;
+          specialArgs = { inherit inputs; };
           modules = [
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
-          {
+            { nixpkgs.overlays = [ hyprpanel.overlay ]; }
+            {
               nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
-          }
-            ./zero-boot.nix
+                substituters = [ "https://cosmic.cachix.org/" ];
+                trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+              };
+            }
+            ./modules/system/zero/zero-boot.nix
             ./system-options.nix
-            ./zero-system-options.nix
+            ./modules/system/zero/zero-system-options.nix
             ./system-packages.nix
             ./host-zero.nix
             home-manager.nixosModules.home-manager
@@ -58,9 +58,9 @@
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
-                  users.geri.imports = [
-                    ./hm-imports.nix
-                    ./zero-values.nix
+                users.geri.imports = [
+                  ./hm-imports.nix
+                  ./modules/system/zero/zero-values.nix
                 ];
               };
             }

@@ -11,7 +11,6 @@
     wireless.enable = false;
     networkmanager = {
       enable = true;
-      # insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
     };
   };
   services = {
