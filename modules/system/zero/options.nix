@@ -164,7 +164,7 @@
   };
   stylix = {
     enable = true;
-    image = ./wallpaper.png;
+    image = ../../home/geri/assets/wallpaper.png;
     polarity = "dark";
   };
 }
