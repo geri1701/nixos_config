@@ -57,7 +57,7 @@
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
-                  ./hm-imports.nix
+                  ./modules/home/geri/imports.nix
                 ];
               };
             }

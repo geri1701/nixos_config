@@ -1,9 +1,4 @@
 { lib, pkgs, ... }: {
-  home.pointerCursor.hyprcursor.enable = true;
-  home.pointerCursor.name = lib.mkForce "BreezeX-RosePine-Linux";
-  home.pointerCursor.package = lib.mkForce pkgs.rose-pine-cursor;
-  home.pointerCursor.gtk.enable = true;
-  home.pointerCursor.size = lib.mkDefault 24;
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -19,6 +14,13 @@
       TERM = "ghostty";
       MOZ_ENABLE_WAYLAND = 1;
 
+    };
+    pointerCursor = {
+      hyprcursor.enable = true;
+      name = lib.mkForce "BreezeX-RosePine-Linux";
+      package = lib.mkForce pkgs.rose-pine-cursor;
+      gtk.enable = true;
+      size = lib.mkDefault 24;
     };
   };
   programs = {
@@ -53,16 +55,6 @@
       enableExtraSocket = true;
     };
     network-manager-applet.enable = false;
-    mpd = {
-      enable = true;
-      musicDirectory = "~/music";
-      extraConfig = ''
-        audio_output {
-            type "pulse"
-            name "My Pulse Output"
-        }
-      '';
-    };
     pasystray.enable = false;
     gnome-keyring.enable = true;
   };
