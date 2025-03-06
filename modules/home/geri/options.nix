@@ -61,7 +61,7 @@
   stylix = {
     enable = true;
     autoEnable = false;
-    image = ./wallpaper.png;
+    image = ./assets/wallpaper.png;
     polarity = "dark";
     cursor.size = 24;
     targets = {

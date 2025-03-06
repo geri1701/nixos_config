@@ -44,8 +44,8 @@
                 trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
               };
             }
-            ./system-options.nix
-            ./system-packages.nix
+            ./modules/system/zero/options.nix
+            ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix

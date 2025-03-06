@@ -4,7 +4,7 @@
     ../programs/helix/helix.nix
     ../programs/hyprland/hyprland.nix
     ../programs/fish/fish.nix
-    ../../../home-options.nix
-    ../../../home-packages.nix
+    ./options.nix
+    ./packages.nix
   ];
 }
