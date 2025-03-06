@@ -58,7 +58,6 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.geri.imports = [
                   ./hm-imports.nix
-                  # ./modules/system/zero/zero-values.nix
                 ];
               };
             }
