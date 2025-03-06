@@ -6,6 +6,5 @@
     ./modules/home/programs/fish/fish.nix
     ./home-options.nix
     ./home-packages.nix
-    ./host-options.nix
   ];
 }
