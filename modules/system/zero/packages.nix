@@ -2,7 +2,6 @@
   environment = {
     systemPackages = with pkgs; [
       hyprpanel
-      brillo
       docfd
       ddcutil
       eza

@@ -320,11 +320,11 @@
         "zig2nix": "zig2nix"
       },
       "locked": {
-        "lastModified": 1741367989,
-        "narHash": "sha256-dmj/WSHXb8S8dNOtDV+NoaCnPGzGGvaI0zeSenzFLDY=",
+        "lastModified": 1741376783,
+        "narHash": "sha256-vXlLil+0Cz6hznEX2GpwDlb8TM+Q8Cz0gLTebUhPtvE=",
         "owner": "ghostty-org",
         "repo": "ghostty",
-        "rev": "77e16770cc97bc69d9678d1f340dc5be5859a1d8",
+        "rev": "4a215a9518c277780babe5d00e24784f456c80dd",
         "type": "github"
       },
       "original": {
@@ -426,11 +426,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741345870,
-        "narHash": "sha256-KTpoO4oaucdFr3oJJBYpGK+aWVVrLvtiT17EQE7Cf4Y=",
+        "lastModified": 1741378606,
+        "narHash": "sha256-ytDmwV93lZ1f6jswJkxEQz5cBlwje/2rH/yUZDADZNs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "04c915bcf1a1eac3519372ff3185beef053fba7c",
+        "rev": "95711f926676018d279ba09fe7530d03b5d5b3e2",
         "type": "github"
       },
       "original": {
@@ -793,11 +793,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1741335745,
-        "narHash": "sha256-jsYqEZ/gll40Jgl8BhzEAYz4E86uwUm99RkaVY38chk=",
+        "lastModified": 1741381249,
+        "narHash": "sha256-lr62m73oNjkSX0ar7tPalTSTzaqCsuZCEYyK8mPbXPU=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "6fada03cd5e223aa9c111e7073118692065a7ee1",
+        "rev": "4891f1471b682af073574dc51fa4810f1470ef8f",
         "type": "github"
       },
       "original": {
@@ -1046,16 +1046,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1738263917,
-        "narHash": "sha256-j/3fwe2pEOquHabP/puljOKwAZFjIE9gXZqA91sC48M=",
+        "lastModified": 1741368279,
+        "narHash": "sha256-WTaC8HmnIq6O71iK0g9as404BbmS+YyEP5qS85m2JBY=",
         "owner": "jcollie",
         "repo": "zig2nix",
-        "rev": "c311d8e77a6ee0d995f40a6e10a89a3a4ab04f9a",
+        "rev": "672971b5b6911de21446ad4fc76dee677922eda0",
         "type": "github"
       },
       "original": {
         "owner": "jcollie",
-        "ref": "c311d8e77a6ee0d995f40a6e10a89a3a4ab04f9a",
+        "ref": "672971b5b6911de21446ad4fc76dee677922eda0",
         "repo": "zig2nix",
         "type": "github"
       }

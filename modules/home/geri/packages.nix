@@ -1,31 +1,5 @@
 { pkgs, ... }:
 let
-  toggle_touchpad = pkgs.writeShellScriptBin "toggle_touchpad" ''
-    readonly hyprland_device="uniw0001:00-093a:0255-touchpad"
-    readonly status_file="/run/user/1000/touchpad.status"
-    enable_touchpad() {
-    echo "true" > "$status_file"
-    notify-send -u normal "Enabling Touchpad"
-    hyprctl keyword "device:$hyprland_device:enabled" true
-    }
-    disable_touchpad() {
-      echo "false" > "$status_file"
-      notify-send -u normal "Disabling Touchpad"
-      hyprctl keyword "device:$hyprland_device:enabled" false
-     }
-     if [[ ! -f "$status_file" ]]; then
-       enable_touchpad
-     else
-       case "$(cat "$status_file" 2>/dev/null)" in
-         "true")
-           disable_touchpad ;;
-         "false")
-           enable_touchpad ;;
-         *)
-           enable_touchpad ;;
-       esac
-     fi
-  '';
       toggle-sink = pkgs.writeShellScriptBin "toggle-sink"  ''
           SINK_A="alsa_output.pci-0000_03_00.1.hdmi-stereo"
           SINK_B="alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0"
@@ -42,14 +16,12 @@ in
     toggle-sink
     anyrun
     amdgpu_top
-    # aseprite
+    aseprite
     atuin
     bogofilter
     cht-sh
-    claws-mail
     clipse
     ddgr
-    webcord
     (discord.override {
       withOpenASAR = false;
     })
@@ -69,7 +41,7 @@ in
     grim
     grex
     gnupg
-    gpt4all-cuda
+    gpt4all
     helix-gpt
     hyprshade
     nwg-panel
@@ -98,8 +70,6 @@ in
     nixpkgs-fmt
     nixpkgs-review
     neovim
-    nm-tray
-    networkmanagerapplet
     nuclear
     nwg-drawer
     nwg-look
@@ -120,7 +90,6 @@ in
     sonic-pi
     taskwarrior3
     taskwarrior-tui
-    thunderbird
     tldr
     toggle_touchpad
     translate-shell
