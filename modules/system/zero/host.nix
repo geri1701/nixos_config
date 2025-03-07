@@ -1,11 +1,11 @@
-{ lib, modulesPath, pkgs, ... }:
+{ config, lib, modulesPath, pkgs, ... }:
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
     boot = {
     kernelPackages = pkgs.linuxPackages_cachyos;
     initrd = {
-      availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "sd_mod" ];
-      kernelModules = [ "i2c-dev" "amdgpu" "nct6775" "lm78" ];
+      availableKernelModules = [ "nvme" "xhci_pci" "ehci_pci" "ahci" "usbhid" "sd_mod" ];
+      kernelModules = [ "i2c-dev" "amdgpu" "nct6775" "lm78" "kvm-amd" ];
       systemd.enable = true;
       verbose = false;
     };
@@ -34,7 +34,7 @@
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
-    cpu.amd.updateMicrocode = true;  
+    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  
     amdgpu = {
        initrd.enable = true;
        amdvlk.enable = true;
