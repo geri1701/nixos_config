@@ -5,7 +5,7 @@
     kernelPackages = pkgs.linuxPackages_cachyos;
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ehci_pci" "ahci" "usbhid" "sd_mod" ];
-      kernelModules = [ "i2c-dev" "ddcci_backlight" "amdgpu" "nct6775" "lm78" "kvm-amd" ];
+      kernelModules = [ "i2c-dev" "amdgpu" "nct6775" "lm78" "kvm-amd" ];
       systemd.enable = true;
       verbose = false;
     };
