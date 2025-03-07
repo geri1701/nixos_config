@@ -6,6 +6,7 @@
   documentation.man.generateCaches = false;
   documentation.dev.enable = true;
   programs.fish.enable = true;
+  programs.light.enable = true;
   home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
