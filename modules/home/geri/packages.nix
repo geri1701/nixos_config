@@ -91,7 +91,6 @@ in
     taskwarrior3
     taskwarrior-tui
     tldr
-    toggle_touchpad
     translate-shell
     typespeed
     typst
