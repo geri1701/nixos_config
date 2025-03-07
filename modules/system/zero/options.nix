@@ -131,6 +131,7 @@
     displayManager.cosmic-greeter.enable = false;
     ollama = {
     enable = true;
+    package = pkgs.ollama-rocm;
     acceleration = "rocm";
     environmentVariables = {
     ROCR_VISIBLE_DEVICES= "1";
