@@ -5,6 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    impermanence.url = "github:nix-community/impermanence";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     zen-browser.url = "github:youwen5/zen-browser-flake";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
@@ -29,6 +30,7 @@
     , zen-browser
     , rose-pine-hyprcursor
     , hyprpanel
+    , impermanence
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -47,6 +49,7 @@
             ./modules/system/zero/options.nix
             ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
+            impermanence.nixosModules.impermanence
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             chaotic.nixosModules.default
