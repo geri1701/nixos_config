@@ -38,6 +38,7 @@
     amdgpu = {
        initrd.enable = true;
        amdvlk.enable = true;
+       amdvlk.support32Bit.enable = true;
     };
     graphics = {
       enable = lib.mkDefault true;

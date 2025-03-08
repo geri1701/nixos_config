@@ -1,3 +1,4 @@
 .sops.yaml
 wallpaper.png
 result/
+modules/home/programs/hyprland/hyprpanel-config
