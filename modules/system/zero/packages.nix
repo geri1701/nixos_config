@@ -19,7 +19,6 @@
       networkmanager
       obsidian
       openssl
-      pfetch
       rust-analyzer
       qmk-udev-rules
       screen

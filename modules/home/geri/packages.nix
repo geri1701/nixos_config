@@ -17,7 +17,6 @@ in
     anyrun
     amdgpu_top
     aseprite
-    atuin
     bogofilter
     cht-sh
     clipse
@@ -32,11 +31,9 @@ in
     fastfetch
     gh
     github-copilot-cli
-    gdal
     geogebra
     gimp-with-plugins
     glow
-    glicol-cli
     graph-easy
     grim
     grex
@@ -45,14 +42,11 @@ in
     helix-gpt
     hyprshade
     nwg-panel
-    joshuto
     jq
     kalker
     keepassxc
     kbs2
-    kibi
     kitty
-    kitty-themes
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
