@@ -108,5 +108,6 @@ bind=SUPER, t, togglegroup
 bind=SUPER+ALT, J, changegroupactive, f
 bind=SUPER+ALT, K, changegroupactive, b
 bind=SUPER,b,exec,hyprpanel toggleWindow bar-0
+bind=,Print,exec,grim -g "$(slurp)" - | swappy -f -
 env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
 env = HYPRCURSOR_THEME,rose-pine-hyprcursor
