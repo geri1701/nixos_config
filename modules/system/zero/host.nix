@@ -27,34 +27,28 @@
     fsType = "tmpfs";
     options = [ "defaults" "size=25%" "mode=755" ];
   };
-  #nvme
-  # fileSystems."/" = {
-  #   device = "/dev/disk/by-uuid/d98e465d-27f0-4b3d-be5a-f95bd43af805";
-  #   fsType = "ext4";
-  #   options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
-  
-  fileSystems."/nix" = {
-    device = "/dev/sdb3";
-    fsType = "ext4";
-    options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
-  };
   fileSystems."/persistent" = {
     neededForBoot = true;
-    device = "/dev/sdb3";
+    device = "/dev/disk/by-uuid/d98e465d-27f0-4b3d-be5a-f95bd43af805";
     fsType = "ext4";
     options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
   };
-  #nvme
-  # fileSystems."/boot" =
-  #   {
-  #     device = "/dev/disk/by-uuid/2673-0095";
-  #     fsType = "vfat";
-  #   };
-      fileSystems."/boot" =
-    {
-      device = "/dev/sda3";
-      fsType = "vfat";
-    };
+  # fileSystems."/nix" = {
+  #   device = "/dev/sdb3";
+  #   fsType = "ext4";
+  #   options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
+  # };
+  # fileSystems."/persistent" = {
+  #   neededForBoot = true;
+  #   device = "/dev/sdb3";
+  #   fsType = "ext4";
+  #   options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
+  # };
+   fileSystems."/boot" =
+     {
+       device = "/dev/disk/by-uuid/2673-0095";
+       fsType = "vfat";
+     };
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
