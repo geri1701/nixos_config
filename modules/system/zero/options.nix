@@ -16,6 +16,7 @@
       "/home/geri/.config"
       "/home/geri/.local/share"
       "/home/geri/.gnupg"
+      "/home/geri/nextcloud"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
     files = [
