@@ -11,6 +11,7 @@
       "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
+      "/etc/sudoers"
       "/etc/NetworkManager/system-connections"
     ];
     files = [
