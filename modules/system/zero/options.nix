@@ -31,6 +31,7 @@
         ".local/share/keyrings"
         ".config/fastfetch"
         ".config/Nextcloud"
+        ".config/discord"
         ".zen"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
