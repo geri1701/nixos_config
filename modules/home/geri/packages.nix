@@ -2,7 +2,7 @@
 let
       toggle-sink = pkgs.writeShellScriptBin "toggle-sink"  ''
           SINK_A="alsa_output.pci-0000_03_00.1.hdmi-stereo"
-          SINK_B="alsa_output.usb-ROCCAT_Elo_7.1_USB-00.pro-output-0"
+          SINK_B="alsa_output.usb-ROCCAT_Elo_7.1_USB-00.analog-stereo"
           CURRENT_SINK=$(pactl info | grep "Default Sink" | awk '{print $3}')
           if [ "$CURRENT_SINK" = "$SINK_A" ]; then
             pactl set-default-sink "$SINK_B"
