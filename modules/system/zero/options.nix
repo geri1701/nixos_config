@@ -24,7 +24,11 @@
         "Documents"
         "Videos"
         "nixos"
+        "nextcloud"
         ".local/share/Steam"
+        ".local/share/fish"
+        ".config/fastfetch"
+        ".config/Nextcloud"
         ".zen"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
@@ -33,7 +37,7 @@
         ".screenrc"
         ".config/nwg-panel/config"
         ".config/ghostty/config"
-        ".local/share/fish/fish_history"
+        ".config/anyrun/config.ron"
       ];
     };
   };
@@ -183,8 +187,8 @@
       description = "geri";
       extraGroups = [ "i2c" "networkmanager" "wheel" "docker" "libvirtd" "video" "wireshark" ];
     };
-    users.geri.initialPassword = "firstboot";
-    users.root.initialPassword = "firstboot";
+    users.geri.hashedPasswordFile = "/persistent/pwd/geri";
+    users.root.hashedPasswordFile = "/persistent/pwd/root";
   };
   virtualisation = {
     docker = {
