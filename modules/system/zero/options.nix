@@ -28,6 +28,7 @@
         "nextcloud"
         ".local/share/Steam"
         ".local/share/fish"
+        ".local/share/keyrings"
         ".config/fastfetch"
         ".config/Nextcloud"
         ".zen"
