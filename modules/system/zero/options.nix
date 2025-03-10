@@ -11,19 +11,10 @@
       "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
-      "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
-      "/home/geri/.config"
-      "/home/geri/.local/share"
-      "/home/geri/.gnupg"
-      "/home/geri/nextcloud"
-      { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
     files = [
       "/etc/machine-id"
-      "/etc/passwd"
-      "/etc/shadow"
-      { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
     ];
     users.geri = {
       directories = [
@@ -33,9 +24,14 @@
         "Documents"
         "Videos"
         "nixos"
+        ".local/share/Steam"
+        ".zen"
       ];
       files = [
         ".screenrc"
+        ".config/nwg-panel/config"
+        ".config/ghostty/config"
+        ".local/share/fish/fish_history"
       ];
     };
   };

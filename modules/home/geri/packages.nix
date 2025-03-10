@@ -102,7 +102,7 @@ in
     wine
     winetricks
     wl-clipboard
-    wolfram-engine
+#    wolfram-engine
     wpaperd
     wthrr
     xdg-utils

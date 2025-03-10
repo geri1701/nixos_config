@@ -29,7 +29,7 @@
   };
   fileSystems."/persistent" = {
     neededForBoot = true;
-    device = "/dev/disk/by-uuid/d98e465d-27f0-4b3d-be5a-f95bd43af805";
+    device = "/dev/nvme0n1p2";
     fsType = "ext4";
     options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
   };
@@ -46,7 +46,7 @@
   # };
    fileSystems."/boot" =
      {
-       device = "/dev/disk/by-uuid/2673-0095";
+       device = "/dev/nvme0n1p1";
        fsType = "vfat";
      };
   networking.useDHCP = lib.mkDefault true;
