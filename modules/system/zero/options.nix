@@ -26,6 +26,8 @@
         "nixos"
         ".local/share/Steam"
         ".zen"
+        { directory = ".gnupg"; mode = "0700"; }
+        { directory = ".ssh"; mode = "0700"; }
       ];
       files = [
         ".screenrc"
