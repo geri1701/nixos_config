@@ -1,3 +1,5 @@
 .sops.yaml
 wallpaper.png
 result/
+modules/home/geri/assets/wallpaper.png
+modules/home/programs/hyprland/hyprpanel-config
