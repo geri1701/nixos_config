@@ -18,8 +18,6 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-rage.url = "github:renesat/nix-rage";
-    nix-rage.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     { self
@@ -33,7 +31,6 @@
     , rose-pine-hyprcursor
     , hyprpanel
     , impermanence
-    , nix-rage
     , ...
     }@inputs: {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
@@ -49,13 +46,6 @@
                 trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
               };
             }
-            {
-            nix.extraOptions = let
-              nix-rage-package = nix-rage.packages."x86_64-linux".default;
-            in ''
-              plugin-files = ${nix-rage-package}/lib/libnix_rage.so
-            '';
-           }
             ./modules/system/zero/options.nix
             ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
