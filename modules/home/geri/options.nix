@@ -48,7 +48,6 @@
       saveLastRegion = true;
      };
    };
-    psd.enable = true;
     gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-gnome3;

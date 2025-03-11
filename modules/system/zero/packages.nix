@@ -6,6 +6,7 @@
     # "shadow".source = "/nix/persist/etc/shadow";
    #};
     systemPackages = with pkgs; [
+      uutils-coreutils-noprefix
       hyprpanel
       docfd
       ddcutil
