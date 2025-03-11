@@ -9,9 +9,7 @@
     directories = [
       "/nix"
       "/var/log"
-      "/var/lib/bluetooth"
       "/var/lib/nixos"
-      "/etc/sudoers"
       "/etc/NetworkManager/system-connections"
     ];
     files = [
@@ -26,12 +24,15 @@
         "Videos"
         "nixos"
         "nextcloud"
+        "projects"
         ".local/share/Steam"
         ".local/share/fish"
         ".local/share/keyrings"
+        ".local/share/zoxide"
         ".config/fastfetch"
         ".config/Nextcloud"
         ".config/discord"
+        ".config/Proton\ Mail"
         ".zen"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
@@ -41,6 +42,9 @@
         ".config/nwg-panel/config"
         ".config/ghostty/config"
         ".config/anyrun/config.ron"
+        ".config/hyprshade/config.toml"
+        ".config/starship.toml"
+        ".config/hypr/shaders/reduced-blue-light-filter.glsl"
       ];
     };
   };
@@ -131,6 +135,8 @@
   security = {
     polkit.enable = true;
     rtkit.enable = true;
+    sudo.enable = false;
+    sudo-rs.enable = true;
   };
   services = {
     greetd = {
