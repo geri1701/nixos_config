@@ -4,7 +4,7 @@
   environment.sessionVariables.EDITOR = "hx";
   environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
   environment.persistence."/persistent" = {
-    enable = true;  # NB: Defaults to true, not needed
+    enable = true;
     hideMounts = true;
     directories = [
       "/nix"
