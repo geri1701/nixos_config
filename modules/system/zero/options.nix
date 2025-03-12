@@ -45,6 +45,7 @@
         ".config/hyprshade/config.toml"
         ".config/starship.toml"
         ".config/hypr/shaders/reduced-blue-light-filter.glsl"
+        ".config/clipse/clipboard_history.json"
       ];
     };
   };
