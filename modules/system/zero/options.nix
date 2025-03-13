@@ -189,6 +189,10 @@
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   };
+  systemd.tmpfiles.rules = [
+  "w /sys/bus/platform/devices/AMDI0101:00/amd_x3d_mode - - - - cache"
+];
+
   time.timeZone = "Europe/Vienna";
   users = {
     defaultUserShell = pkgs.fish;

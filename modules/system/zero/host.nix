@@ -34,17 +34,6 @@
     fsType = "ext4";
     options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
   };
-  # fileSystems."/nix" = {
-  #   device = "/dev/sdb3";
-  #   fsType = "ext4";
-  #   options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
-  # };
-  # fileSystems."/persistent" = {
-  #   neededForBoot = true;
-  #   device = "/dev/sdb3";
-  #   fsType = "ext4";
-  #   options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
-  # };
    fileSystems."/boot" =
      {
        device = "/dev/nvme0n1p1";
