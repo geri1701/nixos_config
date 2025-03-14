@@ -34,6 +34,15 @@
     fsType = "ext4";
     options = [ "rw" "noatime" "data=ordered" "errors=remount-ro" ];
   };
+  fileSystems."/home/geri/.local/share/Steam/config/htmlcache" = {
+    depends = [
+      "/"
+      "/persistent"
+    ];
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "uid=geri" "gid=users" "defaults" "size=5%" "mode=777" ];
+  };
    fileSystems."/boot" =
      {
        device = "/dev/nvme0n1p1";
