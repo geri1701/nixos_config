@@ -10,6 +10,7 @@
       "/nix"
       "/var/log"
       "/var/lib/nixos"
+      "/var/lib/libvirt/images"
       "/etc/NetworkManager/system-connections"
     ];
     files = [
