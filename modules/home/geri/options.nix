@@ -64,6 +64,8 @@
     image = ./assets/wallpaper.png;
     polarity = "dark";
     cursor.size = 24;
+    cursor.name = "BreezeX-RosePine-Linux";
+    cursor.package = pkgs.rose-pine-cursor;
     targets = {
       helix.enable = true;
       kde.enable = false;
