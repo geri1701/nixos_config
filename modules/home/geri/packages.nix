@@ -77,6 +77,7 @@ in
     ouch
     p7zip
     peep
+    pet
     protonmail-desktop
     proton-pass
     rx

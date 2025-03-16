@@ -47,6 +47,7 @@
         ".config/hypr/shaders/reduced-blue-light-filter.glsl"
         ".config/clipse/clipboard_history.json"
         ".config/hyprpanel/config.json"
+        ".config/pet/config.toml"
       ];
     };
   };
