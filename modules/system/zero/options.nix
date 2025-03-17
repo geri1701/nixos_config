@@ -38,7 +38,6 @@
         { directory = ".ssh"; mode = "0700"; }
       ];
       files = [
-        ".screenrc"
         ".config/nwg-panel/config"
         ".config/ghostty/config"
         ".config/anyrun/config.ron"
@@ -47,7 +46,7 @@
         ".config/hypr/shaders/reduced-blue-light-filter.glsl"
         ".config/clipse/clipboard_history.json"
         ".config/hyprpanel/config.json"
-        ".config/pet/config.toml"
+        ".config/nap/config.yaml"
       ];
     };
   };
@@ -55,6 +54,7 @@
   documentation.dev.enable = true;
   programs.fish.enable = true;
   programs.light.enable = true;
+  programs.hyprland.withUWSM = true;
   home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
@@ -142,16 +142,16 @@
     sudo-rs.enable = true;
   };
   services = {
-    greetd = {
-       enable = true;
-       settings = rec {
-       initial_session = {
-       command = "${pkgs.hyprland}/bin/Hyprland";
-       user = "geri";
-     };
-       default_session = initial_session;
-  };
-    };
+  #   greetd = {
+  #      enable = true;
+  #      settings = rec {
+  #      initial_session = {
+  #      command = "${pkgs.hyprland}/bin/Hyprland";
+  #      user = "geri";
+  #    };
+  #      default_session = initial_session;
+  # };
+  #   };
     udev.packages = with pkgs; [ via ];
     udev.extraRules = ''
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
@@ -188,6 +188,7 @@
     };
    };
   };
+  # systemd.network.enable = true;
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   };

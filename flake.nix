@@ -49,6 +49,7 @@
             ./modules/system/zero/options.nix
             ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
+            ./modules/home/programs/hyprland/hyprland.nix
             impermanence.nixosModules.impermanence
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix

@@ -1,10 +1,5 @@
 { pkgs,inputs, ... }: {
   environment = {
-  #etc = {
-   #  "group".source = "/nix/persist/etc/group";
-   #  "passwd".source = "/nix/persist/etc/passwd";
-    # "shadow".source = "/nix/persist/etc/shadow";
-   #};
     systemPackages = with pkgs; [
       uutils-coreutils-noprefix
       hyprpanel

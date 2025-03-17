@@ -77,7 +77,7 @@
     hostName = "zero";
     wireless.enable = false;
     networkmanager = {
-      enable = true;
+      enable = false;
     };
   };
   services = {

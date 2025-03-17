@@ -63,6 +63,7 @@ in
     mpc-cli
     mpv
     mpvpaper
+    nap
     nextcloud-client
     nmap
     nodejs
@@ -77,7 +78,6 @@ in
     ouch
     p7zip
     peep
-    pet
     protonmail-desktop
     proton-pass
     rx
