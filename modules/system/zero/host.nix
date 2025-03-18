@@ -48,7 +48,7 @@
        device = "/dev/nvme0n1p1";
        fsType = "vfat";
      };
-  networking.useDHCP = lib.mkDefault true;
+  networking.useNetworkd = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  

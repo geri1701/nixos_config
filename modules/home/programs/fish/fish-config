@@ -1,7 +1,10 @@
+# if uwsm check may-start
+#     exec uwsm start hyprland-uwsm.desktop
+# end
 if uwsm check may-start
-    then
-    exec uwsm start hyprland-uwsm.desktop
+    exec systemd-cat --identifier=hyprland-session uwsm start hyprland-uwsm.desktop
 end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -U fish_greeting

@@ -47,6 +47,7 @@
         ".config/clipse/clipboard_history.json"
         ".config/hyprpanel/config.json"
         ".config/nap/config.yaml"
+        ".config/uwsm/env"
       ];
     };
   };
@@ -155,6 +156,7 @@
     udev.packages = with pkgs; [ via ];
     udev.extraRules = ''
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+        ACTION=="add|change", KERNEL=="sd[a-z]*[0-9]*|mmcblk[0-9]*p[0-9]*|nvme[0-9]*n[0-9]*p[0-9]*", ENV{ID_FS_TYPE}=="ext4", ATTR{../queue/scheduler}="none"
   '';
     displayManager.ly = { enable = false;
   };
@@ -188,7 +190,8 @@
     };
    };
   };
-  # systemd.network.enable = true;
+  systemd.network.enable = true;
+  systemd.network.wait-online.enable = false;
   systemd.services = {
     mpd.environment = { XDG_RUNTIME_DIR = "/run/user/1000"; };
   };
