@@ -9,7 +9,6 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     zen-browser.url = "github:youwen5/zen-browser-flake";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
@@ -26,7 +25,6 @@
     , nixos-cosmic
     , home-manager
     , stylix
-    , ghostty
     , zen-browser
     , rose-pine-hyprcursor
     , hyprpanel

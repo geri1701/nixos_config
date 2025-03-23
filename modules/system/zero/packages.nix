@@ -8,7 +8,7 @@
       eza
       fd
       gamemode
-      inputs.ghostty.packages.x86_64-linux.default
+      ghostty
       gparted
       helix
       hyprcursor
