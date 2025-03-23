@@ -34,6 +34,7 @@
         ".config/discord"
         ".config/Proton\ Mail"
         ".zen"
+        ".config/weathercrab"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
