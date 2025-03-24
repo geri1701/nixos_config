@@ -10,7 +10,8 @@
       "/nix"
       "/var/log"
       "/var/lib/nixos"
-      "/var/lib/libvirt/images"
+      "/var/lib/libvirt/"
+      "/var/cache/libvirt"
     ];
     files = [
       "/etc/machine-id"
