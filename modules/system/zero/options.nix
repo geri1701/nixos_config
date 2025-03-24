@@ -34,15 +34,16 @@
         ".config/Nextcloud"
         ".config/discord"
         ".config/Proton\ Mail"
+        ".config/Proton\ Pass"
         ".zen"
         ".config/weathercrab"
+        ".config/anyrun"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
       files = [
         ".config/nwg-panel/config"
         ".config/ghostty/config"
-        ".config/anyrun/config.ron"
         ".config/hyprshade/config.toml"
         ".config/starship.toml"
         ".config/hypr/shaders/reduced-blue-light-filter.glsl"
