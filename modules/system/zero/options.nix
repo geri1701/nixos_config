@@ -38,6 +38,7 @@
         ".zen"
         ".config/weathercrab"
         ".config/anyrun"
+        ".config/obsidian"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
