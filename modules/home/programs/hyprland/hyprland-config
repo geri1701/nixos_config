@@ -5,9 +5,11 @@ exec-once = clipse -listen
 exec=hyprshade auto
 windowrulev2 = float, class:clipse
 windowrulev2 = size 622 652, class:clipse
-windowrulev2 = float, class:^([Ss]team)$, title:^((?![Ss]team).*)$
 windowrulev2 = workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$
-windowrulev2 = tile, class:^([Ss]team)$, title:^([Ss]team)$
+windowrulev2 = opacity 1, class:(steam) initialTitle:(.*)
+windowrulev2 = tile, class:(steam) initialTitle:(.*)
+windowrulev2 = fullscreen, class:^(steam_app_.*)$
+
 exec-once=nextcloud
 debug {
     disable_logs=false
