@@ -13,16 +13,11 @@
     stylix.url = "github:danth/stylix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   outputs =
     { self
     , nixpkgs
     , chaotic
-    , nixos-cosmic
     , home-manager
     , stylix
     , zen-browser
@@ -38,12 +33,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             { nixpkgs.overlays = [ hyprpanel.overlay ]; }
-            {
-              nix.settings = {
-                substituters = [ "https://cosmic.cachix.org/" ];
-                trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-              };
-            }
             ./modules/system/zero/options.nix
             ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
@@ -52,7 +41,6 @@
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             chaotic.nixosModules.default
-            nixos-cosmic.nixosModules.default
             {
               home-manager = {
                 useUserPackages = true;

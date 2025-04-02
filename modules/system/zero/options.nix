@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
@@ -183,7 +183,6 @@
       extraArgs = [ "--noclear" "--skip-login" ];
     };
     gnome.gnome-keyring.enable = true;
-    desktopManager.cosmic.enable = false;
     displayManager.cosmic-greeter.enable = false;
     ollama = {
     enable = true;
