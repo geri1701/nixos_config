@@ -40,14 +40,6 @@
     enable = true;
   };
   services = {
-   flameshot = {
-      package = (pkgs.flameshot.override { enableWlrSupport = true; });
-      enable = true;
-      settings.General = {
-      showStartupLaunchMessage = false;
-      saveLastRegion = true;
-     };
-   };
     gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-gnome3;
