@@ -88,7 +88,7 @@ in
     swaybg
     swww
     steamcmd
-    sonic-pi
+    # sonic-pi
     taskwarrior3
     taskwarrior-tui
     tldr
