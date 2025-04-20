@@ -47,7 +47,7 @@ in
     nwg-panel
     joshuto
     jq
-    kalker
+    # kalker
     keepassxc
     kbs2
     kibi
