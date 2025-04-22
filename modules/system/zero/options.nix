@@ -39,6 +39,7 @@
         ".config/weathercrab"
         ".config/anyrun"
         ".config/obsidian"
+        ".config/exercism"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
