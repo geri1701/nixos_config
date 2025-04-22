@@ -26,6 +26,7 @@
         "nixos"
         "nextcloud"
         "projects"
+        "exercism"
         ".local/share/Steam"
         ".local/share/fish"
         ".local/share/keyrings"
