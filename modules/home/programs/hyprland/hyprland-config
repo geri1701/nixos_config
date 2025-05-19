@@ -43,6 +43,10 @@ decoration {
     rounding=8
     rounding_power=4
 }
+
+ecosystem {
+    no_update_news=true
+}
   animations {
       enabled=1
       bezier = overshot, 0.05, 0.9, 0.1, 1.05
