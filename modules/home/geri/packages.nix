@@ -28,6 +28,7 @@ in
     distrobox
     docker-compose
     etlegacy
+    evince
     exercism
     fastfetch
     gh
