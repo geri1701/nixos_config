@@ -51,7 +51,6 @@
     network-manager-applet.enable = false;
     pasystray.enable = false;
     gnome-keyring.enable = true;
-    gnome.glib-networking.enable = true;
   };
   stylix = {
     enable = true;

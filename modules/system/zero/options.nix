@@ -86,6 +86,7 @@
     };  
   services.pulseaudio.enable = false;
   services.gvfs.enable = true;
+  services.gnome.glib-networking.enable = true;
   hardware.keyboard.qmk.enable = true;
   hardware.brillo.enable = true;
   hardware.i2c.enable = true;
