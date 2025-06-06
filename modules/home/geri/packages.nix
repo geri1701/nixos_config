@@ -32,7 +32,6 @@ in
     exercism
     fastfetch
     gh
-    github-copilot-cli
     gdal
     geogebra
     gimp-with-plugins

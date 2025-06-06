@@ -21,9 +21,6 @@ alias -- llm='eza -lbGd --git --sort=modified --icons'
 alias -- ls='eza --icons'
 alias -- lt='eza --tree --level=2 --icons'
 alias -- lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all'
-alias -- 'git!'='github-copilot-cli git-assist'
-alias -- 'gh!'='github-copilot-cli gh-assist'
-alias -- wts='github-copilot-cli what-the-shell'
 function fish_command_not_found
     set cmd $argv[1] # Extract the first argument
     set args $argv[2..-1] # Extract all other arguments
