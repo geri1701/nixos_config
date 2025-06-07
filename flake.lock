@@ -417,15 +417,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1748968993,
-        "narHash": "sha256-9zuTTOgZGUlEe6UTSxup6GrftWCaiLVtwZantwJfiS4=",
+        "lastModified": 1749329715,
+        "narHash": "sha256-ezmmhRHrba+5nlo0ZHdqdhNBPL8IFdEJyskcU7NesrY=",
         "owner": "geri1701",
         "repo": "HyprPanel",
-        "rev": "604225eb708be0d26c2be78f57822319fcdefccb",
+        "rev": "642c4ea8052fe09ef92fd47d72781413cc8327ea",
         "type": "github"
       },
       "original": {
         "owner": "geri1701",
+        "ref": "fix/gio-extra-modules",
         "repo": "HyprPanel",
         "type": "github"
       }

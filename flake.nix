@@ -11,7 +11,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
-    hyprpanel.url = "github:geri1701/HyprPanel";
+    hyprpanel.url = "github:geri1701/HyprPanel?ref=fix/gio-extra-modules";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
