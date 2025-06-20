@@ -90,7 +90,7 @@
     };
   };
   chaotic = {
-    mesa-git.enable = true;
+    mesa-git.enable = false;
   };
 }
 

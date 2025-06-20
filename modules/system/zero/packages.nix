@@ -32,7 +32,7 @@
       virt-manager
       vscode
       wget
-      inputs.zen-browser.packages."${system}".default
+      # inputs.zen-browser.packages."${system}".default
       zoxide
     ];
   };

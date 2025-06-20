@@ -31,6 +31,7 @@ in
     evince
     exercism
     fastfetch
+    floorp
     gh
     gdal
     geogebra

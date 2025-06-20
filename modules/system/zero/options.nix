@@ -37,6 +37,7 @@
         ".config/Proton\ Mail"
         ".config/Proton\ Pass"
         ".zen"
+        ".floorp"
         ".config/weathercrab"
         ".config/anyrun"
         ".config/obsidian"
