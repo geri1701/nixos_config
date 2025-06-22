@@ -188,7 +188,7 @@
     gnome.gnome-keyring.enable = true;
     displayManager.cosmic-greeter.enable = false;
     ollama = {
-    enable = true;
+    enable = false;
     package = pkgs.ollama-rocm;
     acceleration = "rocm";
     environmentVariables = {
