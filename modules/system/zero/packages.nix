@@ -22,6 +22,7 @@
       obsidian
       openssl
       pfetch
+      pulseaudio
       rust-analyzer
       qmk-udev-rules
       screen
