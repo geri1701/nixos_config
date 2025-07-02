@@ -141,11 +141,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1751333492,
-        "narHash": "sha256-ePQTd+GHFiFK2bxmZm3aiWlhyTwbpasjmc+kuM0nxeg=",
+        "lastModified": 1751379121,
+        "narHash": "sha256-+zpgVvwkekHExQHXOoQ/mrxfULr9ejIMANTa7SGjNzg=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "d107b2c87bf7446959668fcc22b2b09b37b27cf3",
+        "rev": "42cb2652781d132e2c458207d7290e6d1bc04622",
         "type": "github"
       },
       "original": {
@@ -288,16 +288,16 @@
     "gnome-shell": {
       "flake": false,
       "locked": {
-        "lastModified": 1744584021,
-        "narHash": "sha256-0RJ4mJzf+klKF4Fuoc8VN8dpQQtZnKksFmR2jhWE1Ew=",
+        "lastModified": 1748186689,
+        "narHash": "sha256-UaD7Y9f8iuLBMGHXeJlRu6U1Ggw5B9JnkFs3enZlap0=",
         "owner": "GNOME",
         "repo": "gnome-shell",
-        "rev": "52c517c8f6c199a1d6f5118fae500ef69ea845ae",
+        "rev": "8c88f917db0f1f0d80fa55206c863d3746fa18d0",
         "type": "github"
       },
       "original": {
         "owner": "GNOME",
-        "ref": "48.1",
+        "ref": "48.2",
         "repo": "gnome-shell",
         "type": "github"
       }
@@ -330,11 +330,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751336185,
-        "narHash": "sha256-ptnVr2x+sl7cZcTuGx/0BOE2qCAIYHTcgfA+/h60ml0=",
+        "lastModified": 1751429452,
+        "narHash": "sha256-4s5vRtaqdNhVBnbOWOzBNKrRa0ShQTLoEPjJp3joeNI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "96354906f58464605ff81d2f6c2ea23211cbf051",
+        "rev": "df12269039dcf752600b1bcc176bacf2786ec384",
         "type": "github"
       },
       "original": {
@@ -649,11 +649,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1751296480,
-        "narHash": "sha256-PMuzVs9khM7cYrjUCXQeV2OP6WVtbsmdZwa4Cc21y0o=",
+        "lastModified": 1751405764,
+        "narHash": "sha256-romzrDMOWMPZioeChZnrugwaUSpROfkWClHhWHuRnRQ=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "4ead8043f70cc3b951e704a1f6e40c8a10230e61",
+        "rev": "5b257989a8337dddc22aa04a70d3665d0384abef",
         "type": "github"
       },
       "original": {
