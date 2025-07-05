@@ -11,8 +11,6 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     { self
@@ -22,7 +20,6 @@
     , stylix
     , zen-browser
     , rose-pine-hyprcursor
-    , hyprpanel
     , impermanence
     , ...
     }@inputs: {
@@ -32,7 +29,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            { nixpkgs.overlays = [ hyprpanel.overlay ]; }
             ./modules/system/zero/options.nix
             ./modules/system/zero/packages.nix
             ./modules/system/zero/host.nix
