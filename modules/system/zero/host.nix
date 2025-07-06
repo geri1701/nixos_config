@@ -2,12 +2,7 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
     boot = {
-  #   kernelPackages = pkgs.linuxPackages_cachyos (pkgs.linux_6_14.override {
-  #   argsOverride = {
-  #     version = "6.15.3";
-  #     };
-  # });
-
+    kernelPackages = pkgs.linuxPackages_cachyos; 
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ehci_pci" "ahci" "usbhid" "sd_mod" ];
       kernelModules = [ "i2c-dev" "amdgpu" "nct6775" "lm78" "kvm-amd" ];
