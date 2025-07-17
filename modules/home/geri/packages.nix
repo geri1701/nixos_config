@@ -45,6 +45,7 @@ in
     gpt4all
     helix-gpt
     hyprshade
+    hyprlandPlugins.hyprscrolling
     nwg-panel
     joshuto
     jq
