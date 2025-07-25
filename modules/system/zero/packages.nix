@@ -27,6 +27,7 @@
       qmk-udev-rules
       screen
       sshfs
+      tailspin
       tmux
       tree
       via
