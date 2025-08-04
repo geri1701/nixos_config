@@ -58,8 +58,8 @@
       ];
     };
   };
-  documentation.man.generateCaches = false;
-  documentation.dev.enable = true;
+  # documentation.man.generateCaches = false;
+  # documentation.dev.enable = true;
   programs.fish.enable = true;
   programs.light.enable = true;
   programs.hyprland.withUWSM = true;
