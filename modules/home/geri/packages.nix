@@ -101,6 +101,7 @@ in
     w3m
     wayland-protocols
     wayland-utils
+    waydroid
     wlroots
     wine
     winetricks
