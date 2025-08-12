@@ -12,6 +12,7 @@
       "/var/lib/nixos"
       "/var/lib/libvirt/"
       "/var/cache/libvirt"
+      "/var/lib/waydroid"
     ];
     files = [
       "/etc/machine-id"
@@ -217,6 +218,7 @@
     users.root.hashedPasswordFile = "/persistent/pwd/root";
   };
   virtualisation = {
+    waydroid.enable = true;
     docker = {
       enable = true;
       enableOnBoot = true;
