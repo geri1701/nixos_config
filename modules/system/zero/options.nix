@@ -43,6 +43,7 @@
         ".config/anyrun"
         ".config/obsidian"
         ".config/exercism"
+        ".config/cosmic"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
@@ -63,7 +64,7 @@
   # documentation.dev.enable = true;
   programs.fish.enable = true;
   programs.light.enable = true;
-  programs.hyprland.withUWSM = true;
+  # programs.hyprland.withUWSM = true;
   home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
@@ -85,7 +86,10 @@
         iosevka
         iosevka-comfy.comfy
       ];
-    };  
+    };
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.xwayland.enable = true;      
   services.pulseaudio.enable = false;
   services.gvfs.enable = true;
   hardware.keyboard.qmk.enable = true;
@@ -166,8 +170,8 @@
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
         ACTION=="add|change", KERNEL=="sd[a-z]*[0-9]*|mmcblk[0-9]*p[0-9]*|nvme[0-9]*n[0-9]*p[0-9]*", ENV{ID_FS_TYPE}=="ext4", ATTR{../queue/scheduler}="none"
   '';
-    displayManager.ly = { enable = false;
-  };
+     # displayManager.ly = { enable = false;
+   # };
   desktopManager.plasma6.enable = false;
     pipewire = {
       enable = true;
@@ -187,7 +191,7 @@
       extraArgs = [ "--noclear" "--skip-login" ];
     };
     gnome.gnome-keyring.enable = true;
-    displayManager.cosmic-greeter.enable = false;
+    # displayManager.cosmic-greeter.enable = false;
     ollama = {
     enable = false;
     package = pkgs.ollama-rocm;
