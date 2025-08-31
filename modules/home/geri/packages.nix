@@ -56,7 +56,7 @@ in
     kitty
     kitty-themes
     libnotify
-    libsForQt5.qtstyleplugin-kvantum
+    # libsForQt5.qtstyleplugin-kvantum
     libsixel
     luajitPackages.vicious
     marksman
