@@ -64,7 +64,7 @@
   # documentation.dev.enable = true;
   programs.fish.enable = true;
   programs.light.enable = true;
-  # programs.hyprland.withUWSM = true;
+  programs.hyprland.withUWSM = true;
   home-manager.users.geri.nixpkgs.config.allowUnfree = true;
   fonts =
     {
@@ -87,9 +87,9 @@
         iosevka-comfy.comfy
       ];
     };
-  services.desktopManager.cosmic.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
-  services.desktopManager.cosmic.xwayland.enable = true;      
+  services.desktopManager.cosmic.enable = false;
+  services.displayManager.cosmic-greeter.enable = false;
+  services.desktopManager.cosmic.xwayland.enable = false;      
   services.pulseaudio.enable = false;
   services.gvfs.enable = true;
   hardware.keyboard.qmk.enable = true;

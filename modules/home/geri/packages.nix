@@ -50,7 +50,7 @@ in
     joshuto
     jq
     kalker
-    keepassxc
+    # keepassxc
     kbs2
     kibi
     kitty
@@ -112,7 +112,7 @@ in
     xplr
     yazi
     yt-dlp
-    zeal
+    # zeal
     zellij
     zsh-autosuggestions
     zsh-you-should-use
