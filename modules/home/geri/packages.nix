@@ -16,7 +16,7 @@ in
     toggle-sink
     anyrun
     amdgpu_top
-    # aseprite
+    aseprite
     atuin
     bogofilter
     cht-sh
@@ -35,7 +35,7 @@ in
     gh
     gdal
     geogebra
-    # gimp-with-plugins
+    gimp-with-plugins
     glow
     glicol-cli
     graph-easy
@@ -50,13 +50,13 @@ in
     joshuto
     jq
     kalker
-    # keepassxc
+    keepassxc
     kbs2
     kibi
     kitty
     kitty-themes
     libnotify
-    # libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
     libsixel
     luajitPackages.vicious
     marksman
