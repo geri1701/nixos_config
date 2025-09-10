@@ -14,7 +14,6 @@ in
 {
   home.packages = with pkgs; [
     toggle-sink
-    anyrun
     amdgpu_top
     aseprite
     atuin
@@ -90,6 +89,7 @@ in
     swaybg
     swww
     steamcmd
+    sysmenu
     # sonic-pi
     taskwarrior3
     taskwarrior-tui
