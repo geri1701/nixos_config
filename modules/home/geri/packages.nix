@@ -81,6 +81,7 @@ in
     peep
     protonmail-desktop
     proton-pass
+    quickshell
     rx
     scriptisto
     slurp
