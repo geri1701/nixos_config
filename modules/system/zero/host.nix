@@ -82,7 +82,7 @@
   };
   services = {
     kmscon.hwRender = true;
-    scx.enable = true;
+    scx.enable = false;
     scx.scheduler = "scx_bpfland";
     openssh = {
       enable = false;

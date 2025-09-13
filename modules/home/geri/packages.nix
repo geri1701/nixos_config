@@ -15,7 +15,7 @@ in
   home.packages = with pkgs; [
     toggle-sink
     amdgpu_top
-    aseprite
+    # aseprite
     atuin
     bogofilter
     cht-sh
