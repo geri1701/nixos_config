@@ -40,7 +40,7 @@ in
     grim
     grex
     gnupg
-    gpt4all
+    # gpt4all
     helix-gpt
     hyprshade
     hyprlandPlugins.hyprscrolling
