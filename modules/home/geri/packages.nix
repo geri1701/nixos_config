@@ -74,14 +74,14 @@ in
     nuclear
     nwg-drawer
     nwg-look
-    oculante
+    # oculante
     ouch
     p7zip
     peep
     protonmail-desktop
     proton-pass
     quickshell
-    rx
+    # rx
     scriptisto
     slurp
     sniffnet
