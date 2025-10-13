@@ -16,6 +16,7 @@ in
     toggle-sink
     amdgpu_top
     # aseprite
+    ashell
     atuin
     bogofilter
     cht-sh

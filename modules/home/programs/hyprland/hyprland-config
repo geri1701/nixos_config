@@ -1,6 +1,7 @@
 monitor= DP-2,3440x1440@99.982Hz,0x0,1.0
-exec-once=hyprpanel
+# exec-once=hyprpanel
 exec-once=nwg-panel
+exec-once=ashell
 exec-once = clipse -listen
 exec=hyprshade auto
 windowrulev2 = float, class:clipse
