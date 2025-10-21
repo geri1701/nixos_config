@@ -36,6 +36,9 @@
       wget
       inputs.zen-browser.packages."${system}".default
       zoxide
+      fsuae-launcher
+      fsuae
+      linuxfb
     ];
   };
 }
