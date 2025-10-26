@@ -38,7 +38,6 @@
       zoxide
       fsuae-launcher
       fsuae
-      linuxfb
     ];
   };
 }
