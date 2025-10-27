@@ -31,13 +31,12 @@
       tmux
       tree
       via
+      vice
       virt-manager
       vscode
       wget
       inputs.zen-browser.packages."${system}".default
       zoxide
-      fsuae-launcher
-      fsuae
     ];
   };
 }
