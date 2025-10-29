@@ -44,6 +44,7 @@
         ".config/obsidian"
         ".config/exercism"
         ".config/cosmic"
+         "/home/geri/.config/vice"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
