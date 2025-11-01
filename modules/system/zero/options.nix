@@ -81,7 +81,7 @@
         nerd-fonts.meslo-lg
         noto-fonts
         noto-fonts-cjk-sans
-        noto-fonts-emoji
+        noto-fonts-color-emoji
         nerd-fonts.iosevka
         nerd-fonts.iosevka-term
         tamsyn
