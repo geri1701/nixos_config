@@ -28,6 +28,7 @@
         "nextcloud"
         "projects"
         "exercism"
+        "c64share"
         ".local/share/Steam"
         ".local/share/fish"
         ".local/share/keyrings"
