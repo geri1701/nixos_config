@@ -61,7 +61,7 @@ in
     marksman
     mangohud
     meson
-    mpc-cli
+    mpc
     mpv
     mpvpaper
     nap
