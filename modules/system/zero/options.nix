@@ -46,6 +46,7 @@
         ".config/exercism"
         ".config/cosmic"
         ".config/vice"
+        ".etlegacy"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
