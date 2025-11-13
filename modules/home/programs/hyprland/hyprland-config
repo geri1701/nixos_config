@@ -12,10 +12,10 @@ windowrulev2 = opacity 1, class:(steam) initialTitle:(.*)
 windowrulev2 = tile, class:(steam) initialTitle:(.*)
 windowrulev2 = fullscreen, class:^(steam_app_.*)$
 # Zen Popout/Picture-in-Picture keep tiling
-windowrulev2 = tile,                          class:^(zen)$, title:^(Picture-in-Picture)$
-windowrulev2 = suppressevent maximize,        class:^(zen)$, title:^(Picture-in-Picture)$
-windowrulev2 = suppressevent fullscreen,      class:^(zen)$, title:^(Picture-in-Picture)$
-windowrulev2 = noinitialfocus,                class:^(zen)$, title:^(Picture-in-Picture)$
+windowrulev2 = tile,                          class:^(zen-beta)$, title:^(Picture-in-Picture)$
+windowrulev2 = suppressevent maximize,        class:^(zen-beta)$, title:^(Picture-in-Picture)$
+windowrulev2 = suppressevent fullscreen,      class:^(zen-beta)$, title:^(Picture-in-Picture)$
+windowrulev2 = noinitialfocus,                class:^(zen-beta)$, title:^(Picture-in-Picture)$
 
 exec-once=nextcloud
 debug {
