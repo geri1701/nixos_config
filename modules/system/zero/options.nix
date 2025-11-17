@@ -24,6 +24,7 @@
         "Pictures"
         "Documents"
         "Videos"
+        "FS-UAE"
         "nixos"
         "nextcloud"
         "projects"

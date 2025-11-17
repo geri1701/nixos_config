@@ -31,6 +31,8 @@ in
     evince
     exercism
     fastfetch
+    fsuae
+    fsuae-launcher
     gh
     gdal
     geogebra
