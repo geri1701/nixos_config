@@ -160,16 +160,6 @@
     sudo-rs.enable = true;
   };
   services = {
-  #   greetd = {
-  #      enable = true;
-  #      settings = rec {
-  #      initial_session = {
-  #      command = "${pkgs.hyprland}/bin/Hyprland";
-  #      user = "geri";
-  #    };
-  #      default_session = initial_session;
-  # };
-  #   };
     udev.packages = with pkgs; [ via ];
     udev.extraRules = ''
         KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"

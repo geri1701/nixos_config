@@ -25,6 +25,10 @@ in
     (discord.override {
       withOpenASAR = false;
     })
+    (pkgs.writeShellScriptBin "fs-uae-launcher" ''
+      export QT_QPA_PLATFORM=xcb
+      exec ${pkgs.fsuae-launcher}/bin/fs-uae-launcher "$@"
+    '')
     distrobox
     docker-compose
     etlegacy
@@ -32,7 +36,6 @@ in
     exercism
     fastfetch
     fsuae
-    fsuae-launcher
     gh
     gdal
     geogebra
