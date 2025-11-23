@@ -103,6 +103,7 @@ in
     translate-shell
     typespeed
     typst
+    vice
     w3m
     wayland-protocols
     wayland-utils
