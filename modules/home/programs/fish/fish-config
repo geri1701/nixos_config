@@ -23,3 +23,60 @@ function fish_command_not_found
     echo "Command '$cmd' not found; attempting execution with nix run..."
     nix run nixpkgs#$cmd -- $args
 end
+
+function rp --description 'Create a Rust playground with Helix and Bacon in Ghostty'
+    set template "$HOME/projects/rust-playground-template"
+    set target_root "$HOME/projects/rust-playgrounds"
+
+    if not test -d $template
+        echo "Template not found: $template"
+        return 1
+    end
+
+    if not test -d $target_root
+        mkdir -p $target_root
+    end
+
+    set newdir (mktemp -d "$target_root/play-XXXXXX")
+    if test -z "$newdir"
+        echo "Failed to create playground directory"
+        return 1
+    end
+
+    cp -a $template/. $newdir/
+    cd $newdir
+
+    if not type -q zellij
+        echo "zellij is required for the split layout; please install it."
+        return 1
+    end
+
+    set layout_path "$newdir/.zellij-layout.kdl"
+    if not test -f $layout_path
+        echo "Layout file missing: $layout_path"
+        return 1
+    end
+
+    set start_cmd "zellij --layout $layout_path"
+
+    if type -q direnv
+        direnv allow
+        set start_cmd "direnv exec $newdir zellij --layout $layout_path"
+    end
+
+    if test -n "$RP_NO_GHOSTTY" -o ! type -q ghostty
+        eval $start_cmd >/dev/null 2>&1 &
+        disown
+        kill -s TERM $fish_pid
+    end
+
+    ghostty --title="Rust Playground" --working-directory=$newdir -e fish -lc "$start_cmd" >/dev/null 2>&1 &
+    set rc $status
+    disown
+    if test $rc -ne 0
+        echo "Ghostty failed; falling back to current terminal."
+        eval $start_cmd >/dev/null 2>&1 &
+        disown
+    end
+    kill -s TERM $fish_pid
+end
