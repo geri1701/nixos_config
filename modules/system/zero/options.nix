@@ -203,7 +203,7 @@
     ollama = {
     enable = false;
     package = pkgs.ollama-rocm;
-    acceleration = "rocm";
+    # acceleration = "rocm";
     environmentVariables = {
     ROCR_VISIBLE_DEVICES= "1";
     };

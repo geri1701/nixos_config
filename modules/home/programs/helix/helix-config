@@ -1,5 +1,6 @@
 theme = "dark_plus"
 [editor]
+shell = ["/run/current-system/sw/bin/fish", "-c"]
 auto-completion = true
 auto-info = true
 cursorline = true
@@ -49,6 +50,9 @@ select = "SELECT"
 [keys.normal]
 A-x = "extend_to_line_bounds"
 X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.normal."space"]
+n = ":open ~/projects/snippets"
 
 [keys.select]
 A-x = "extend_to_line_bounds"

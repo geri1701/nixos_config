@@ -27,6 +27,23 @@ end
 function rp --description 'Create a Rust playground with Helix and Bacon in Ghostty'
     set template "$HOME/projects/rust-playground-template"
     set target_root "$HOME/projects/rust-playgrounds"
+    set create_new 0
+
+    if test (count $argv) -gt 0
+        switch $argv[1]
+        case '--new' '-n'
+            set create_new 1
+        case '--help' '-h'
+            echo "Usage: rp [--new|-n]"
+            echo "  default: reopen newest playground (create if none exist)"
+            echo "  --new: create a fresh playground; keep only the latest two"
+            return 0
+        case '*'
+            echo "Unknown flag: $argv[1]"
+            echo "Usage: rp [--new|-n]"
+            return 1
+        end
+    end
 
     if not test -d $template
         echo "Template not found: $template"
@@ -37,21 +54,57 @@ function rp --description 'Create a Rust playground with Helix and Bacon in Ghos
         mkdir -p $target_root
     end
 
-    set newdir (mktemp -d "$target_root/play-XXXXXX")
-    if test -z "$newdir"
-        echo "Failed to create playground directory"
+    set playgrounds (command find $target_root -maxdepth 1 -mindepth 1 -type d -name 'play-*' -printf '%T@ %p\n' 2>/dev/null | sort -nr | awk '{print $2}')
+
+    set target_dir ""
+    if test $create_new -eq 1 -o (count $playgrounds) -eq 0
+        set newdir (mktemp -d "$target_root/play-XXXXXX")
+        if test -z "$newdir"
+            echo "Failed to create playground directory"
+            return 1
+        end
+
+        cp -a $template/. $newdir/; or begin
+            echo "Failed to copy template into $newdir"
+            rm -rf $newdir
+            return 1
+        end
+        touch $newdir  # ensure mtime marks this as newest for cleanup
+        set target_dir $newdir
+    else
+        set target_dir $playgrounds[1]
+    end
+
+    set playgrounds (command find $target_root -maxdepth 1 -mindepth 1 -type d -name 'play-*' -printf '%T@ %p\n' 2>/dev/null | sort -nr | awk '{print $2}')
+    if test (count $playgrounds) -gt 2
+        for dir in $playgrounds[3..-1]
+            rm -rf $dir
+        end
+        set playgrounds $playgrounds[1..2]
+    end
+
+    if test -z "$target_dir" -a (count $playgrounds) -gt 0
+        set target_dir $playgrounds[1]
+    end
+
+    if test -z "$target_dir"
+        echo "No playground available; creation failed."
         return 1
     end
 
-    cp -a $template/. $newdir/
-    cd $newdir
+    if not test -d "$target_dir"
+        echo "Playground directory missing: $target_dir"
+        return 1
+    end
+
+    cd $target_dir
 
     if not type -q zellij
         echo "zellij is required for the split layout; please install it."
         return 1
     end
 
-    set layout_path "$newdir/.zellij-layout.kdl"
+    set layout_path "$target_dir/.zellij-layout.kdl"
     if not test -f $layout_path
         echo "Layout file missing: $layout_path"
         return 1
@@ -60,8 +113,8 @@ function rp --description 'Create a Rust playground with Helix and Bacon in Ghos
     set start_cmd "zellij --layout $layout_path"
 
     if type -q direnv
-        direnv allow
-        set start_cmd "direnv exec $newdir zellij --layout $layout_path"
+        direnv allow $target_dir
+        set start_cmd "direnv exec $target_dir zellij --layout $layout_path"
     end
 
     if test -n "$RP_NO_GHOSTTY" -o ! type -q ghostty
@@ -70,7 +123,7 @@ function rp --description 'Create a Rust playground with Helix and Bacon in Ghos
         kill -s TERM $fish_pid
     end
 
-    ghostty --title="Rust Playground" --working-directory=$newdir -e fish -lc "$start_cmd" >/dev/null 2>&1 &
+    ghostty --title="Rust Playground" --working-directory=$target_dir -e fish -lc "$start_cmd" >/dev/null 2>&1 &
     set rc $status
     disown
     if test $rc -ne 0
