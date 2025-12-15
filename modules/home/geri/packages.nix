@@ -63,6 +63,7 @@ in
     libnotify
     libsForQt5.qtstyleplugin-kvantum
     libsixel
+    lsp-plugins
     luajitPackages.vicious
     marksman
     mangohud
