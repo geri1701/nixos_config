@@ -75,6 +75,7 @@ in
     nextcloud-client
     nmap
     nodejs
+    nomacs
     nil
     nixpkgs-fmt
     nixpkgs-review
