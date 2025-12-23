@@ -39,6 +39,7 @@ in
     fsuae
     gh
     gdal
+    geeqie
     geogebra
     gimp-with-plugins
     glow
