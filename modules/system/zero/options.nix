@@ -51,6 +51,7 @@
         ".config/cosmic"
         ".config/vice"
         ".etlegacy"
+        ".ollama"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
       ];
@@ -83,6 +84,7 @@
   };
   # documentation.man.generateCaches = false;
   # documentation.dev.enable = true;
+  programs.nix-ld.enable = true;
   programs.fish.enable = true;
   programs.light.enable = true;
   programs.hyprland.withUWSM = true;
@@ -116,6 +118,7 @@
   hardware.keyboard.qmk.enable = true;
   hardware.brillo.enable = true;
   hardware.i2c.enable = true;
+  services.nextjs-ollama-llm-ui.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -204,12 +207,13 @@
     gnome.gnome-keyring.enable = true;
     # displayManager.cosmic-greeter.enable = false;
     ollama = {
-    enable = false;
+    enable = true;
     package = pkgs.ollama-rocm;
     # acceleration = "rocm";
     environmentVariables = {
     ROCR_VISIBLE_DEVICES= "1";
     };
+    models = "~/.ollama/models";
    };
   };
   systemd.network.enable = true;

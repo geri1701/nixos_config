@@ -29,7 +29,6 @@
       enable = true;
       nix-direnv = { enable = true; };
     };
-    nix-ld.enable = true;
     skim.enable = true;
     bottom.enable = true;
     zsh.enable = true;
