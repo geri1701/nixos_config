@@ -13,6 +13,7 @@
       "/var/lib/libvirt/"
       "/var/cache/libvirt"
       "/var/lib/waydroid"
+      "/var/lib/ollama"
     ];
     files = [
       "/etc/machine-id"
