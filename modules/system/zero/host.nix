@@ -28,6 +28,7 @@
     fsType = "tmpfs";
     options = [ "defaults" "size=25%" "mode=755" ];
   };
+
   fileSystems."/persistent" = {
     neededForBoot = true;
     device = "/dev/nvme0n1p2";
@@ -43,11 +44,27 @@
     fsType = "tmpfs";
     options = [ "uid=geri" "gid=users" "defaults" "size=5%" "mode=777" ];
   };
+  fileSystems."/home/geri/projects/ai/comfyui-env/ComfyUI/temp" = {
+    depends = [
+      "/"
+      "/persistent"
+    ];
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "uid=geri" "gid=users" "defaults" "size=5%" "mode=777" ];
+  };
    fileSystems."/boot" =
      {
        device = "/dev/nvme0n1p1";
        fsType = "vfat";
      };
+     swapDevices = [
+  { device = "/dev/sdb"; }
+];
+boot.kernel.sysctl = {
+  "vm.swappiness" = 10;
+};
+
   networking.useNetworkd = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
