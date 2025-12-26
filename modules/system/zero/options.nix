@@ -207,16 +207,16 @@
     };
     gnome.gnome-keyring.enable = true;
     # displayManager.cosmic-greeter.enable = false;
-    ollama = {
-    enable = true;
-    package = pkgs.ollama-rocm;
-    # acceleration = "rocm";
-    environmentVariables = {
-    ROCR_VISIBLE_DEVICES= "1";
-    };
-    models = "~/.ollama/models";
-   };
-  };
+  #   ollama = {
+  #   enable = true;
+  #   package = pkgs.ollama-rocm;
+  #   # acceleration = "rocm";
+  #   environmentVariables = {
+  #   ROCR_VISIBLE_DEVICES= "1";
+  #   };
+  #   models = "~/.ollama/models";
+  #  };
+  # };
   systemd.network.enable = true;
   systemd.network.wait-online.enable = false;
   systemd.services = {

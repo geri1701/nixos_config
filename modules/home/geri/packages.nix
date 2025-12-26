@@ -30,7 +30,7 @@ in
       export QT_QPA_PLATFORM=xcb
       exec ${pkgs.fsuae-launcher}/bin/fs-uae-launcher "$@"
     '')
-    rg
+    ripgrep
     distrobox
     docker-compose
     etlegacy
