@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/geri/nixos/logs/.2e19b95f26dda1544010199ba76e83398f25eaa9-audit.json",
+    "files": [
+        {
+            "date": 1766798353950,
+            "name": "/home/geri/nixos/logs/error-2025-12-27.log",
+            "hash": "01b3280a57b15fba2b3cb63b8064e6a4cb0efb74d9d3607ac15e4ee3c567820d"
+        }
+    ],
+    "hashType": "sha256"
+}

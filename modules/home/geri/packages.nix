@@ -13,7 +13,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    toggle-sink
+   toggle-sink
     amdgpu_top
     # aseprite
     ardour
@@ -49,7 +49,6 @@ in
     grim
     grex
     gnupg
-    # gpt4all
     helix-gpt
     hyprshade
     hyprlandPlugins.hyprscrolling

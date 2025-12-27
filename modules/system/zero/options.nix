@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, ... }: {
   system.stateVersion = "24.05";
   console = { useXkbConfig = true; };
   environment.sessionVariables.EDITOR = "hx";
@@ -13,7 +13,6 @@
       "/var/lib/libvirt/"
       "/var/cache/libvirt"
       "/var/lib/waydroid"
-      "/var/lib/ollama"
     ];
     files = [
       "/etc/machine-id"
@@ -111,6 +110,17 @@
         iosevka-comfy.comfy
       ];
     };
+    services.open-webui = {
+    enable = true;
+    host = "127.0.0.1";
+    port = 8080;
+
+    environment = {
+      OLLAMA_API_BASE = "http://127.0.0.1:11434";
+      WEBUI_AUTH = "false";
+       };
+    stateDir = "/persistent/var/lib/open-webui";
+  };
   services.desktopManager.cosmic.enable = false;
   services.displayManager.cosmic-greeter.enable = false;
   services.desktopManager.cosmic.xwayland.enable = false;      
@@ -119,7 +129,6 @@
   hardware.keyboard.qmk.enable = true;
   hardware.brillo.enable = true;
   hardware.i2c.enable = true;
-  services.nextjs-ollama-llm-ui.enable = true;
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -207,16 +216,18 @@
     };
     gnome.gnome-keyring.enable = true;
     # displayManager.cosmic-greeter.enable = false;
-  #   ollama = {
-  #   enable = true;
-  #   package = pkgs.ollama-rocm;
-  #   # acceleration = "rocm";
-  #   environmentVariables = {
-  #   ROCR_VISIBLE_DEVICES= "1";
-  #   };
-  #   models = "~/.ollama/models";
-  #  };
-  # };
+    ollama = {
+    home = "/persistent/var/lib/ollama";  
+    user = "ollama";
+    enable = true;
+    package = pkgs.ollama-rocm;
+    environmentVariables = {
+    ROCR_VISIBLE_DEVICES= "1";
+    };
+    models = "~/.ollama/models";
+    loadModels = [ "qwen3:14b" "gemma3:12b" "dolphin3"];
+       };
+  };
   systemd.network.enable = true;
   systemd.network.wait-online.enable = false;
   systemd.services = {
