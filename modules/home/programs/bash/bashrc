@@ -1,0 +1,155 @@
+# Bash configuration managed via Home Manager symlink.
+
+if command -v uwsm >/dev/null 2>&1; then
+  if uwsm check may-start >/dev/null 2>&1; then
+    exec systemd-cat --identifier=hyprland-session uwsm start hyprland-uwsm.desktop
+  fi
+fi
+
+if [[ $- == *i* ]]; then
+  if [[ $SHLVL -eq 1 ]]; then
+    fastfetch
+  fi
+
+  eval "$(zoxide init bash)"
+  eval "$(starship init bash)"
+fi
+
+alias l='eza -lbF --git --icons'
+alias lS='eza -1 --icons'
+alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons --color-scale all'
+alias ll='eza -lbGF --git --icons'
+alias llm='eza -lbGd --git --sort=modified --icons'
+alias ls='eza --icons'
+alias lt='eza --tree --level=2 --icons'
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --icons --color-scale all'
+
+command_not_found_handle() {
+  local cmd="$1"
+  shift
+  echo "Command '$cmd' not found; attempting execution with nix run..."
+  nix run "nixpkgs#$cmd" -- "$@"
+}
+
+rp() {
+  local template="$HOME/projects/rust-playground-template"
+  local target_root="$HOME/projects/rust-playgrounds"
+  local create_new=0
+
+  if [[ $# -gt 0 ]]; then
+    case "$1" in
+      --new|-n)
+        create_new=1
+        ;;
+      --help|-h)
+        echo "Usage: rp [--new|-n]"
+        echo "  default: reopen newest playground (create if none exist)"
+        echo "  --new: create a fresh playground; keep only the latest two"
+        return 0
+        ;;
+      *)
+        echo "Unknown flag: $1"
+        echo "Usage: rp [--new|-n]"
+        return 1
+        ;;
+    esac
+  fi
+
+  if [[ ! -d "$template" ]]; then
+    echo "Template not found: $template"
+    return 1
+  fi
+
+  if [[ ! -d "$target_root" ]]; then
+    mkdir -p "$target_root"
+  fi
+
+  local playgrounds
+  mapfile -t playgrounds < <(
+    command find "$target_root" -maxdepth 1 -mindepth 1 -type d -name 'play-*' -printf '%T@ %p\n' 2>/dev/null | sort -nr | awk '{print $2}'
+  )
+
+  local target_dir=""
+  if [[ $create_new -eq 1 || ${#playgrounds[@]} -eq 0 ]]; then
+    local newdir
+    newdir=$(mktemp -d "$target_root/play-XXXXXX")
+    if [[ -z "$newdir" ]]; then
+      echo "Failed to create playground directory"
+      return 1
+    fi
+
+    if ! cp -a "$template/." "$newdir/"; then
+      echo "Failed to copy template into $newdir"
+      rm -rf "$newdir"
+      return 1
+    fi
+    touch "$newdir"
+    target_dir="$newdir"
+  else
+    target_dir="${playgrounds[0]}"
+  fi
+
+  mapfile -t playgrounds < <(
+    command find "$target_root" -maxdepth 1 -mindepth 1 -type d -name 'play-*' -printf '%T@ %p\n' 2>/dev/null | sort -nr | awk '{print $2}'
+  )
+  if [[ ${#playgrounds[@]} -gt 2 ]]; then
+    local dir
+    for dir in "${playgrounds[@]:2}"; do
+      rm -rf "$dir"
+    done
+    playgrounds=("${playgrounds[@]:0:2}")
+  fi
+
+  if [[ -z "$target_dir" && ${#playgrounds[@]} -gt 0 ]]; then
+    target_dir="${playgrounds[0]}"
+  fi
+
+  if [[ -z "$target_dir" ]]; then
+    echo "No playground available; creation failed."
+    return 1
+  fi
+
+  if [[ ! -d "$target_dir" ]]; then
+    echo "Playground directory missing: $target_dir"
+    return 1
+  fi
+
+  cd "$target_dir" || return 1
+
+  if ! command -v zellij >/dev/null 2>&1; then
+    echo "zellij is required for the split layout; please install it."
+    return 1
+  fi
+
+  local layout_path="$target_dir/.zellij-layout.kdl"
+  if [[ ! -f "$layout_path" ]]; then
+    echo "Layout file missing: $layout_path"
+    return 1
+  fi
+
+  local -a base_cmd=(zellij --layout "$layout_path")
+  local -a run_cmd=("${base_cmd[@]}")
+  local shell_cmd
+
+  if command -v direnv >/dev/null 2>&1; then
+    direnv allow "$target_dir"
+    run_cmd=(direnv exec "$target_dir" "${base_cmd[@]}")
+  fi
+
+  if [[ -n "${RP_NO_GHOSTTY:-}" ]] || ! command -v ghostty >/dev/null 2>&1; then
+    "${run_cmd[@]}" >/dev/null 2>&1 &
+    disown
+    kill -s TERM "$$"
+  fi
+
+  shell_cmd=$(printf '%q ' "${run_cmd[@]}")
+  ghostty --title="Rust Playground" --working-directory="$target_dir" -e bash -lc "$shell_cmd" >/dev/null 2>&1 &
+  local rc=$?
+  disown
+  if [[ $rc -ne 0 ]]; then
+    echo "Ghostty failed; falling back to current terminal."
+    "${run_cmd[@]}" >/dev/null 2>&1 &
+    disown
+  fi
+  kill -s TERM "$$"
+}
