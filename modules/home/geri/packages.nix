@@ -10,10 +10,16 @@ let
             pactl set-default-sink "$SINK_A"
           fi
         '';
+     comfyui-drop-caches = pkgs.writeShellScriptBin "comfyui-drop-caches" ''
+        set -eu
+        ${pkgs.coreutils}/bin/sync
+        echo 3 > /proc/sys/vm/drop_caches
+      '';
 in
 {
   home.packages = with pkgs; [
    toggle-sink
+   comfyui-drop-caches
     amdgpu_top
     # aseprite
     ardour

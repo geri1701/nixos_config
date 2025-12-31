@@ -11,8 +11,17 @@ if [[ $- == *i* ]]; then
     fastfetch
   fi
 
+  # Keep a large, persistent history.
+  export HISTSIZE=100000
+  export HISTFILESIZE=200000
+  shopt -s histappend
+  PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND:-:}"
+
   eval "$(zoxide init bash)"
   eval "$(starship init bash)"
+  if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook bash)"
+  fi
 fi
 
 alias l='eza -lbF --git --icons'

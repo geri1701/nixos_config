@@ -53,6 +53,11 @@
     fsType = "tmpfs";
     options = [ "uid=geri" "gid=users" "defaults" "size=5%" "mode=777" ];
   };
+  fileSystems."/var/lib/open-webui" = {
+    device = "/persistent/var/lib/open-webui";
+    fsType = "none";
+    options = [ "bind" ];
+  };
    fileSystems."/boot" =
      {
        device = "/dev/nvme0n1p1";

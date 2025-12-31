@@ -18,6 +18,7 @@ windowrulev2 = suppressevent fullscreen,      class:^(zen-beta)$, title:^(Pictur
 windowrulev2 = noinitialfocus,                class:^(zen-beta)$, title:^(Picture-in-Picture)$
 
 exec-once=nextcloud
+env = SHELL,/run/current-system/sw/bin/bash
 debug {
     disable_logs=false
 }
