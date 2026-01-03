@@ -9,8 +9,10 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs?rev=c0b0e0fddf73fd517c3471e546c0df87a42d53f4";
     stylix.url = "github:danth/stylix";
+
   };
   outputs =
     { self
