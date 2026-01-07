@@ -28,7 +28,8 @@
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
         zero = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          # system = "x86_64-linux";
+          system = nixpkgs.legacyPackages.x86_64-linux.stdenv.hostPlatform.system;
           specialArgs = { inherit inputs; };
           modules = [
             ./modules/system/zero/options.nix

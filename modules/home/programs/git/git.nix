@@ -1,11 +1,5 @@
 {
-  programs.git = {
-    enable = true;
-    userName = "geri1701";
-    userEmail = "geri@sdf.org";
-    signing.signByDefault = true;
-    signing.key = null;
-    delta = {
+  programs.delta = {
       enable = true;
       options = {
         commit-decoration-style = "bold box ul";
@@ -28,6 +22,12 @@
         plus-style = "syntax #001a00";
         syntax-theme = "Nord";
       };
-    };
+  };
+  programs.git = {
+    enable = true;
+    settings.user.name = "geri1701";
+    settings.user.email = "geri@sdf.org"; 
+    signing.signByDefault = true;
+    signing.key = null;
   };
 }
