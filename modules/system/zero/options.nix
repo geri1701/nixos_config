@@ -38,6 +38,8 @@
         ".config/etlegacy"
         ".config/exercism"
         ".config/fastfetch"
+        ".config/gimp"
+        ".config/GIMP"
         ".config/Nextcloud"
         ".config/obsidian"
         ".config/Proton Mail"
@@ -45,6 +47,7 @@
         ".config/vice"
         ".config/weathercrab"
         ".local/share/direnv"
+        ".local/share/GIMP"
         ".local/share/Steam"
         ".local/share/keyrings"
         ".local/share/zoxide"
@@ -108,6 +111,7 @@ fonts = {
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
     nerd-fonts.iosevka
+    nerd-fonts.recursive-mono
     nerd-fonts.iosevka-term
     tamsyn
     tamzen

@@ -15,10 +15,50 @@ let
         ${pkgs.coreutils}/bin/sync
         echo 3 > /proc/sys/vm/drop_caches
       '';
+      rotate-wallpaper = pkgs.writeShellScriptBin "rotate-wallpaper" ''
+      set -euo pipefail
+
+      WALLROOT="$HOME/Pictures/wallpapers"
+      STATE="/var/tmp/hypr-wallpaper-mode.state"
+      MODE="$(cat "$STATE" 2>/dev/null || echo light)"
+      DIR="$WALLROOT/$MODE"
+
+      IMG="$(find "$DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)"
+      [ -n "$IMG" ] || exit 0
+
+      hyprctl hyprpaper preload "$IMG" >/dev/null
+      hyprctl hyprpaper wallpaper ",$IMG" >/dev/null
+  '';
+      toggle-wallpaper = pkgs.writeShellScriptBin "toggle-wallpaper" ''
+        set -euo pipefail
+
+        WALLROOT="$HOME/Pictures/wallpapers"
+        STATE="/var/tmp/hypr-wallpaper-mode.state"
+        
+        CURRENT="$(cat "$STATE" 2>/dev/null || echo light)"
+        if [ "$CURRENT" = "light" ]; then
+          NEW="dark"
+        else
+          NEW="light"
+        fi
+        
+        # Mode dauerhaft setzen
+        echo "$NEW" > "$STATE"
+        
+        DIR="$WALLROOT/$NEW"
+        IMG="$(find "$DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)"
+        [ -n "$IMG" ] || exit 0
+        
+        hyprctl hyprpaper preload "$IMG" >/dev/null
+        hyprctl hyprpaper wallpaper ",$IMG" >/dev/null
+
+       '';
 in
 {
   home.packages = with pkgs; [
    toggle-sink
+   toggle-wallpaper
+   rotate-wallpaper
    comfyui-drop-caches
     amdgpu_top
     # aseprite
@@ -48,7 +88,12 @@ in
     gdal
     geeqie
     geogebra
-    gimp-with-plugins
+    (gimp-with-plugins.override{
+    plugins = with pkgs.gimpPlugins; [
+      gmic
+      resynthesizer
+    ];
+  })
     glow
     glicol-cli
     graph-easy
@@ -103,7 +148,6 @@ in
     sniffnet
     swappy
     swaybg
-    swww
     steamcmd
     sysmenu
     # sonic-pi
@@ -130,7 +174,5 @@ in
     yt-dlp
     # zeal
     zellij
-    zsh-autosuggestions
-    zsh-you-should-use
   ];
 }

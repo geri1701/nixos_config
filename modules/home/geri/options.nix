@@ -1,4 +1,29 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, config, ... }: {
+
+  systemd.user.services.wallpaper-rotate = {
+  Unit = {
+    Description = "Rotate wallpaper within current mode (light/dark)";
+    After = [ "hyprpaper.service" ];
+    Requires = [ "hyprpaper.service" ];
+  };
+
+  Service = {
+    Type = "oneshot";
+
+    ExecStart = "${pkgs.bash}/bin/bash -lc rotate-wallpaper";
+
+  };
+};
+
+  systemd.user.timers.wallpaper-rotate = {
+    Unit = { Description = "Rotate wallpaper every 2 minutes"; };
+    Timer = {
+      OnBootSec = "30s";
+      OnUnitActiveSec = "2m";
+      Unit = "wallpaper-rotate.service";
+    };
+    Install = { WantedBy = [ "timers.target" ]; };
+  };
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -31,7 +56,6 @@
     };
     skim.enable = true;
     bottom.enable = true;
-    zsh.enable = true;
     zoxide.enable = true;
     starship.enable = true;
     command-not-found.enable = false;
@@ -40,6 +64,7 @@
     enable = true;
   };
   services = {
+  hyprpaper.enable = true;
     gpg-agent = {
       enable = true;
       pinentry = {
