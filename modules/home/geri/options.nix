@@ -11,7 +11,8 @@
     Type = "oneshot";
 
     ExecStart = "${pkgs.bash}/bin/bash -lc rotate-wallpaper";
-
+    StandardOutput = "journal";
+    StandardError = "journal";
   };
 };
 

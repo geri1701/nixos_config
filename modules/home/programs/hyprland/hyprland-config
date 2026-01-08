@@ -1,8 +1,5 @@
 monitor= DP-2,3440x1440@99.982Hz,0x0,1.0,vrr,2
-# monitor= DP-2,3440x1440@120Hz,0x0,1.0,vrr,1
-# exec-once = pgrep -x swww-daemon >/dev/null 2>&1 || swww-daemon
-# exec-once = sh -lc 'sleep 1; pgrep -x swww-daemon >/dev/null 2>&1 || /nix/store/d8gdd4s3pfcd9h81l5q5ji7lylzyni7d-swww-0.11.2/bin/swww-daemon >/var/tmp/swww-daemon.log 2>&1'
-# exec=swww-daemon
+exec=rotate-wallpaper
 exec-once=ashell
 exec-once = clipse -listen
 exec=hyprshade auto

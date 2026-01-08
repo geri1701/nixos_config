@@ -26,7 +26,6 @@ let
       IMG="$(find "$DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)"
       [ -n "$IMG" ] || exit 0
 
-      hyprctl hyprpaper preload "$IMG" >/dev/null
       hyprctl hyprpaper wallpaper ",$IMG" >/dev/null
   '';
       toggle-wallpaper = pkgs.writeShellScriptBin "toggle-wallpaper" ''
@@ -49,7 +48,6 @@ let
         IMG="$(find "$DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)"
         [ -n "$IMG" ] || exit 0
         
-        hyprctl hyprpaper preload "$IMG" >/dev/null
         hyprctl hyprpaper wallpaper ",$IMG" >/dev/null
 
        '';
