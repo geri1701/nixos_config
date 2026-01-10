@@ -1,96 +1,106 @@
-monitor= DP-2,3440x1440@99.982Hz,0x0,1.0,vrr,2
-exec=rotate-wallpaper
+############################
+# Monitor & session
+monitor=DP-2,3440x1440@99.982Hz,0x0,1.0,vrr,2
+env=SHELL,/run/current-system/sw/bin/bash
+############################
+# Autostart
+exec=sleep 2 && rotate-wallpaper
 exec-once=ashell
-exec-once = clipse -listen
+exec-once=clipse -listen
 exec=hyprshade auto
-windowrulev2 = float, class:clipse
-windowrulev2 = size 622 652, class:clipse
-windowrulev2 = workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$
-windowrulev2 = opacity 1, class:(steam) initialTitle:(.*)
-windowrulev2 = tile, class:(steam) initialTitle:(.*)
-windowrulev2 = fullscreen, class:^(steam_app_.*)$
-# Zen Popout/Picture-in-Picture keep tiling
-windowrulev2 = tile,                          class:^(zen-beta)$, title:^(Picture-in-Picture)$
-windowrulev2 = suppressevent maximize,        class:^(zen-beta)$, title:^(Picture-in-Picture)$
-windowrulev2 = suppressevent fullscreen,      class:^(zen-beta)$, title:^(Picture-in-Picture)$
-windowrulev2 = noinitialfocus,                class:^(zen-beta)$, title:^(Picture-in-Picture)$
-
 exec-once=nextcloud
-env = SHELL,/run/current-system/sw/bin/bash
+############################
+# Window rules
+windowrulev2=float, class:clipse
+windowrulev2=size 622 652, class:clipse
+# Steam (TODO)
+windowrulev2=workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$
+windowrulev2=opacity 1, class:(steam) initialTitle:(.*)
+windowrulev2=tile, class:(steam) initialTitle:(.*)
+windowrulev2=fullscreen, class:^(steam_app_.*)$
+# Zen PiP
+windowrulev2=tile,                     class:^(zen.*)$, initialTitle:^(Picture-in-Picture)$
+windowrulev2=suppressevent maximize,   class:^(zen.*)$, initialTitle:^(Picture-in-Picture)$
+windowrulev2=suppressevent fullscreen, class:^(zen.*)$, initialTitle:^(Picture-in-Picture)$
+windowrulev2=noinitialfocus,           class:^(zen.*)$, initialTitle:^(Picture-in-Picture)$
+############################
+# Debug / input / layout
 debug {
     disable_logs=false
 }
 input {
-    kb_layout= de
-    kb_variant= us
-    kb_options= caps:escape
+    kb_layout=de
+    kb_variant=us
+    kb_options=caps:escape
     follow_mouse=1
 }
 master {
-   orientation = center
-   slave_count_for_center_master = 2
-   mfact = 0.5
+    orientation=center
+    slave_count_for_center_master=2
+    mfact=0.5
 }
 cursor {
-  inactive_timeout = 3
+    inactive_timeout=3
 }
+############################
+# General / decoration
 general {
     gaps_in=3
     gaps_out=7
     border_size=2
-    col.active_border= rgba(FF731Dee)
-    col.inactive_border= rgba(32603Fee)
+    col.active_border=rgba(FF731Dee)
+    col.inactive_border=rgba(32603Fee)
     layout=master
 }
 misc {
-   disable_hyprland_logo=true
+    disable_hyprland_logo=true
 }
 decoration {
     rounding=8
     rounding_power=4
 }
-
 ecosystem {
     no_update_news=true
 }
-  animations {
-      enabled=1
-      bezier = overshot, 0.05, 0.9, 0.1, 1.05
-      animation = windows, 1, 4, overshot, slide
-      animation = windowsOut, 1, 5, default, popin 80%
-      animation = border, 1, 5, default
-      animation = fade, 1, 8, default
-      animation = workspaces, 1, 6, overshot, slidevert
+animations {
+    enabled=1
+    bezier=overshot, 0.05, 0.9, 0.1, 1.05
+    animation=windows, 1, 4, overshot, slide
+    animation=windowsOut, 1, 5, default, popin 80%
+    animation=border, 1, 5, default
+    animation=fade, 1, 8, default
+    animation=workspaces, 1, 6, overshot, slidevert
 }
-# gestures {
-#     workspace_swipe=no
-# }
+############################
+# Mouse / resize
 bindm=SUPER,mouse:272,movewindow
 bindm=SUPER,mouse:273,resizewindow
 bind=SHIFT,right,resizeactive,10 0
 bind=SHIFT,left,resizeactive,-10 0
-bind=SHIFT,up,resizeactive, 0 -10
+bind=SHIFT,up,resizeactive,0 -10
 bind=SHIFT,down,resizeactive,0 10
-bind=SUPER,RETURN,exec,ghostty
+############################
+# Audio / brightness
 bind=,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
 bind=,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
 bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bind=,XF86MonBrightnessDown,exec,ddcutil setvcp 10 - 5
 bind=,XF86MonBrightnessUp,exec,ddcutil setvcp 10 + 5
+############################
+# Windows: minimal (cycle)
 bind=SUPER,C,killactive,
-bind=SUPER,M,exec,~/.config/rofi/bin/leave.sh
+bind=SUPER,j,cyclenext,
+bind=SUPER,k,swapnext,
+############################
+# Launcher & tools
+bind=SUPER,RETURN,exec,ghostty
 bind=SUPER,P,exec,sysmenu
-bind=ALT,P,exec,~/.config/hypr/bin/clip-color.sh
 bind=SUPER,E,exec,toggle-sink
-bind=SUPER,F,togglefloating,
-bind=ALT,SPACE,exec,pkill -f -64 nwg-panel
 bind=SUPER,V,exec,ghostty -e 'clipse'
-bind=SUPER,h,movefocus,l
-bind=SUPER,l,movefocus,r
-bind=SUPER,k,movefocus,u
-bind=SUPER,j,movefocus,d
-bind=SUPER,H,swapwindow,l
-bind = SUPER, W, exec, toggle-wallpaper
+bind=SUPER,W,exec,toggle-wallpaper
+bind=,Print,exec,grim -g "$(slurp)" - | swappy -f -
+############################
+# Workspaces
 bind=SUPER,1,workspace,1
 bind=SUPER,2,workspace,2
 bind=SUPER,3,workspace,3
@@ -113,13 +123,8 @@ bind=ALT,9,movetoworkspace,9
 bind=ALT,0,movetoworkspace,10
 bind=SUPER,mouse_down,workspace,e+1
 bind=SUPER,mouse_up,workspace,e-1
-bind=SUPER,Tab,cyclenext,          # change focus
-bind=SUPER+SHIFT,Tab,swapnext,          # change position
-bind=SUPER,Tab,bringactivetotop,   # to top
-bind=SUPER, t, togglegroup
-bind=SUPER+ALT, J, changegroupactive, f
-bind=SUPER+ALT, K, changegroupactive, b
-bind=SUPER,b,exec,hyprpanel toggleWindow bar-0
-bind=,Print,exec,grim -g "$(slurp)" - | swappy -f -
-# env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
-# env = HYPRCURSOR_THEME,rose-pine-hyprcursor
+############################
+# Groups (kept)
+bind=SUPER,t,togglegroup
+bind=SUPER+ALT,J,changegroupactive,f
+bind=SUPER+ALT,K,changegroupactive,b
